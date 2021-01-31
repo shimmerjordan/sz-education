@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.shimmerjordan.exam.api.feign.fallback.ExaminationServiceClientFallbackImpl,\
+  com.github.shimmerjordan.exam.api.feign.factory.ExaminationServiceClientFallbackFactory
