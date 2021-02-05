@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 日志
  *
  * @author shimmerjordan
- * @date 2018/10/31 20:29
+ * @date 2021/01/31 20:29
  */
 @Data
 public class Log extends BaseEntity<Log> {
