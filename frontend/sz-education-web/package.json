@@ -1,7 +1,7 @@
 {
-  "name": "spring-microservice-exam-web",
+  "name": "sz-education-web",
   "version": "3.7.0",
-  "description": "spring-microservice-exam-web",
+  "description": "sz-education-web",
   "author": "shimmerjordan <shimmerjordan@foxmail.com>",
   "private": true,
   "scripts": {

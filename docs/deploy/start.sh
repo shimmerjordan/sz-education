@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# 配置文件根目录，固定是spring-microservice-exam
-DOCKERHOME=/spring-microservice-exam
+# 配置文件根目录，固定是sz-education
+DOCKERHOME=/sz-education
 
 # 镜像名称前缀、标签
-BASE_IMAGE_NAME=registry.cn-hangzhou.aliyuncs.com/spring-microservice-exam
+BASE_IMAGE_NAME=registry.cn-hangzhou.aliyuncs.com/sz-education
 BSEE_IMAGE_TAG=latest
 
 # 各服务的镜像名称
@@ -15,8 +15,8 @@ EXAM_SERVICE=$BASE_IMAGE_NAME/exam-service:$BSEE_IMAGE_TAG
 GATEWAY_SERVICE=$BASE_IMAGE_NAME/gateway-service:$BSEE_IMAGE_TAG
 MSC_SERVICE=$BASE_IMAGE_NAME/msc-service:$BSEE_IMAGE_TAG
 MONITOR_SERVICE=$BASE_IMAGE_NAME/monitor-service:$BSEE_IMAGE_TAG
-UI_SERVICE=$BASE_IMAGE_NAME/spring-microservice-exam-ui:$BSEE_IMAGE_TAG
-WEB_SERVICE=$BASE_IMAGE_NAME/spring-microservice-exam-web:$BSEE_IMAGE_TAG
+UI_SERVICE=$BASE_IMAGE_NAME/sz-education-ui:$BSEE_IMAGE_TAG
+WEB_SERVICE=$BASE_IMAGE_NAME/sz-education-web:$BSEE_IMAGE_TAG
 WEB_SERVICE_EXAMPLE=$BASE_IMAGE_NAME/exam-web-example:$BSEE_IMAGE_TAG
 
 case "$1" in

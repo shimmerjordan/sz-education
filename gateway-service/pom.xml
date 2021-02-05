@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
     <parent>
         <groupId>com.github.shimmerjordan</groupId>
-        <artifactId>spring-microservice-exam</artifactId>
+        <artifactId>sz-education</artifactId>
         <version>${revision}</version>
     </parent>
     <artifactId>gateway-service</artifactId>

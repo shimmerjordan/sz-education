@@ -4,6 +4,6 @@ spring:
     config:
       server:
         git:
-          uri: https://git.oschina.net/wells2333/config-server      # 配置git仓库的地址
+          uri: https://git.oschina.net/shimmerjordan/config-server      # 配置git仓库的地址
           username:                                                 # git仓库的账号
           password:                                                 # git仓库的密码

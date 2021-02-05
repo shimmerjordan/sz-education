@@ -27,16 +27,16 @@
                     </el-submenu>
                     <el-submenu index="/u">
                       <template slot="title">帮助</template>
-                      <el-menu-item index="u-source" @click="open('https://gitee.com/wells2333/spring-microservice-exam')">
+                      <el-menu-item index="u-source" @click="open('https://gitee.com/shimmerjordan/sz-education')">
                         源码地址
                       </el-menu-item>
-                      <el-menu-item index="u-deploy" @click="open('https://www.kancloud.cn/shimmerjordan/spring-microservice-exam/1322870')">
+                      <el-menu-item index="u-deploy" @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322870')">
                         部署文档
                       </el-menu-item>
-                      <el-menu-item index="c-log" @click="open('https://gitee.com/wells2333/spring-microservice-exam/blob/master/CHANGELOG.md')">
+                      <el-menu-item index="c-log" @click="open('https://gitee.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md')">
                         更新日志
                       </el-menu-item>
-                      <el-menu-item index="c-overview"  @click="open('https://www.kancloud.cn/shimmerjordan/spring-microservice-exam/1322864#6__112')">
+                      <el-menu-item index="c-overview"  @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322864#6__112')">
                         规划总览
                       </el-menu-item>
                       <el-menu-item index="u-admin" @click="open('http://118.25.138.130:81')">

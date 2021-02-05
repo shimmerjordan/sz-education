@@ -3,8 +3,8 @@ services:
   # ---------------------------
   # 前台
   # ---------------------------
-  spring-microservice-exam-web:
-    image: registry.cn-hangzhou.aliyuncs.com/spring-microservice-exam/spring-microservice-exam-web:latest
+  sz-education-web:
+    image: registry.cn-hangzhou.aliyuncs.com/sz-education/sz-education-web:latest
     volumes:
       # 挂载nginx的配置文件
       - ./nginx.conf:/etc/nginx/nginx.conf
@@ -19,8 +19,8 @@ services:
   # ---------------------------
   # 后台
   # ---------------------------
-  spring-microservice-exam-ui:
-    image: registry.cn-hangzhou.aliyuncs.com/spring-microservice-exam/spring-microservice-exam-ui:latest
+  sz-education-ui:
+    image: registry.cn-hangzhou.aliyuncs.com/sz-education/sz-education-ui:latest
     volumes:
       # 挂载nginx的配置文件
       - ./nginx.conf:/etc/nginx/nginx.conf
@@ -35,8 +35,8 @@ services:
 #  # ---------------------------
 #  # example
 #  # ---------------------------
-#  spring-microservice-exam-web-Spencer:
-#    image: registry.cn-hangzhou.aliyuncs.com/spring-microservice-exam/exam-web-example:latest
+#  sz-education-web-Spencer:
+#    image: registry.cn-hangzhou.aliyuncs.com/sz-education/exam-web-example:latest
 #    volumes:
 #      # 挂载nginx的配置文件
 #      - ./nginx.conf:/etc/nginx/nginx.conf

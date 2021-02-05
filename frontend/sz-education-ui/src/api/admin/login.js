@@ -2,7 +2,7 @@ import request from '@/router/axios'
 import { getRefreshToken } from '@/utils/auth'
 const baseAuthenticationUrl = '/api/auth/v1/authentication/'
 
-const basicAuthorization = 'Basic ' + btoa('web_app:spring-microservice-exam-secret')
+const basicAuthorization = 'Basic ' + btoa('web_app:sz-education-secret')
 
 /**
  * 登录

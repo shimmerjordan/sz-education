@@ -57,7 +57,7 @@ export function loginByUsername (identifier, credential, code, randomStr) {
 ```
 其中：
 
-1. `const basicAuthorization = 'Basic ' + btoa('web_app:spring-microservice-exam-secret')`
+1. `const basicAuthorization = 'Basic ' + btoa('web_app:sz-education-secret')`
 2. 密码需要加密，具体看**密码加密**部分
 3. 请求头要带`Tenant-Code`，即租户标识
 
@@ -119,7 +119,7 @@ POST：`/api/auth/wx/token?grant_type=wx&scope=read&code=` + code
     'Tenant-Code': 'gitee'  // 租户标识，目前固定为gitee
 }
 ```
-Authorization为`clientId:clientSecret`的base64编码，即：`'Basic ' + btoa('web_app:spring-microservice-exam-secret')`
+Authorization为`clientId:clientSecret`的base64编码，即：`'Basic ' + btoa('web_app:sz-education-secret')`
 
 2. 请求体参数:
 ```
@@ -255,7 +255,7 @@ export function refreshToken () {
   return request({
     url: '/api/auth/oauth/token',
     headers: {
-      'Authorization': 'Basic ' + btoa('web_app:spring-microservice-exam-secret')
+      'Authorization': 'Basic ' + btoa('web_app:sz-education-secret')
     },
     method: 'post',
     params: { grant_type: grantType, scope, refresh_token: refreshToken }

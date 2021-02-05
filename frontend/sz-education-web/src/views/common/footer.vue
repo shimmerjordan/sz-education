@@ -5,10 +5,10 @@
         <el-row>
           <el-col :span="3" :offset="2" class="footer-col">
             <h4>链接</h4>
-            <a target="_blank" href="https://gitee.com/wells2333/spring-microservice-exam">码云</a>
+            <a target="_blank" href="https://gitee.com/shimmerjordan/sz-education">码云</a>
             <a target="_blank" href="https://github.com/">GITHUB</a>
             <a target="_blank" href="http://118.25.138.130:81">管理后台</a>
-            <a target="_blank" href="https://gitee.com/wells2333/spring-microservice-exam/blob/master/CHANGELOG.md">更新日志</a>
+            <a target="_blank" href="https://gitee.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md">更新日志</a>
           </el-col>
           <el-col :span="3" class="footer-col">
             <h4>工具</h4>
@@ -17,8 +17,8 @@
           </el-col>
           <el-col :span="3" class="footer-col">
             <h4>社区</h4>
-            <a target="_blank" href="https://www.kancloud.cn/shimmerjordan/spring-microservice-exam/1322864">看云</a>
-            <a target="_blank" href="https://gitee.com/wells2333/spring-microservice-exam/issues">反馈建议</a>
+            <a target="_blank" href="https://www.kancloud.cn/shimmerjordan/sz-education/1322864">看云</a>
+            <a target="_blank" href="https://gitee.com/shimmerjordan/sz-education/issues">反馈建议</a>
           </el-col>
           <el-col :span="7" class="footer-col">
             <div class="we-chat">
@@ -40,7 +40,7 @@
             <ul class="privacy">
               <li class="content-c1"><a class="content-c0" @click="openLayer">法律声明</a></li>
               <li class="content-c1"><a class="content-c0" @click="openPrivacy">隐私条款</a></li>
-              <li class="content-c1"><a class="content-c0" target="_blank" href="https://gitee.com/wells2333/spring-microservice-exam">开发者中心</a></li>
+              <li class="content-c1"><a class="content-c0" target="_blank" href="https://gitee.com/shimmerjordan/sz-education">开发者中心</a></li>
             </ul>
           </div>
         </el-col>
@@ -48,7 +48,7 @@
       <el-row :gutter="20">
         <el-col :span="12" :offset="6">
           <div class="cop">
-            <a class="content-c3" href="https://gitee.com/wells2333" target="_blank">
+            <a class="content-c3" href="https://gitee.com/shimmerjordan" target="_blank">
               <span class="content-c3">粤ICP备18038322号</span>
               <span class="content-c3">粤ICP备18038322号-1</span>
             </a>

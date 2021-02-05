@@ -34,7 +34,7 @@ Windows系统下consul的安装、启动、配置参考: https://www.cnblogs.com
 
 项目的二维码生成功能是依赖QRCode.jar这个jar包的，该jar包在源码的`docs/deploy`目录下，需要手动执行命令安装到本地的maven仓库，进入windos命令行，输入具体命令如下，注意文件目录替换成你jar包存放在本地实际的目录：
 
-`mvn install:install-file -Dfile=QRCode.jar -DgroupId=QRCode -DartifactId=QRCode -Dversion=3.0 -Dpackaging=jar -Dfile=D:\ProgramData\GitKraken_Repository\spring-microservice-exam\docs\deploy\QRCode.jar`
+`mvn install:install-file -Dfile=QRCode.jar -DgroupId=QRCode -DartifactId=QRCode -Dversion=3.0 -Dpackaging=jar -Dfile=D:\sz-education\docs\deploy\QRCode.jar`
 
 
 
@@ -70,7 +70,7 @@ Windows系统下consul的安装、启动、配置参考: https://www.cnblogs.com
 
 解决：
 
-- 从别处找到一个如下文件夹，放入到路径：D:\ProgramData\GitKraken_Repository\spring-microservice-exam\frontend\spring-microservice-exam-ui\node_modules
+- 从别处找到一个如下文件夹，放入到路径：D:\sz-education\frontend\sz-education-ui\node_modules
 
 ![image](docs\images\MyDeployNotes\image-20201104173228165.png)
 

@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.shimmerjordan</groupId>
-    <artifactId>spring-microservice-exam</artifactId>
+    <artifactId>sz-education</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
-    <name>spring-microservice-exam</name>
-    <description>微服务在线考试系统</description>
-    <url>https://github.com/shimmerjordan/spring-micoservices-exam.git</url>
+    <name>sz-education</name>
+    <description>轼辙云教育系统</description>
+    <url>https://github.com/shimmerjordan/sz-education.git</url>
     <developers>
         <developer>
             <name>shimmerjordan</name>
@@ -79,7 +79,7 @@
         <!-- docker -->
         <docker.maven.verion>1.4.3</docker.maven.verion>
         <docker.registry>registry.cn-hangzhou.aliyuncs.com</docker.registry>
-        <docker.namespace>spring-microservice-exam</docker.namespace>
+        <docker.namespace>sz-education</docker.namespace>
         <scanner.maven.version>3.3.0.603</scanner.maven.version>
 
         <!-- logstash -->
