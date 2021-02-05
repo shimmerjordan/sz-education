@@ -24,7 +24,7 @@ import java.util.Map;
  * redis配置
  *
  * @author shimmerjordan
- * @date 2021/3/16 20:40
+ * @date 2021/2/16 20:40
  */
 @Configuration
 @EnableCaching

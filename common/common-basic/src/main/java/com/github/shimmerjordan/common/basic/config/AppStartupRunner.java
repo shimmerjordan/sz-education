@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * 系统启动时的一些处理
  *
  * @author shimmerjordan
- * @date 2021/07/14 16:09
+ * @date 2021/02/14 16:09
  */
 @Slf4j
 @AllArgsConstructor
