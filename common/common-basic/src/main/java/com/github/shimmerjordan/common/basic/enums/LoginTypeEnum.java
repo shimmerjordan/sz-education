@@ -7,7 +7,7 @@ import lombok.Getter;
  * 登录类型
  *
  * @author shimmerjordan
- * @date 2021/07/02 09:45
+ * @date 2021/02/02 09:45
  */
 @Getter
 @AllArgsConstructor

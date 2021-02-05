@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @author shimmerjordan
- * @date 2021/07/05 15:05
+ * @date 2021/02/05 15:05
  */
 @Data
 public class SysConfigDto implements Serializable {
