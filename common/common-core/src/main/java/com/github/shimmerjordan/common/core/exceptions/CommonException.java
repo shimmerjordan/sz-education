@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * 公共异常
  *
  * @author shimmerjordan
- * @date 2021/3/16 20:28
+ * @date 2021/03/16 20:28
  */
 public class CommonException extends RuntimeException {
 
