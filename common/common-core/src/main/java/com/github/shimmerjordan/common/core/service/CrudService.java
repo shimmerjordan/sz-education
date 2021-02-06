@@ -12,11 +12,11 @@ import java.util.List;
 
 /**
  * @author shimmerjordan
- * @date 2018-08-25 17:22
+ * @date 2021/03/16 17:22
  */
 public abstract class CrudService<D extends CrudMapper<T>, T extends BaseEntity<T>> extends BaseService {
 
-    @Autowired
+    @Autowired(required = false)
     protected D dao;
 
     /**
