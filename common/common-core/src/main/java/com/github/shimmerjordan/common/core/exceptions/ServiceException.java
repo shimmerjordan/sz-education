@@ -5,7 +5,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * 服务异常
  *
  * @author shimmerjordan
- * @date 2021-10-08 12:56
+ * @date 2021/03/08 12:56
  */
 public class ServiceException extends CommonException {
 
