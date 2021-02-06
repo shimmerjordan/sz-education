@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 /**
  * @author shimmerjordan
- * @date 2021/3/22 15:27
+ * @date 2021/03/22 15:27
  */
 public class QRCode implements QRCodeImage {
     BufferedImage bufImg;

@@ -25,7 +25,7 @@ import java.util.Random;
  * 二维码工具类
  *
  * @author shimmerjordan
- * @date 2021/3/22 15:24
+ * @date 2021/03/22 15:24
  */
 public class QRCodeUtils {
 
@@ -449,7 +449,7 @@ public class QRCodeUtils {
     }
 
 //    public static void main(String[] args) {
-//        String imgPath = "C:\\Users\\gaung\\Desktop\\Michael_QRCode.png";
+//        String imgPath = "C:\\Users\\shimmerjordan\\Desktop\\Michael_QRCode.png";
 //        String encoderContent = "yx73715248x1903081000221";
 //        QRCodeUtils.encoderQRCode(encoderContent, imgPath, "png");
 //        System.out.println("========encoder success");
