@@ -92,7 +92,7 @@ sms:
   domain: ${SMS_DOMAIN:dysmsapi.aliyuncs.com}
   signName: ${SMS_SIGN_NAME:test}
   templateCode: ${SMS_TEMP_CODE:SMS_171192294}
-  version: ${SMS_VERSION:2017-05-25}
+  version: ${SMS_VERSION:2020-05-25}
   action: ${SMS_ACTION:SendSms}
 
 ignore:

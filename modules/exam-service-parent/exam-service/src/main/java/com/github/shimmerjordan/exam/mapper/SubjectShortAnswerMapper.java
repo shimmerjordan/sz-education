@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 简答题Mapper
  *
  * @author shimmerjordan
- * @date 2016/6/16 14:52
+ * @date 2020/6/16 14:52
  */
 @Mapper
 public interface SubjectShortAnswerMapper extends CrudMapper<SubjectShortAnswer> {
