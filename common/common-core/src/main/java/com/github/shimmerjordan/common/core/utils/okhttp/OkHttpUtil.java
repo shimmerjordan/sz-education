@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  * okHttp工具类
  *
  * @author shimmerjordan
- * @date 2018-09-07 20:31
+ * @date 2021/03/12 20:31
  */
 public class OkHttpUtil {
 

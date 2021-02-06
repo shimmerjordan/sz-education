@@ -13,7 +13,7 @@ import java.io.InputStream;
 /**
  * @author shimmerjordan
  * @version V1.0
- * @date 2018-09-09 10:14
+ * @date 2021/03/12 10:14
  */
 public class OkHttpRequestBodyUtil {
 
@@ -21,7 +21,7 @@ public class OkHttpRequestBodyUtil {
      * @param
      * @return
      * @author shimmerjordan
-     * @date 2018/9/9 10:22
+     * @date 2021/03/12 10:22
      */
     public static RequestBody create(final MediaType mediaType, final InputStream inputStream) {
         return new RequestBody() {
