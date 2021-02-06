@@ -22,7 +22,7 @@ import java.awt.image.BufferedImage;
  * 验证码
  *
  * @author shimmerjordan
- * @date 2020/09-14-19:24
+ * @date 2020/12-14-19:24
  */
 @AllArgsConstructor
 @Api("生成验证码")

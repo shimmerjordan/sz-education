@@ -6,7 +6,7 @@ import java.util.UUID;
  * id生成工具类
  *
  * @author shimmerjordan
- * @date 2020/08/23 12:03
+ * @date 2020/12/23 12:03
  */
 public class IdGen {
 
@@ -18,7 +18,7 @@ public class IdGen {
     }
 
     /**
-     * 基于snowflake算法生成ID
+     * 基于snowflake算法生成IDs
      *
      * @return String
      * @author shimmerjordan
