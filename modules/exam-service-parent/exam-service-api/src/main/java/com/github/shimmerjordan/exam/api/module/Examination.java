@@ -12,7 +12,7 @@ import java.util.Date;
  * 考试
  *
  * @author shimmerjordan
- * @date 2020/11/8 20:47
+ * @date 2021/05/8 20:47
  */
 @Data
 public class Examination extends BaseEntity<Examination> {

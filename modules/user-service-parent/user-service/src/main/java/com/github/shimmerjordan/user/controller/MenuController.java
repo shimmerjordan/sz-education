@@ -226,7 +226,7 @@ public class MenuController extends BaseController {
      *
      * @param ids ids
      * @author shimmerjordan
-     * @date 2020/11/28 12:46
+     * @date 2021/05/28 12:46
      */
     @PostMapping("export")
     @AdminTenantTeacherAuthorization
@@ -257,7 +257,7 @@ public class MenuController extends BaseController {
      * @param file file
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/28 12:51
+     * @date 2021/05/28 12:51
      */
     @PostMapping("import")
     @AdminTenantTeacherAuthorization

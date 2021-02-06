@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 课程
  *
  * @author shimmerjordan
- * @date 2020/11/8 20:43
+ * @date 2021/05/8 20:43
  */
 @Data
 public class Course extends BaseEntity<Course> {

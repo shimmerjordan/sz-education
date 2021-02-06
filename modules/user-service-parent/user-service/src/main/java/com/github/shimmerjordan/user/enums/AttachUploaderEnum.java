@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * 附件存储类型
  * @author shimmerjordan
- * @date 2020/04/05 14:01
+ * @date 2021/04/05 14:01
  */
 @Getter
 public enum AttachUploaderEnum {

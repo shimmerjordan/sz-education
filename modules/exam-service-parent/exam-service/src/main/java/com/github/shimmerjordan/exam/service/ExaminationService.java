@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * 考试service
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:19
+ * @date 2021/05/8 21:19
  */
 @Slf4j
 @AllArgsConstructor
@@ -92,7 +92,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param examination examination
 	 * @return PageInfo
 	 * @author shimmerjordan
-	 * @date 2020/11/10 21:10
+	 * @date 2021/05/10 21:10
 	 */
 	public PageInfo<ExaminationDto> examinationList(String pageNum, String pageSize, String sort, String order, Examination examination) {
 		examination.setTenantCode(SysUtil.getTenantCode());
@@ -247,7 +247,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param subjectDto subjectDto
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/3/12 1:00 下午
+	 * @date 2021/3/12 1:00 下午
 	 */
     public List<SubjectDto> allSubjectList(SubjectDto subjectDto) {
 		// 查询考试题目关联表
@@ -287,7 +287,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 *
 	 * @param examinationDto examinationDto
 	 * @author shimmerjordan
-	 * @date 2020/03/12 22:32:30
+	 * @date 2021/03/12 22:32:30
 	 */
 	public void initExaminationLogo(ExaminationDto examinationDto) {
 		try {
@@ -313,7 +313,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * 根据考试ID生成二维码
 	 * @param examinationId examinationId
 	 * @author shimmerjordan
-	 * @date 2020/3/15 1:16 下午
+	 * @date 2021/3/15 1:16 下午
 	 */
 	public byte[] produceCode(Long examinationId) {
 		Examination examination = this.get(examinationId);
@@ -332,7 +332,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * 根据考试ID生成二维码
 	 * @param examinationId examinationId
 	 * @author shimmerjordan
-	 * @date 2020/3/21 5:38 下午
+	 * @date 2021/3/21 5:38 下午
 	 */
 	public byte[] produceCodeV2(Long examinationId) {
 		Examination examination = this.get(examinationId);

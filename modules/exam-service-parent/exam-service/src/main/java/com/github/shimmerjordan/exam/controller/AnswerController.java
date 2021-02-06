@@ -28,7 +28,7 @@ import java.util.List;
  * 答题controller
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:24
+ * @date 2021/05/8 21:24
  */
 @Slf4j
 @AllArgsConstructor
@@ -47,7 +47,7 @@ public class AnswerController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:23
+     * @date 2021/05/10 21:23
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取答题信息", notes = "根据答题id获取答题详细信息")
@@ -66,7 +66,7 @@ public class AnswerController extends BaseController {
      * @param answer   answer
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/11/10 21:25
+     * @date 2021/05/10 21:25
      */
     @GetMapping("answerList")
     @ApiOperation(value = "获取答题列表")
@@ -92,7 +92,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:26
+     * @date 2021/05/10 21:26
      */
     @PostMapping
     @ApiOperation(value = "创建答题", notes = "创建答题")
@@ -109,7 +109,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:27
+     * @date 2021/05/10 21:27
      */
     @PutMapping
     @ApiOperation(value = "更新答题信息", notes = "根据答题id更新答题的基本信息")
@@ -143,7 +143,7 @@ public class AnswerController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:28
+     * @date 2021/05/10 21:28
      */
     @DeleteMapping("{id}")
     @ApiOperation(value = "删除答题", notes = "根据ID删除答题")
@@ -355,7 +355,7 @@ public class AnswerController extends BaseController {
      * @param examinationId examinationId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/03/15 16:08
+     * @date 2021/03/15 16:08
      */
     @PostMapping("anonymousUser/submitAll/{examinationId}")
     @ApiOperation(value = "提交答题", notes = "提交答题")

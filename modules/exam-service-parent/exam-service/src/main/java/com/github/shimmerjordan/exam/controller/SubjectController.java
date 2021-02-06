@@ -32,7 +32,7 @@ import java.util.List;
  * 题目controller
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:29
+ * @date 2021/05/8 21:29
  */
 @Slf4j
 @AllArgsConstructor
@@ -51,7 +51,7 @@ public class SubjectController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:43
+     * @date 2021/05/10 21:43
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取题目信息", notes = "根据题目id获取题目详细信息")
@@ -72,7 +72,7 @@ public class SubjectController extends BaseController {
      * @param subject  subject
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/11/10 21:43
+     * @date 2021/05/10 21:43
      */
     @GetMapping("subjectList")
     @ApiOperation(value = "获取题目列表")
@@ -98,7 +98,7 @@ public class SubjectController extends BaseController {
      * @param subject subject
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:43
+     * @date 2021/05/10 21:43
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -119,7 +119,7 @@ public class SubjectController extends BaseController {
      * @param subject subject
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:43
+     * @date 2021/05/10 21:43
      */
     @PutMapping
     @AdminTenantTeacherAuthorization
@@ -140,7 +140,7 @@ public class SubjectController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/10 21:43
+     * @date 2021/05/10 21:43
      */
     @DeleteMapping("{id}")
     @AdminTenantTeacherAuthorization
@@ -164,7 +164,7 @@ public class SubjectController extends BaseController {
      *
      * @param ids ids
      * @author shimmerjordan
-     * @date 2020/11/28 12:53
+     * @date 2021/05/28 12:53
      */
     @PostMapping("export")
     @AdminTenantTeacherAuthorization
@@ -197,7 +197,7 @@ public class SubjectController extends BaseController {
      * @param file          file
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/28 12:59
+     * @date 2021/05/28 12:59
      */
     @RequestMapping("import")
     @AdminTenantTeacherAuthorization

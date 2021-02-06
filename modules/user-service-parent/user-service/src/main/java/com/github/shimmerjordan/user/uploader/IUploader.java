@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 /**
  * @author shimmerjordan
- * @date 2020/04/05 13:36
+ * @date 2021/04/05 13:36
  */
 public interface IUploader {
 

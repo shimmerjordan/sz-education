@@ -49,7 +49,7 @@ public class RoleController extends BaseController {
      * @param id id
      * @return RoleVo
      * @author shimmerjordan
-     * @date 2020/9/14 18:20
+     * @date 2021/04/14 18:20
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取角色信息", notes = "根据角色id获取角色详细信息")
@@ -111,7 +111,7 @@ public class RoleController extends BaseController {
      * @param role role
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/9/14 18:22
+     * @date 2021/04/14 18:22
      */
     @PutMapping
     @AdminTenantTeacherAuthorization
@@ -153,7 +153,7 @@ public class RoleController extends BaseController {
      * @param role role
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/9/14 18:23
+     * @date 2021/04/14 18:23
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -171,7 +171,7 @@ public class RoleController extends BaseController {
      * @param id id
      * @return RoleVo
      * @author shimmerjordan
-     * @date 2020/9/14 18:24
+     * @date 2021/04/14 18:24
      */
     @DeleteMapping("/{id}")
     @AdminTenantTeacherAuthorization

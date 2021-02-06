@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
  * 答题service
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:17
+ * @date 2021/05/8 21:17
  */
 @Slf4j
 @AllArgsConstructor
@@ -676,7 +676,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param examinationId examinationId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/03/15 16:08
+     * @date 2021/03/15 16:08
      */
     @Transactional
 	public boolean anonymousUserSubmit(Long examinationId, String identifier, List<SubjectDto> subjectDtos) {
@@ -739,7 +739,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param distinctAnswer distinctAnswer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/03/15 16:21
+     * @date 2021/03/15 16:21
      */
     public AnswerHandleResult handleAll(Map<String, List<Answer>> distinctAnswer) {
         // 暂时只自动统计单选题、多选题、判断题，简答题由老师阅卷批改
@@ -757,7 +757,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param identifier identifier
      * @return StartExamDto
      * @author shimmerjordan
-     * @date 2020/3/21 5:51 下午
+     * @date 2021/3/21 5:51 下午
      */
     @Transactional
     public StartExamDto anonymousUserStart(Long examinationId, String identifier) {

@@ -137,7 +137,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userVo userVo
      * @return User
      * @author shimmerjordan
-     * @date 2020/9/11 23:44
+     * @date 2021/04/11 23:44
      */
     public UserInfoDto findUserInfo(UserVo userVo) {
         // 返回结果
@@ -431,7 +431,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param random    random
      * @param imageCode imageCode
      * @author shimmerjordan
-     * @date 2020/9/14 20:12
+     * @date 2021/04/14 20:12
      */
     public void saveImageCode(String random, String imageCode) {
         redisTemplate.opsForValue().set(CommonConstant.DEFAULT_CODE_KEY + LoginTypeEnum.PWD.getType() + "@" + random, imageCode, SecurityConstant.DEFAULT_IMAGE_EXPIRE, TimeUnit.SECONDS);

@@ -39,7 +39,7 @@ public class ValidateCodeController extends BaseController {
      *
      * @param random random
      * @author shimmerjordan
-     * @date 2020/9/14 20:13
+     * @date 2021/04/14 20:13
      */
     @ApiOperation(value = "生成验证码", notes = "生成验证码")
     @ApiImplicitParams({

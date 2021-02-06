@@ -288,7 +288,7 @@ public class UserController extends BaseController {
      *
      * @param ids ids
      * @author shimmerjordan
-     * @date 2020/11/26 22:11
+     * @date 2021/05/26 22:11
      */
     @PostMapping("export")
     @AdminTenantTeacherAuthorization
@@ -333,7 +333,7 @@ public class UserController extends BaseController {
      * @param file file
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/11/28 12:44
+     * @date 2021/05/28 12:44
      */
     @PostMapping("import")
     @AdminTenantTeacherAuthorization

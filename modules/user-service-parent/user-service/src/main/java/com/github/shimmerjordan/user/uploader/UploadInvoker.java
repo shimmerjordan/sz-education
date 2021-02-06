@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * @author shimmerjordan
- * @date 2020/04/05 14:16
+ * @date 2021/04/05 14:16
  */
 @Slf4j
 public class UploadInvoker {
@@ -44,7 +44,7 @@ public class UploadInvoker {
      * @param bytes      bytes
      * @return Attachment
      * @author shimmerjordan
-     * @date 2020/04/05 14:27
+     * @date 2021/04/05 14:27
      */
     public Attachment upload(Attachment attachment, byte[] bytes) {
         if (attachment == null || bytes == null)
@@ -71,7 +71,7 @@ public class UploadInvoker {
      * @param attachment attachment
      * @return Attachment
      * @author shimmerjordan
-     * @date 2020/04/05 14:29
+     * @date 2021/04/05 14:29
      */
     public InputStream download(Attachment attachment) {
         if (attachment == null)
@@ -88,7 +88,7 @@ public class UploadInvoker {
      * @param attachment attachment
      * @return Attachment
      * @author shimmerjordan
-     * @date 2020/04/05 14:29
+     * @date 2021/04/05 14:29
      */
     public boolean delete(Attachment attachment) {
         if (attachment == null)
@@ -105,7 +105,7 @@ public class UploadInvoker {
      * @param ids ids
      * @return Attachment
      * @author shimmerjordan
-     * @date 2020/04/05 15:03
+     * @date 2021/04/05 15:03
      */
     public boolean deleteAll(Long[] ids) {
         boolean result = false;
@@ -130,7 +130,7 @@ public class UploadInvoker {
      * @param uploadType uploadType
      * @return IUploader
      * @author shimmerjordan
-     * @date 2020/04/05 14:17
+     * @date 2021/04/05 14:17
      */
     private IUploader getUploader(Integer uploadType) {
         IUploader uploader;

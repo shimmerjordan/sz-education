@@ -24,7 +24,7 @@ import java.util.Random;
  * 课程service
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:18
+ * @date 2021/05/8 21:18
  */
 @Slf4j
 @Service
@@ -71,7 +71,7 @@ public class CourseService extends CrudService<CourseMapper, Course> {
      * @param page page
      * @param course course
      * @author shimmerjordan
-     * @date 2020/03/18 20:38
+     * @date 2021/03/18 20:38
      */
     @Override
     public PageInfo<Course> findPage(PageInfo<Course> page, Course course) {
@@ -132,7 +132,7 @@ public class CourseService extends CrudService<CourseMapper, Course> {
      *
      * @param courseList courseList
      * @author shimmerjordan
-     * @date 2020/03/18 20:38
+     * @date 2021/03/18 20:38
      */
     public void initLogoUrl(List<Course> courseList) {
         try {

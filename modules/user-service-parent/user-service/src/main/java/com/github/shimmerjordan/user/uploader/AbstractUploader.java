@@ -13,7 +13,7 @@ import java.io.InputStream;
 
 /**
  * @author shimmerjordan
- * @date 2020/04/05 13:37
+ * @date 2021/04/05 13:37
  */
 public abstract class AbstractUploader implements IUploader {
 

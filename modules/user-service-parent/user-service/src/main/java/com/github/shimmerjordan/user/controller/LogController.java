@@ -41,7 +41,7 @@ public class LogController extends BaseController {
      * @param id id
      * @return Log
      * @author shimmerjordan
-     * @date 2020/9/14 18:20
+     * @date 2021/04/14 18:20
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取日志信息", notes = "根据日志id获取日志详细信息")

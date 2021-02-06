@@ -9,7 +9,7 @@ import java.util.List;
  * Crud Mapper
  *
  * @author shimmerjordan
- * @date 2020/03/24 18:59
+ * @date 2021/03/24 18:59
  */
 public interface CrudMapper<T> extends BaseMapper {
 

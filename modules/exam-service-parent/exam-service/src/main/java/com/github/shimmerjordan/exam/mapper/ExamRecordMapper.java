@@ -11,7 +11,7 @@ import java.util.List;
  * 考试记录Mapper
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:12
+ * @date 2021/05/8 21:12
  */
 @Mapper
 public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {

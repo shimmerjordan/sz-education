@@ -10,7 +10,7 @@ import java.util.List;
  * 答题Mapper
  *
  * @author shimmerjordan
- * @date 2020/11/8 21:09
+ * @date 2021/05/8 21:09
  */
 @Mapper
 public interface AnswerMapper extends CrudMapper<Answer> {

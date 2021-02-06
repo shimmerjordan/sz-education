@@ -12,7 +12,7 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 /**
  * oauth2 client 配置
  * @author shimmerjordan
- * @date 2020/3/7 3:25 下午
+ * @date 2021/3/7 3:25 下午
  */
 @Configuration
 @Import(FilterIgnorePropertiesConfig.class)

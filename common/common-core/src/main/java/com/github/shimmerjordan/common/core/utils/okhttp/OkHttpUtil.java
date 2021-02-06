@@ -67,7 +67,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/7 20:37
+     * @date 2021/04/7 20:37
      */
     public String get(String url, Map<String, Object> header) throws Exception {
         return getResponseBody(url, header).string();
@@ -80,7 +80,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/11 10:24
+     * @date 2021/04/11 10:24
      */
     public ResponseBody getResponseBody(String url, Map<String, Object> header) throws Exception {
         return getResponse(url, header).body();
@@ -109,7 +109,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/9 10:32
+     * @date 2021/04/9 10:32
      */
     public String postJson(String url, Map<String, Object> header, Map<String, Object> data) {
         try {
@@ -134,7 +134,7 @@ public class OkHttpUtil {
      * @param object object
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/9 10:32
+     * @date 2021/04/9 10:32
      */
     public String postJson(String url, Map<String, Object> header, Object object) {
         try {
@@ -159,7 +159,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/9 10:32
+     * @date 2021/04/9 10:32
      */
     public String postForm(String url, Map<String, Object> header, Map<String, Object> data) throws Exception {
         logger.debug("post data:{}", data);
@@ -178,7 +178,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/15 10:36
+     * @date 2021/04/15 10:36
      */
     public String postFile(String url, Map<String, Object> header, String filePath) throws Exception {
         Request.Builder builder = new Request.Builder().url(url).post(RequestBody.create(MediaType.parse("application/octet-stream"), new File(filePath)));
@@ -197,7 +197,7 @@ public class OkHttpUtil {
      * @param file   file
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/9 10:32
+     * @date 2021/04/9 10:32
      */
     public String put(String url, Map<String, Object> header, String file) throws Exception {
         RequestBody body = RequestBody.create(MediaType.parse("application/octet-stream"), new File(file));
@@ -217,7 +217,7 @@ public class OkHttpUtil {
      * @param bytes  bytes
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/14 17:14
+     * @date 2021/04/14 17:14
      */
     public String putBytes(String url, Map<String, Object> header, byte[] bytes) throws Exception {
         RequestBody body = RequestBody.create(MediaType.parse("application/octet-stream"), bytes);
@@ -257,7 +257,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/9 10:49
+     * @date 2021/04/9 10:49
      */
     public String patch(String url, Map<String, Object> header, Map<String, Object> data) throws Exception {
         logger.debug("patch data:{}", data);
@@ -276,7 +276,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/11 10:28
+     * @date 2021/04/11 10:28
      */
     public String delete(String url, Map<String, Object> header) throws Exception {
         return deleteResponse(url, header).body().string();
@@ -289,7 +289,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/9/12 15:15
+     * @date 2021/04/12 15:15
      */
     public Response deleteResponse(String url, Map<String, Object> header) throws Exception {
         Request.Builder builder = new Request.Builder().url(url).delete();
@@ -302,7 +302,7 @@ public class OkHttpUtil {
      * @param data data
      * @return JSONObject
      * @author shimmerjordan
-     * @date 2020/9/4 20:24
+     * @date 2021/04/4 20:24
      */
     private JSONObject mapToJSONObject(Map<String, Object> data) {
         JSONObject jsonObject = new JSONObject();
