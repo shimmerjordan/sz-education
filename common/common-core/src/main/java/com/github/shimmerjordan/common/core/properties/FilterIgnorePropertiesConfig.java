@@ -13,7 +13,7 @@ import java.util.List;
  * 不做权限拦截的URL
  *
  * @author shimmerjordan
- * @date 2021/3/16 20:39
+ * @date 2021/03/16 20:39
  */
 @Data
 @Configuration
