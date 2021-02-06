@@ -26,7 +26,7 @@ import java.util.List;
  * Swagger配置
  *
  * @author shimmerjordan
- * @date 2021/3/26 16:26
+ * @date 2021/03/26 16:26
  */
 @Configuration
 @EnableSwagger2
@@ -80,7 +80,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("硕果云")
+                .title("轼辙云")
                 .description("https://gitee.com/shimmerjordan/sz-education")
                 .termsOfServiceUrl("https://gitee.com/shimmerjordan/sz-education")
                 .contact(new Contact("shimmerjordan", "https://gitee.com/shimmerjordan/sz-education", "shimmerjordan@foxmail.com"))
