@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * 判断题
  *
  * @author shimmerjordan
- * @date 2021-07-16 12:57
+ * @date 2021/07-16 12:57
  */
 @Data
 public class SubjectJudgement extends BaseEntity<SubjectJudgement> {

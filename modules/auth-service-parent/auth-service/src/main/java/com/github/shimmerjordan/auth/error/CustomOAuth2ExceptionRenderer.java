@@ -26,7 +26,7 @@ import java.util.List;
  * render异常
  *
  * @author shimmerjordan
- * @date 2021-11-11 21:29
+ * @date 2021/11-11 21:29
  */
 @Slf4j
 public class CustomOAuth2ExceptionRenderer {

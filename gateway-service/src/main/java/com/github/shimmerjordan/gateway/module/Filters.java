@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 网关过滤器
  *
  * @author shimmerjordan
- * @date 2021-08-16 17:48
+ * @date 2021/08-16 17:48
  */
 @Data
 public class Filters extends BaseEntity<Filters> {

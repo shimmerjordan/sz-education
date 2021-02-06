@@ -9,7 +9,7 @@ import lombok.Data;
  * 菜单dto
  *
  * @author shimmerjordan
- * @date 2020-09-13 20:39
+ * @date 2020/09-13 20:39
  */
 @Data
 public class MenuDto extends TreeEntity<MenuDto> {

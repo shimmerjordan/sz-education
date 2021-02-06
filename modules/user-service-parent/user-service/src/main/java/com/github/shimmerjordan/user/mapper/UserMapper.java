@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 用户mapper接口
  *
  * @author shimmerjordan
- * @date 2020-08-25 15:27
+ * @date 2020/08-25 15:27
  */
 @Mapper
 public interface UserMapper extends CrudMapper<User> {

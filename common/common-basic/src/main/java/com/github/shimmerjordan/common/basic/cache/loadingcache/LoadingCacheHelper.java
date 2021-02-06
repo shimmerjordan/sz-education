@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
  * 2. LoadingCacheHelper.getInstance().get(SimpleCacheLoader.class, "key");
  *
  * @author shimmerjordan
- * @date 2021-11-25 16:38
+ * @date 2021/11-25 16:38
  */
 @Slf4j
 public class LoadingCacheHelper {

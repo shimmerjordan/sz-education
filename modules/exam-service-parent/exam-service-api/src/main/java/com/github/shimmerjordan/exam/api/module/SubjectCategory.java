@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * 题目分类
  *
  * @author shimmerjordan
- * @date 2020-12-04 11:18
+ * @date 2020/12-04 11:18
  */
 @Data
 public class SubjectCategory extends BaseEntity<SubjectCategory> {

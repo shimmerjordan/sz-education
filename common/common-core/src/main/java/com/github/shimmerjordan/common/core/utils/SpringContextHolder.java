@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * 以静态变量保存Spring ApplicationContext
  *
  * @author shimmerjordan
- * @date 2020-08-24 19:04
+ * @date 2020/08-24 19:04
  */
 @Service
 @Lazy(false)

@@ -28,7 +28,7 @@ import java.time.LocalDateTime;
  * 处理登录成功事件
  *
  * @author shimmerjordan
- * @date 2021-11-11 23:48
+ * @date 2021/11-11 23:48
  */
 @Slf4j
 @AllArgsConstructor
@@ -95,7 +95,7 @@ public class LoginSuccessListener implements ApplicationListener<CustomAuthentic
 	 *
 	 * @return ServletRequestAttributes
 	 * @author shimmerjordan
-	 * @date 2021-11-12 00:15
+	 * @date 2021/11-12 00:15
 	 */
 	private static ServletRequestAttributes currentRequestAttributes() {
 		try {

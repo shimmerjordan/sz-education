@@ -21,7 +21,7 @@ import java.util.List;
  * 用户服务
  *
  * @author shimmerjordan
- * @date 2020-12-30 23:21
+ * @date 2020/12-30 23:21
  */
 @FeignClient(value = ServiceConstant.USER_SERVICE, configuration = CustomFeignConfig.class, fallbackFactory = UserServiceClientFallbackFactory.class)
 public interface UserServiceClient {

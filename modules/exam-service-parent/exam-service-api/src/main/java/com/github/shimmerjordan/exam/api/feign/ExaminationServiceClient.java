@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * FeignClient需要指定configuration为CustomFeignConfig，用于服务间调用携带token
  *
  * @author shimmerjordan
- * @date 2021-03-01 15:21
+ * @date 2021/03-01 15:21
  */
 @FeignClient(name = ServiceConstant.EXAM_SERVICE, configuration = CustomFeignConfig.class, fallback = ExaminationServiceClientFallbackImpl.class)
 public interface ExaminationServiceClient {

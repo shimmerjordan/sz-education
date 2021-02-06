@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 系统配置controller
  *
  * @author shimmerjordan
- * @date 2021-02-28 17:29
+ * @date 2021/02-28 17:29
  */
 @AllArgsConstructor
 @Api("系统配置信息管理")

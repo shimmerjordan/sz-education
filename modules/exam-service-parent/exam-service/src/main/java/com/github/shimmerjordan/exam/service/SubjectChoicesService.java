@@ -109,7 +109,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021-09-14 16:47
+     * @date 2021/09-14 16:47
      */
     public SubjectChoices getByCurrentId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -128,7 +128,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021-09-14 16:47
+     * @date 2021/09-14 16:47
      */
     public SubjectChoices getByPreviousId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();

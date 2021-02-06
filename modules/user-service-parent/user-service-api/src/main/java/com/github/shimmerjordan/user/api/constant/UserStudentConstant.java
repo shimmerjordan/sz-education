@@ -4,7 +4,7 @@ package com.github.shimmerjordan.user.api.constant;
  * 用户学生常量
  *
  * @author shimmerjordan
- * @date 2021-07-25 13:08
+ * @date 2021/07-25 13:08
  */
 public class UserStudentConstant {
 

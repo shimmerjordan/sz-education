@@ -19,7 +19,7 @@ import java.io.IOException;
  * accessDeniedHandler，return ResponseBean
  *
  * @author shimmerjordan
- * @date 2021-11-11 21:24
+ * @date 2021/11-11 21:24
  */
 @Slf4j
 public class CustomOAuth2AccessDeniedHandler extends AbstractOAuth2SecurityExceptionHandler

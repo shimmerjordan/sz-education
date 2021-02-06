@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  * 从数据库获取用户信息
  *
  * @author shimmerjordan
- * @date 2021-03-14 14:36
+ * @date 2021/03-14 14:36
  */
 @AllArgsConstructor
 @Service("userDetailsService")

@@ -13,7 +13,7 @@ import java.util.List;
  * 用户基本信息
  *
  * @author shimmerjordan
- * @date 2020-08-25 15:30
+ * @date 2020/08-25 15:30
  */
 @Data
 public class User extends BaseEntity<User> {

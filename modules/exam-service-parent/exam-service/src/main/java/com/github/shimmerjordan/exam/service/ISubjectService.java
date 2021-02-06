@@ -31,7 +31,7 @@ public interface ISubjectService {
      * @param nextType      -1：当前题目，0：下一题，1：上一题
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021-09-14 16:33
+     * @date 2021/09-14 16:33
      */
     SubjectDto getNextByCurrentIdAndType(Long examinationId, Long previousId, Integer nextType);
 

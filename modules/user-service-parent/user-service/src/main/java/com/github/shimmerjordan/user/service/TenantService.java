@@ -55,7 +55,7 @@ public class TenantService extends CrudService<TenantMapper, Tenant> {
      * @param tenant tenant
      * @return int
      * @author shimmerjordan
-     * @date 2021-09-02 11:41
+     * @date 2021/09-02 11:41
      */
     @Transactional
     @CacheEvict(value = "tenant", key = "#tenant.tenantCode")

@@ -20,7 +20,7 @@ import java.util.UUID;
 
 /**
  * @author shimmerjordan
- * @date 2020-04-19 11:32
+ * @date 2020/04-19 11:32
  */
 public class CustomTokenServices implements AuthorizationServerTokenServices, ResourceServerTokenServices,
         ConsumerTokenServices, InitializingBean {

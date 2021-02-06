@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * 考试服务熔断
  *
  * @author shimmerjordan
- * @date 2021-03-01 15:22
+ * @date 2021/03-01 15:22
  */
 @Slf4j
 @Service

@@ -5,7 +5,7 @@ import com.github.shimmerjordan.common.core.model.ResponseBean;
 
 /**
  * @author shimmerjordan
- * @date 2021-10-08 12:03
+ * @date 2021/10-08 12:03
  */
 public class ResponseUtil {
 

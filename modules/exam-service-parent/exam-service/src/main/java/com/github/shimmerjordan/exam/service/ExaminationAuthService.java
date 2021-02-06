@@ -14,7 +14,7 @@ import java.util.List;
  * 考试权限Service
  *
  * @author shimmerjordan
- * @date 2021-07-16 14:04
+ * @date 2021/07-16 14:04
  */
 @Slf4j
 @AllArgsConstructor
@@ -27,7 +27,7 @@ public class ExaminationAuthService extends CrudService<ExaminationAuthMapper, E
      * @param examinationAuth examinationAuth
      * @return List<ExaminationAuth>
      * @author shimmerjordan
-     * @date 2021-07-16 14:06
+     * @date 2021/07-16 14:06
      */
     public List<ExaminationAuth> finListByUserId(ExaminationAuth examinationAuth) {
         return null;
@@ -39,7 +39,7 @@ public class ExaminationAuthService extends CrudService<ExaminationAuthMapper, E
      * @param examinationAuth examinationAuth
      * @return List<ExaminationAuth>ß
      * @author shimmerjordan
-     * @date 2021-07-16 14:07
+     * @date 2021/07-16 14:07
      */
     public List<ExaminationAuth> finListByExaminationId(ExaminationAuth examinationAuth) {
         return null;
@@ -51,7 +51,7 @@ public class ExaminationAuthService extends CrudService<ExaminationAuthMapper, E
      * @param examinationAuth examinationAuth
      * @return int
      * @author shimmerjordan
-     * @date 2021-07-16 14:08
+     * @date 2021/07-16 14:08
      */
     @Transactional
     public int deleteByExaminationId(ExaminationAuth examinationAuth) {
@@ -64,7 +64,7 @@ public class ExaminationAuthService extends CrudService<ExaminationAuthMapper, E
      * @param examinationAuth examinationAuth
      * @return int
      * @author shimmerjordan
-     * @date 2021-07-16 14:09
+     * @date 2021/07-16 14:09
      */
     @Transactional
     public int deleteByUserId(ExaminationAuth examinationAuth) {
