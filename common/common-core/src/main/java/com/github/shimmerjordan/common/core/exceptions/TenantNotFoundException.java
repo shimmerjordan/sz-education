@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * 租户不存在异常
  *
  * @author shimmerjordan
- * @date 2021/5/26 10:14
+ * @date 2021/03/26 10:14
  */
 public class TenantNotFoundException extends CommonException {
 
