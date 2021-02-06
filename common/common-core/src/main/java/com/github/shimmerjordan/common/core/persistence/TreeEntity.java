@@ -9,7 +9,7 @@ import java.util.List;
  * 树形实体
  *
  * @author shimmerjordan
- * @date 2018-09-13 20:40
+ * @date 2020/03/26 20:40
  */
 @Data
 public abstract class TreeEntity<T> extends BaseEntity<T> {
