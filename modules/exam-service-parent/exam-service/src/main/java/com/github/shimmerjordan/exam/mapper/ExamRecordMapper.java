@@ -11,7 +11,7 @@ import java.util.List;
  * 考试记录Mapper
  *
  * @author shimmerjordan
- * @date 2018/11/8 21:12
+ * @date 2020/11/8 21:12
  */
 @Mapper
 public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
@@ -22,7 +22,7 @@ public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
      * @param examRecord examRecord
      * @return Score
      * @author shimmerjordan
-     * @date 2018/12/26 13:56
+     * @date 2020/12/26 13:56
      */
     ExaminationRecord getByUserIdAndExaminationId(ExaminationRecord examRecord);
 

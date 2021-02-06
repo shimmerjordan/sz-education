@@ -2,7 +2,7 @@ package com.github.shimmerjordan.common.core.utils;
 
 /**
  * @author shimmerjordan
- * @date 2018/11/26 22:47
+ * @date 2020/11/26 22:47
  */
 public class ObjectUtil {
 

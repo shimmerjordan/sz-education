@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @author shimmerjordan
- * @date 2018-08-28 20:40
+ * @date 2020-08-28 20:40
  */
 @Data
 public class MenuVo extends BaseEntity<MenuVo> {

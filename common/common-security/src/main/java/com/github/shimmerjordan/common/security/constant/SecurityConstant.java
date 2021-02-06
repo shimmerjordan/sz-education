@@ -2,7 +2,7 @@ package com.github.shimmerjordan.common.security.constant;
 
 /**
  * @author shimmerjordan
- * @date 2018-08-25 14:08
+ * @date 2020-08-25 14:08
  */
 public class SecurityConstant {
 

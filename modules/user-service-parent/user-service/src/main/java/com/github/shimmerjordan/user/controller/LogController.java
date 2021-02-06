@@ -24,7 +24,7 @@ import javax.validation.Valid;
  * 日志controller
  *
  * @author shimmerjordan
- * @date 2018/10/31 20:48
+ * @date 2020/10/31 20:48
  */
 @Slf4j
 @AllArgsConstructor
@@ -41,7 +41,7 @@ public class LogController extends BaseController {
      * @param id id
      * @return Log
      * @author shimmerjordan
-     * @date 2018/9/14 18:20
+     * @date 2020/9/14 18:20
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取日志信息", notes = "根据日志id获取日志详细信息")
@@ -65,7 +65,7 @@ public class LogController extends BaseController {
      * @param log      log
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2018/10/24 0024 22:13
+     * @date 2020/10/24 0024 22:13
      */
     @GetMapping("logList")
     @ApiOperation(value = "获取日志列表")
@@ -107,7 +107,7 @@ public class LogController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/10/31 21:27
+     * @date 2020/10/31 21:27
      */
     @DeleteMapping("/{id}")
     @AdminAuthorization
@@ -125,7 +125,7 @@ public class LogController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/12/4 10:12
+     * @date 2020/12/4 10:12
      */
     @PostMapping("deleteAll")
     @AdminAuthorization

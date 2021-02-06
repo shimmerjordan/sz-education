@@ -7,7 +7,7 @@ import lombok.Data;
 
 /**
  * @author shimmerjordan
- * @date 2018/12/4 22:04
+ * @date 2020/12/4 22:04
  */
 @Data
 public class SubjectCategoryDto extends TreeEntity<SubjectCategoryDto> {

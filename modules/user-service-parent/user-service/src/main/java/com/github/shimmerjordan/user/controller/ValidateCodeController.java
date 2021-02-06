@@ -22,7 +22,7 @@ import java.awt.image.BufferedImage;
  * 验证码
  *
  * @author shimmerjordan
- * @date 2018-09-14-19:24
+ * @date 2020-09-14-19:24
  */
 @AllArgsConstructor
 @Api("生成验证码")
@@ -39,7 +39,7 @@ public class ValidateCodeController extends BaseController {
      *
      * @param random random
      * @author shimmerjordan
-     * @date 2018/9/14 20:13
+     * @date 2020/9/14 20:13
      */
     @ApiOperation(value = "生成验证码", notes = "生成验证码")
     @ApiImplicitParams({

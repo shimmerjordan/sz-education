@@ -11,7 +11,7 @@ import java.util.Properties;
  * 验证码配置
  *
  * @author shimmerjordan
- * @date 2018-09-14-20:34
+ * @date 2020-09-14-20:34
  */
 @Configuration
 public class ValidateCodeConfig {

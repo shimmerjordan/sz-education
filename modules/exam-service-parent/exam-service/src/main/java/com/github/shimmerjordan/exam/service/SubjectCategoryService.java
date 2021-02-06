@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  * 题目分类service
  *
  * @author shimmerjordan
- * @date 2018/12/4 21:56
+ * @date 2020/12/4 21:56
  */
 @Service
 public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, SubjectCategory> {
@@ -92,7 +92,7 @@ public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, S
 	 *
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2018/12/04 22:03
+	 * @date 2020/12/04 22:03
 	 */
     public List<SubjectCategoryDto> menus() {
 		SubjectCategory subjectCategory = new SubjectCategory();

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * 日志service
  *
  * @author shimmerjordan
- * @date 2018/10/31 20:43
+ * @date 2020/10/31 20:43
  */
 @Service
 public class LogService extends CrudService<LogMapper, Log> {

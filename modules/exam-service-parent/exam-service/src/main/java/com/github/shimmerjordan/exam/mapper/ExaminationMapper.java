@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 考试Mapper
  *
  * @author shimmerjordan
- * @date 2018/11/8 21:11
+ * @date 2020/11/8 21:11
  */
 @Mapper
 public interface ExaminationMapper extends CrudMapper<Examination> {

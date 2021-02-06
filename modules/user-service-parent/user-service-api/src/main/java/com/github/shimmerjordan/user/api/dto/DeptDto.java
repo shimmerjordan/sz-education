@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
  * 部门dto
  *
  * @author shimmerjordan
- * @date 2018-10-25 12:49
+ * @date 2020-10-25 12:49
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

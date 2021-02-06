@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * 考试service
  *
  * @author shimmerjordan
- * @date 2018/11/8 21:19
+ * @date 2020/11/8 21:19
  */
 @Slf4j
 @AllArgsConstructor
@@ -92,7 +92,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param examination examination
 	 * @return PageInfo
 	 * @author shimmerjordan
-	 * @date 2018/11/10 21:10
+	 * @date 2020/11/10 21:10
 	 */
 	public PageInfo<ExaminationDto> examinationList(String pageNum, String pageSize, String sort, String order, Examination examination) {
 		examination.setTenantCode(SysUtil.getTenantCode());
@@ -159,7 +159,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2018/12/4 9:51
+     * @date 2020/12/4 9:51
      */
     @Override
     @Transactional
@@ -175,7 +175,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param ids ids
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2018/12/4 9:51
+	 * @date 2020/12/4 9:51
 	 */
 	@Transactional
     public void deleteExaminationSubject(Long[] ids) {

@@ -8,7 +8,7 @@ import lombok.Data;
  * 选择题的选项
  *
  * @author shimmerjordan
- * @date 2018/11/8 20:53
+ * @date 2020/11/8 20:53
  */
 @Data
 public class SubjectOption extends BaseEntity<SubjectOption> {

@@ -11,7 +11,7 @@ import java.util.List;
  * 选择题
  *
  * @author shimmerjordan
- * @date 2018/11/8 20:53
+ * @date 2020/11/8 20:53
  */
 @Data
 public class SubjectChoices extends BaseEntity<SubjectChoices> {

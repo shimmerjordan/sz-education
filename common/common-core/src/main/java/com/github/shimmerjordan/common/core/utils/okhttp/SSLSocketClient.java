@@ -18,7 +18,7 @@ public class SSLSocketClient {
      *
      * @return SSLSocketFactory
      * @author shimmerjordan
-     * @date 2018/12/4 16:54
+     * @date 021/03/12 16:54
      */
     public static SSLSocketFactory getSSLSocketFactory() {
         try {
@@ -35,7 +35,7 @@ public class SSLSocketClient {
      *
      * @return TrustManager
      * @author shimmerjordan
-     * @date 2018/12/4 16:55
+     * @date 2020/12/4 16:55
      */
     private static TrustManager[] getTrustManager() {
         return new TrustManager[]{
@@ -61,7 +61,7 @@ public class SSLSocketClient {
      *
      * @return HostnameVerifier
      * @author shimmerjordan
-     * @date 2018/12/4 16:56
+     * @date 2020/12/4 16:56
      */
     public static HostnameVerifier getHostnameVerifier() {
         return (requestedHost, remoteServerSession) -> requestedHost.equalsIgnoreCase(remoteServerSession.getPeerHost());

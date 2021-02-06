@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
  * 答题service
  *
  * @author shimmerjordan
- * @date 2018/11/8 21:17
+ * @date 2020/11/8 21:17
  */
 @Slf4j
 @AllArgsConstructor
@@ -269,7 +269,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      *
      * @param answer answer
      * @author shimmerjordan
-     * @date 2018/12/26 14:09
+     * @date 2020/12/26 14:09
      */
     @Transactional
     public void submit(Answer answer) {

@@ -7,7 +7,7 @@ import lombok.Data;
  * 用户部门关系
  *
  * @author shimmerjordan
- * @date 2018/10/27 10:23
+ * @date 2020/10/27 10:23
  */
 @Data
 public class UserDept extends BaseEntity<UserDept> {

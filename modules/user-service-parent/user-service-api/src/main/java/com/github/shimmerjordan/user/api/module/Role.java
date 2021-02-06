@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 角色
  *
  * @author shimmerjordan
- * @date 2018-08-25 13:58
+ * @date 2020-08-25 13:58
  */
 @Data
 public class Role extends BaseEntity<Role> {

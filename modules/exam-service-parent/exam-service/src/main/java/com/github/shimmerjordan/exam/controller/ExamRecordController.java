@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  * 考试记录controller
  *
  * @author shimmerjordan
- * @date 2018/11/8 21:27
+ * @date 2020/11/8 21:27
  */
 @Slf4j
 @AllArgsConstructor
@@ -51,7 +51,7 @@ public class ExamRecordController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/11/10 21:33
+     * @date 2020/11/10 21:33
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取考试记录信息", notes = "根据考试记录id获取考试记录详细信息")
@@ -70,7 +70,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2018/11/10 21:33
+     * @date 2020/11/10 21:33
      */
     @GetMapping("examRecordList")
     @ApiOperation(value = "获取考试记录列表")
@@ -95,7 +95,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/11/10 21:33
+     * @date 2020/11/10 21:33
      */
     @PostMapping
     @ApiOperation(value = "创建考试记录", notes = "创建考试记录")
@@ -114,7 +114,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/11/10 21:34
+     * @date 2020/11/10 21:34
      */
     @PutMapping
     @ApiOperation(value = "更新考试记录信息", notes = "根据考试记录id更新考试记录的基本信息")
@@ -131,7 +131,7 @@ public class ExamRecordController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/11/10 21:34
+     * @date 2020/11/10 21:34
      */
     @DeleteMapping("{id}")
     @ApiOperation(value = "删除考试记录", notes = "根据ID删除考试记录")
@@ -158,7 +158,7 @@ public class ExamRecordController extends BaseController {
 	 * @param request request
 	 * @param response response
      * @author shimmerjordan
-     * @date 2018/12/31 22:28
+     * @date 2020/12/31 22:28
      */
     @PostMapping("export")
     @AdminTenantTeacherAuthorization

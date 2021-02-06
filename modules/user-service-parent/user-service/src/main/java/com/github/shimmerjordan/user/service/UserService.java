@@ -46,7 +46,7 @@ import java.util.stream.Stream;
  * 用户service实现
  *
  * @author shimmerjordan
- * @date 2018-08-25 16:17
+ * @date 2020-08-25 16:17
  */
 @AllArgsConstructor
 @Slf4j
@@ -112,7 +112,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param user user
      * @return int
      * @author shimmerjordan
-     * @date 2018/10/30 12:43
+     * @date 2020/10/30 12:43
      */
     @Override
     @Transactional
@@ -137,7 +137,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userVo userVo
      * @return User
      * @author shimmerjordan
-     * @date 2018/9/11 23:44
+     * @date 2020/9/11 23:44
      */
     public UserInfoDto findUserInfo(UserVo userVo) {
         // 返回结果
@@ -263,7 +263,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2018/8/26 15:15
+     * @date 2020/8/26 15:15
      */
     @Transactional
     @CacheEvict(value = "user", key = "#id")
@@ -431,7 +431,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param random    random
      * @param imageCode imageCode
      * @author shimmerjordan
-     * @date 2018/9/14 20:12
+     * @date 2020/9/14 20:12
      */
     public void saveImageCode(String random, String imageCode) {
         redisTemplate.opsForValue().set(CommonConstant.DEFAULT_CODE_KEY + LoginTypeEnum.PWD.getType() + "@" + random, imageCode, SecurityConstant.DEFAULT_IMAGE_EXPIRE, TimeUnit.SECONDS);

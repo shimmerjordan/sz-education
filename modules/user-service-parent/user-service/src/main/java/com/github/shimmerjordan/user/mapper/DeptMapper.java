@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 菜单mapper
  *
  * @author shimmerjordan
- * @date 2018/8/26 22:34
+ * @date 2020/8/26 22:34
  */
 @Mapper
 public interface DeptMapper extends CrudMapper<Dept> {

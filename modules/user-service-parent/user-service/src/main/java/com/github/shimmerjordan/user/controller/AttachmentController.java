@@ -39,7 +39,7 @@ import java.util.stream.Collectors;
  * 附件信息管理
  *
  * @author shimmerjordan
- * @date 2018/10/30 20:45
+ * @date 2020/10/30 20:45
  */
 @Slf4j
 @AllArgsConstructor
@@ -79,7 +79,7 @@ public class AttachmentController extends BaseController {
      * @param attachment attachment
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2018/10/30 21:05
+     * @date 2020/10/30 21:05
      */
     @GetMapping("attachmentList")
     @ApiOperation(value = "获取附件列表")
@@ -105,7 +105,7 @@ public class AttachmentController extends BaseController {
      * @param file       file
      * @param attachment attachment
      * @author shimmerjordan
-     * @date 2018/10/30 21:54
+     * @date 2020/10/30 21:54
      */
     @PostMapping("upload")
     @ApiOperation(value = "上传文件", notes = "上传文件")
@@ -137,7 +137,7 @@ public class AttachmentController extends BaseController {
      *
      * @param id id
      * @author shimmerjordan
-     * @date 2018/10/30 22:26
+     * @date 2020/10/30 22:26
      */
     @GetMapping("download")
     @ApiOperation(value = "下载附件", notes = "根据ID下载附件")
@@ -180,7 +180,7 @@ public class AttachmentController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/10/30 22:44
+     * @date 2020/10/30 22:44
      */
     @DeleteMapping("/{id}")
     @ApiOperation(value = "删除附件", notes = "根据ID删除附件")
@@ -202,7 +202,7 @@ public class AttachmentController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2018/12/4 10:01
+     * @date 2020/12/4 10:01
      */
     @PostMapping("deleteAll")
     @ApiOperation(value = "批量删除附件", notes = "根据附件id批量删除附件")

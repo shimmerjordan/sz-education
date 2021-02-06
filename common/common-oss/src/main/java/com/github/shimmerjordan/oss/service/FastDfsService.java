@@ -25,7 +25,7 @@ import java.util.Set;
  * fastDfs服务
  *
  * @author shimmerjordan
- * @date 2018-01-04 10:34
+ * @date 2020-01-04 10:34
  */
 @Slf4j
 @AllArgsConstructor
@@ -55,7 +55,7 @@ public class FastDfsService {
      * @param extName     扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2018/1/5 12:02
+     * @date 2020/1/5 12:02
      */
     public String uploadFile(InputStream inputStream, long size, String extName) {
         return uploadFile(inputStream, size, extName, null);
@@ -70,7 +70,7 @@ public class FastDfsService {
      * @param metaDataSet 元数据集
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2018/1/5 12:02
+     * @date 2020/1/5 12:02
      */
     public String uploadFile(InputStream inputStream, long size, String extName, Set<MetaData> metaDataSet) {
         try {
@@ -93,7 +93,7 @@ public class FastDfsService {
      * @param extName     附件扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2018/3/8 15:51
+     * @date 2020/3/8 15:51
      */
     public String uploadAppenderFile(String groupName, InputStream inputStream, long size, String extName) {
         try {
@@ -116,7 +116,7 @@ public class FastDfsService {
      * @param size        附件大小
      * @return 是否续传成功
      * @author shimmerjordan
-     * @date 2018/3/8 15:53
+     * @date 2020/3/8 15:53
      */
     public boolean appendFile(String groupName, String path, InputStream inputStream, long size) {
         try {
@@ -136,7 +136,7 @@ public class FastDfsService {
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @return 字节数组
      * @author shimmerjordan
-     * @date 2018/1/5 11:59
+     * @date 2020/1/5 11:59
      */
     public byte[] downloadFile(String groupName, String path) {
         if (path.startsWith(groupName + "/"))
@@ -159,7 +159,7 @@ public class FastDfsService {
      * @param filePath  文件存放的路径，如：C:\attach\1.rar
      * @return 文件存放的路径
      * @author shimmerjordan
-     * @date 2018/3/9 10:10
+     * @date 2020/3/9 10:10
      */
     public String downloadFile(String groupName, String path, String filePath) {
         if (path.startsWith(groupName + "/"))
@@ -181,7 +181,7 @@ public class FastDfsService {
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @return 附件输入流
      * @author shimmerjordan
-     * @date 2018/1/5 12:00
+     * @date 2020/1/5 12:00
      */
     public InputStream downloadStream(String groupName, String path) {
         try {
@@ -199,7 +199,7 @@ public class FastDfsService {
      * @param groupName 组名，如：group1
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @author shimmerjordan
-     * @date 2018/1/5 12:01
+     * @date 2020/1/5 12:01
      */
     public void deleteFile(String groupName, String path) {
         if (path.startsWith(groupName + "/"))
@@ -218,7 +218,7 @@ public class FastDfsService {
      * @param extName     扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2018/1/5 12:01
+     * @date 2020/1/5 12:01
      */
     public String modify(String groupName, String oldPath, InputStream inputStream, long size, String extName) {
         String path = uploadFile(inputStream, size, extName);
@@ -233,7 +233,7 @@ public class FastDfsService {
      *
      * @return 组名
      * @author shimmerjordan
-     * @date 2018/3/9 10:43
+     * @date 2020/3/9 10:43
      */
     public String getGroup() {
         StorageNode storageNode = trackerClient.getStoreStorage();
@@ -247,7 +247,7 @@ public class FastDfsService {
      *
      * @return 可用的组列表
      * @author shimmerjordan
-     * @date 2018/3/9 10:42
+     * @date 2020/3/9 10:42
      */
     public List<String> listGroups() {
         List<String> groups = new ArrayList<String>();

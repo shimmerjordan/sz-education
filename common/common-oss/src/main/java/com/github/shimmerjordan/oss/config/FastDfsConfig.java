@@ -11,7 +11,7 @@ import org.springframework.jmx.support.RegistrationPolicy;
  * fastDfs配置
  *
  * @author shimmerjordan
- * @date 2018-01-05 14:45
+ * @date 2020-01-05 14:45
  */
 @Deprecated
 @Configuration

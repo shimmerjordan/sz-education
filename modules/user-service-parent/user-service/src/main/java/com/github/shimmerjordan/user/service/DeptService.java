@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * 部门service
  *
  * @author shimmerjordan
- * @date 2018/8/26 22:46
+ * @date 2020/8/26 22:46
  */
 @Service
 public class DeptService extends CrudService<DeptMapper, Dept> {
@@ -58,7 +58,7 @@ public class DeptService extends CrudService<DeptMapper, Dept> {
 	 *
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2018/10/25 12:57
+	 * @date 2020/10/25 12:57
 	 */
 	public List<DeptDto> depts() {
 		Dept dept = new Dept();
