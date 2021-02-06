@@ -15,7 +15,7 @@ import java.util.Date;
  * Entity基类
  *
  * @author shimmerjordan
- * @date 2018-08-24 18:58
+ * @date 2020/03/24 18:58
  */
 @Data
 @NoArgsConstructor
