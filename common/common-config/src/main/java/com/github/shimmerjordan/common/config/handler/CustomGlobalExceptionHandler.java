@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * 全局异常处理
  *
  * @author shimmerjordan
- * @date 2021/05/25 15:36
+ * @date 2021/02/25 15:36
  */
 @RestControllerAdvice
 public class CustomGlobalExceptionHandler {
