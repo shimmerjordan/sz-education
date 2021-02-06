@@ -9,7 +9,7 @@ import java.security.cert.X509Certificate;
  * SSLSocketFactory
  *
  * @author shimmerjordan
- * @date 2018-12-04 16:53
+ * @date 2021/03/12  16:53
  */
 public class SSLSocketClient {
 
