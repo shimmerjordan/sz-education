@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * 验证码过期异常
  *
  * @author shimmerjordan
- * @date 2021/3/29 12:07
+ * @date 2021/03/29 12:07
  */
 public class ValidateCodeExpiredException extends CommonException {
 
