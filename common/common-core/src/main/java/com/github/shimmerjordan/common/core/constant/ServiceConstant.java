@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.constant;
  * 服务名常量
  *
  * @author shimmerjordan
- * @date 2021/3/23 23:35
+ * @date 2021/03/23 23:35
  */
 public class ServiceConstant {
 

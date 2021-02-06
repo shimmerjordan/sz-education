@@ -2,7 +2,7 @@ package com.github.shimmerjordan.common.core.constant;
 
 /**
  * @author shimmerjordan
- * @date 2021/4/2 20:48
+ * @date 2021/03/02 20:48
  */
 public class MqConstant {
 
