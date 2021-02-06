@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 封装返回数据
  *
  * @author shimmerjordan
- * @date 2021/3/17 12:08
+ * @date 2021/03/17 12:08
  */
 @Data
 public class ResponseBean<T> implements Serializable {
