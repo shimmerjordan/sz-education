@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * 验证码错误异常
  *
  * @author shimmerjordan
- * @date 2021/3/18 16:46
+ * @date 2021/03/18 16:46
  */
 public class InvalidValidateCodeException extends CommonException {
 
