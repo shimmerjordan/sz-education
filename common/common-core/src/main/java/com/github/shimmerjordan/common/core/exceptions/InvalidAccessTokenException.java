@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.exceptions;
  * token非法异常
  *
  * @author shimmerjordan
- * @date 2021/5/27 17:52
+ * @date 2021/05/27 17:52
  */
 public class InvalidAccessTokenException extends CommonException {
 
