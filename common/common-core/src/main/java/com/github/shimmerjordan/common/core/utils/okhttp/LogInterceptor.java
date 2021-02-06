@@ -12,7 +12,7 @@ import java.io.IOException;
  * 日志拦截器
  *
  * @author shimmerjordan
- * @date 2018-09-12 17:03
+ * @date 2021/03/12 17:03
  */
 public class LogInterceptor implements Interceptor {
 
