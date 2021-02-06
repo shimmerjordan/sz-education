@@ -8,7 +8,7 @@ import java.io.File;
  * 文件工具类
  *
  * @author shimmerjordan
- * @date 2020/10/30 22:05
+ * @date 2020/01/30 22:05
  */
 @Slf4j
 public class FileUtil {
@@ -19,7 +19,7 @@ public class FileUtil {
      * @param fileName fileName
      * @return String
      * @author shimmerjordan
-     * @date 2020/10/30 22:05
+     * @date 2021/01/30 22:05
      */
     public static String getFileNameEx(String fileName) {
         if ((fileName != null) && (fileName.length() > 0)) {

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author shimmerjordan
- * @date 2020/8/26 14:53
+ * @date 2020/12/26 14:53
  */
 @Mapper
 public interface UserRoleMapper extends CrudMapper<UserRole> {

@@ -27,7 +27,7 @@ import java.util.stream.Stream;
  * 部门controller
  *
  * @author shimmerjordan
- * @date 2020/8/26 0026 22:49
+ * @date 2020/12/26 0026 22:49
  */
 @AllArgsConstructor
 @Api("部门信息管理")
@@ -42,7 +42,7 @@ public class DeptController extends BaseController {
      *
      * @return List
      * @author shimmerjordan
-     * @date 2020/10/25 12:57
+     * @date 2021/01/25 12:57
      */
     @GetMapping(value = "depts")
     @ApiOperation(value = "获取部门列表")
@@ -56,7 +56,7 @@ public class DeptController extends BaseController {
      * @param id id
      * @return Dept
      * @author shimmerjordan
-     * @date 2020/8/28 10:11
+     * @date 2020/12/28 10:11
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取部门信息", notes = "根据部门id获取部门详细信息")
@@ -71,7 +71,7 @@ public class DeptController extends BaseController {
      * @param dept dept
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/28 10:15
+     * @date 2020/12/28 10:15
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -89,7 +89,7 @@ public class DeptController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/28 10:16
+     * @date 2020/12/28 10:16
      */
     @DeleteMapping("/{id}")
     @AdminTenantTeacherAuthorization
@@ -109,7 +109,7 @@ public class DeptController extends BaseController {
      * @param dept dept
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/28 10:22
+     * @date 2020/12/28 10:22
      */
     @PutMapping
     @AdminTenantTeacherAuthorization

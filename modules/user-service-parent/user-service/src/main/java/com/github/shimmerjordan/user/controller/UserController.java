@@ -126,7 +126,7 @@ public class UserController extends BaseController {
      * @param userVo   userVo
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/8/26 22:56
+     * @date 2020/12/26 22:56
      */
     @GetMapping("userList")
     @ApiOperation(value = "获取用户列表")
@@ -174,7 +174,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/26 14:34
+     * @date 2020/12/26 14:34
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -192,7 +192,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/26 15:06
+     * @date 2020/12/26 15:06
      */
     @PutMapping("/{id:[a-zA-Z0-9,]+}")
     @AdminTenantTeacherAuthorization
@@ -214,7 +214,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/10/30 10:06
+     * @date 2021/01/30 10:06
      */
     @PutMapping("updateInfo")
     @ApiOperation(value = "更新用户基本信息", notes = "根据用户id更新用户的基本信息")
@@ -265,7 +265,7 @@ public class UserController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/8/26 15:28
+     * @date 2020/12/26 15:28
      */
     @DeleteMapping("/{id}")
     @AdminTenantTeacherAuthorization

@@ -112,7 +112,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param user user
      * @return int
      * @author shimmerjordan
-     * @date 2020/10/30 12:43
+     * @date 2021/01/30 12:43
      */
     @Override
     @Transactional
@@ -263,7 +263,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2020/8/26 15:15
+     * @date 2020/12/26 15:15
      */
     @Transactional
     @CacheEvict(value = "user", key = "#id")

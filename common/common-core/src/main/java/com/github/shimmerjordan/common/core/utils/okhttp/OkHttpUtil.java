@@ -93,7 +93,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2020/10/11 11:11
+     * @date 2021/01/11 11:11
      */
     public Response getResponse(String url, Map<String, Object> header) throws Exception {
         Request.Builder builder = new Request.Builder().url(url).get();

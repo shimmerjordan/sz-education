@@ -108,7 +108,7 @@ public class DateUtils {
     }
 
     /**
-     * 两个时间只差
+     * 两个时间之差
      *
      * @param startDate startDate
      * @param endDate   endDate

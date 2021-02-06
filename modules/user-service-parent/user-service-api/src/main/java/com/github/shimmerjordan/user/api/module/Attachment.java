@@ -9,7 +9,7 @@ import lombok.Data;
  * 附件信息
  *
  * @author shimmerjordan
- * @date 2020/10/30 20:47
+ * @date 2021/01/30 20:47
  */
 @Data
 public class Attachment extends BaseEntity<Attachment> {

@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  * 角色controller
  *
  * @author shimmerjordan
- * @date 2020/8/26 22:50
+ * @date 2020/12/26 22:50
  */
 @Slf4j
 @AllArgsConstructor
@@ -68,7 +68,7 @@ public class RoleController extends BaseController {
      * @param role     role
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/10/24 22:13
+     * @date 2021/01/24 22:13
      */
     @GetMapping("roleList")
     @ApiOperation(value = "获取角色列表")
@@ -129,7 +129,7 @@ public class RoleController extends BaseController {
      * @param role role
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/10/28 14:20
+     * @date 2021/01/28 14:20
      */
     @PutMapping("roleMenuUpdate")
     @ApiOperation(value = "更新角色菜单信息", notes = "更新角色菜单信息")

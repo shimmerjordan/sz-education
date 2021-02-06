@@ -2,7 +2,7 @@ package com.github.shimmerjordan.user.api.constant;
 
 /**
  * @author shimmerjordan
- * @date 2020/10/28 15:48
+ * @date 2021/01/28 15:48
  */
 public class MenuConstant {
 

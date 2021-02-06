@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 日志
  *
  * @author shimmerjordan
- * @date 2020/10/31 20:38
+ * @date 2021/01/31 20:38
  */
 @Mapper
 public interface LogMapper extends CrudMapper<Log> {

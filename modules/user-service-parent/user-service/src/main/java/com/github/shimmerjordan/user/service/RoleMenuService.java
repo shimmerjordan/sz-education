@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * @author shimmerjordan
- * @date 2020/8/26 22:47
+ * @date 2020/12/26 22:47
  */
 @AllArgsConstructor
 @Service
@@ -28,7 +28,7 @@ public class RoleMenuService extends CrudService<RoleMenuMapper, RoleMenu> {
 	 * @param menus 菜单ID集合
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/10/28 14:29
+	 * @date 2021/01/28 14:29
 	 */
 	@Transactional
 	@CacheEvict(value = "menu", allEntries = true)
@@ -56,7 +56,7 @@ public class RoleMenuService extends CrudService<RoleMenuMapper, RoleMenu> {
 	 * @param roleMenus roleMenus
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/10/30 19:59
+	 * @date 2021/01/30 19:59
 	 */
 	@Transactional
 	public int insertBatch(List<RoleMenu> roleMenus) {
