@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.core.constant;
  * 公用常量
  *
  * @author shimmerjordan
- * @date 2018-08-23 12:00
+ * @date 2020/02/13 12:00
  */
 public class CommonConstant {
 
