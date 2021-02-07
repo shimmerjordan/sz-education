@@ -25,7 +25,7 @@ import javax.validation.Valid;
  * 课程controller
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:25
+ * @date 2021/03/8 21:25
  */
 @Slf4j
 @AllArgsConstructor
@@ -42,7 +42,7 @@ public class CourseController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:28
+     * @date 2021/03/10 21:28
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取课程信息", notes = "根据课程id获取课程详细信息")
@@ -61,7 +61,7 @@ public class CourseController extends BaseController {
      * @param course   course
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/05/10 21:30
+     * @date 2021/03/10 21:30
      */
     @GetMapping("courseList")
     @ApiOperation(value = "获取课程列表")
@@ -87,7 +87,7 @@ public class CourseController extends BaseController {
      * @param course course
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:31
+     * @date 2021/03/10 21:31
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -105,7 +105,7 @@ public class CourseController extends BaseController {
      * @param course course
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:31
+     * @date 2021/03/10 21:31
      */
     @PutMapping
     @AdminTenantTeacherAuthorization
@@ -123,7 +123,7 @@ public class CourseController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:32
+     * @date 2021/03/10 21:32
      */
     @DeleteMapping("{id}")
     @AdminTenantTeacherAuthorization

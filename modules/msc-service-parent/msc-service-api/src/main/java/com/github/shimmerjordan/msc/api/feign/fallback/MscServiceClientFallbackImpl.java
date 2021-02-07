@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * 消息中心服务断路器
  *
  * @author shimmerjordan
- * @date 2021/07/02 16:09
+ * @date 2021/03/02 16:09
  */
 @Slf4j
 @Component

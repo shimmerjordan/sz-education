@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  * 考试记录controller
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:27
+ * @date 2021/03/8 21:27
  */
 @Slf4j
 @AllArgsConstructor
@@ -51,7 +51,7 @@ public class ExamRecordController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:33
+     * @date 2021/03/10 21:33
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取考试记录信息", notes = "根据考试记录id获取考试记录详细信息")
@@ -70,7 +70,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/05/10 21:33
+     * @date 2021/03/10 21:33
      */
     @GetMapping("examRecordList")
     @ApiOperation(value = "获取考试记录列表")
@@ -95,7 +95,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:33
+     * @date 2021/03/10 21:33
      */
     @PostMapping
     @ApiOperation(value = "创建考试记录", notes = "创建考试记录")
@@ -114,7 +114,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:34
+     * @date 2021/03/10 21:34
      */
     @PutMapping
     @ApiOperation(value = "更新考试记录信息", notes = "根据考试记录id更新考试记录的基本信息")
@@ -131,7 +131,7 @@ public class ExamRecordController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:34
+     * @date 2021/03/10 21:34
      */
     @DeleteMapping("{id}")
     @ApiOperation(value = "删除考试记录", notes = "根据ID删除考试记录")
@@ -188,7 +188,7 @@ public class ExamRecordController extends BaseController {
      *
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/07 22:03
+     * @date 2021/03/07 22:03
      */
     @GetMapping("currentTime")
 	@ApiOperation(value = "获取服务器当前时间", notes = "获取服务器当前时间")
@@ -202,7 +202,7 @@ public class ExamRecordController extends BaseController {
      * @param examRecord examRecord
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/19 14:33
+     * @date 2021/03/19 14:33
      */
     @PutMapping("completeMarking")
     public ResponseBean<Boolean> completeMarking(@RequestBody ExaminationRecord examRecord) {
@@ -215,7 +215,7 @@ public class ExamRecordController extends BaseController {
 	 * @param tenantCode tenantCode
 	 * @return ResponseBean
 	 * @author shimmerjordan
-	 * @date 2021/10/27 20:07:38
+	 * @date 2021/04/27 20:07:38
 	 */
 	@GetMapping("dashboard")
 	public ResponseBean<ExaminationDashboardDto> findExamDashboardData(@RequestParam @NotBlank String tenantCode) {

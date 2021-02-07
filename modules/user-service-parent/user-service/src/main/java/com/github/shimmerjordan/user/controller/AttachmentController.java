@@ -250,7 +250,7 @@ public class AttachmentController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/19 15:47
+     * @date 2021/03/19 15:47
      */
     @GetMapping("/{id}/canPreview")
     @ApiOperation(value = "判断附件是否支持预览", notes = "根据附件ID判断附件是否支持预览")
@@ -268,7 +268,7 @@ public class AttachmentController extends BaseController {
      * @param response response
      * @param id id
      * @author shimmerjordan
-     * @date 2021/06/19 15:47
+     * @date 2021/03/19 15:47
      */
     @GetMapping("/preview")
     @ApiOperation(value = "预览附件", notes = "根据附件ID预览附件")

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author shimmerjordan
- * @date 2021/6/22 13:23
+ * @date 2021/03/22 13:23
  */
 @Slf4j
 @AllArgsConstructor
@@ -32,7 +32,7 @@ public class SmsService {
      * @param smsDto smsDto
      * @return SmsResponse
      * @author shimmerjordan
-     * @date 2021/06/22 13:28
+     * @date 2021/03/22 13:28
      */
     public SmsResponse sendSms(SmsDto smsDto) {
         DefaultProfile profile = DefaultProfile.getProfile(smsProperties.getRegionId(), smsProperties.getAppKey(), smsProperties.getAppSecret());

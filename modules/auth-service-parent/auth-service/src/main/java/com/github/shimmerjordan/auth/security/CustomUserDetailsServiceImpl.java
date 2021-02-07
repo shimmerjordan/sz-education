@@ -94,7 +94,7 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
      * @param mobileUser mobileUser
      * @return UserDetails
      * @author shimmerjordan
-     * @date 2021/06/22 21:08
+     * @date 2021/03/22 21:08
      */
     @Override
     public UserDetails loadUserBySocialAndTenantCode(String tenantCode, String social, MobileUser mobileUser) throws UsernameNotFoundException {
@@ -135,7 +135,7 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
      * @param wxUser     wxUser
      * @return UserDetails
      * @author shimmerjordan
-     * @date 2021/07/05 20:05:36
+     * @date 2021/03/05 20:05:36
      */
     @Override
     public UserDetails loadUserByWxCodeAndTenantCode(String tenantCode, String code, WxUser wxUser) throws UsernameNotFoundException {

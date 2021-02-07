@@ -19,7 +19,7 @@ public interface RoleMapper extends CrudMapper<Role> {
      * @param role role
      * @return Role
      * @author shimmerjordan
-     * @date 2021/09/21 12:08:29
+     * @date 2021/04/21 12:08:29
      */
     Role findByRoleCode(Role role);
 }

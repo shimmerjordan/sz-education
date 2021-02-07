@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
  * 微信登录相关配置
  *
  * @author shimmerjordan
- * @date 2021/07/05 19:44
+ * @date 2021/03/05 19:44
  */
 @Configuration
 public class WxLoginConfig {

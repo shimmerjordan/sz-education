@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 演示环境开关配置
  * @author shimmerjordan
- * @date 2021/12/15 18:56
+ * @date 2021/05/15 18:56
  */
 @Slf4j
 @AllArgsConstructor
@@ -32,7 +32,7 @@ public class PreviewController {
      * @param enable enable
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/12/15 19:45
+     * @date 2021/05/15 19:45
      */
     @GetMapping("/enable")
     public ResponseBean<Boolean> preview(@RequestParam(required = false) String enable, @RequestParam String secret) {
@@ -50,7 +50,7 @@ public class PreviewController {
      *
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/12/15 19:45
+     * @date 2021/05/15 19:45
      */
     @GetMapping("/getPreview")
     public ResponseBean<String> getPreview() {

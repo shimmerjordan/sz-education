@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 考试Mapper
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:11
+ * @date 2021/03/8 21:11
  */
 @Mapper
 public interface ExaminationMapper extends CrudMapper<Examination> {
@@ -29,7 +29,7 @@ public interface ExaminationMapper extends CrudMapper<Examination> {
      * @param examination examination
      * @return int
      * @author shimmerjordan
-     * @date 2021/10/27 20:08:58
+     * @date 2021/04/27 20:08:58
      */
     int findExamUserCount(Examination examination);
 }

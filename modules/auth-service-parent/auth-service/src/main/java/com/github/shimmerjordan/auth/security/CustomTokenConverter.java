@@ -21,7 +21,7 @@ import java.util.Map;
  * 扩展JwtAccessTokenConverter，增加租户code
  *
  * @author shimmerjordan
- * @date 2021/5/28 22:53
+ * @date 2021/03/28 22:53
  */
 public class CustomTokenConverter extends JwtAccessTokenConverter {
 

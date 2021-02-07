@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  * 微信登录配置
  *
  * @author shimmerjordan
- * @date 2021/07/05 19:29
+ * @date 2021/03/05 19:29
  */
 @Data
 public class WxSecurityConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {

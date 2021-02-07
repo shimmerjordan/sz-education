@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 选择题
  * @author shimmerjordan
- * @date 2021/12/8 21:57
+ * @date 2021/05/8 21:57
  */
 @Slf4j
 @AllArgsConstructor
@@ -38,7 +38,7 @@ public class ChoicesAnswerHandler extends AbstractAnswerHandler {
 	 * @param answer  answer
 	 * @param subject subject
 	 * @author shimmerjordan
-	 * @date 2020/02/19 23:23
+	 * @date 2021/02/19 23:23
 	 */
 	public void judgeOptionRight(Answer answer, SubjectDto subject) {
 		String userAnswer = answer.getAnswer();

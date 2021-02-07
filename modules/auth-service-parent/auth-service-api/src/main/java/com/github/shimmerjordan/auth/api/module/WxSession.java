@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 封装微信登录状态
  *
  * @author shimmerjordan
- * @date 2021/07/05 20:35
+ * @date 2021/03/05 20:35
  */
 @Data
 @AllArgsConstructor

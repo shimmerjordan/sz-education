@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
  * 题目service
  *
  * @author shimmerjordan
- * @date 2021/6/16 17:22
+ * @date 2021/03/16 17:22
  */
 @AllArgsConstructor
 @Slf4j
@@ -52,7 +52,7 @@ public class SubjectService {
      * @param type type
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 17:24
+     * @date 2021/03/16 17:24
      */
     public SubjectDto get(Long id, Integer type) {
         return subjectService(type).getSubject(id);
@@ -64,7 +64,7 @@ public class SubjectService {
      * @param id id
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 17:26
+     * @date 2021/03/16 17:26
      */
     public SubjectDto get(Long id) {
         Integer type = SubjectTypeEnum.CHOICES.getValue();
@@ -86,7 +86,7 @@ public class SubjectService {
      * @param nextType          0：下一题，1：上一题
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/18 13:49
+     * @date 2021/03/18 13:49
      */
     @Transactional
     public SubjectDto getNextByCurrentIdAndType(Long examinationId, Long previousSubjectId, Integer type, Integer nextType) {
@@ -99,7 +99,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 18:12
+     * @date 2021/03/16 18:12
      */
     public List<SubjectDto> findList(SubjectDto subjectDto) {
         // 先查询题目考试关联表
@@ -115,7 +115,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/17 17:12
+     * @date 2021/03/17 17:12
      */
     public List<SubjectDto> findListByType(SubjectDto subjectDto) {
         List<SubjectDto> subjectDtos = subjectService(subjectDto.getType()).findSubjectList(subjectDto);
@@ -136,7 +136,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 18:12
+     * @date 2021/03/16 18:12
      */
     public PageInfo<SubjectDto> findPage(PageInfo pageInfo, SubjectDto subjectDto) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -164,7 +164,7 @@ public class SubjectService {
      * @param ids  ids
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 18:14
+     * @date 2021/03/16 18:14
      */
     public List<SubjectDto> findListById(Integer type, Long[] ids) {
         return subjectService(type).findSubjectListById(ids);
@@ -176,7 +176,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 17:59
+     * @date 2021/03/16 17:59
      */
     @Transactional
     public int insert(SubjectDto subjectDto) {
@@ -198,7 +198,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 18:01
+     * @date 2021/03/16 18:01
      */
     @Transactional
     public int update(SubjectDto subjectDto) {
@@ -214,7 +214,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 18:04
+     * @date 2021/03/16 18:04
      */
     @Transactional
     public int delete(SubjectDto subjectDto) {
@@ -227,7 +227,7 @@ public class SubjectService {
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:51
+     * @date 2021/03/16 22:51
      */
     @Transactional
     public int physicalDelete(SubjectDto subjectDto) {
@@ -246,7 +246,7 @@ public class SubjectService {
      * @param ids  ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 18:04
+     * @date 2021/03/16 18:04
      */
     @Transactional
     public int deleteAll(Integer type, Long[] ids) {
@@ -259,7 +259,7 @@ public class SubjectService {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:52
+     * @date 2021/03/16 22:52
      */
     @Transactional
     public int physicalDeleteAll(Long[] ids) {
@@ -287,7 +287,7 @@ public class SubjectService {
      * @param type type
      * @return BaseSubjectService
      * @author shimmerjordan
-     * @date 2021/06/16 17:34
+     * @date 2021/03/16 17:34
      */
 	private ISubjectService subjectService(Integer type) {
 		return SpringContextHolder.getApplicationContext().getBean(SubjectTypeEnum.matchByValue(type).getService());
@@ -301,7 +301,7 @@ public class SubjectService {
      * @param categoryId    categoryId
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/17 14:39
+     * @date 2021/03/17 14:39
      */
     @Transactional
     public int importSubject(List<SubjectDto> subjects, Long examinationId, Long categoryId) {
@@ -331,7 +331,7 @@ public class SubjectService {
      * @param examinationSubjects examinationSubjects
      * @return Map
      * @author shimmerjordan
-     * @date 2021/06/17 10:43
+     * @date 2021/03/17 10:43
      */
     private Map<String, Long[]> getSubjectIdByType(List<ExaminationSubject> examinationSubjects) {
         Map<String, Long[]> idMap = new HashMap<>();
@@ -373,7 +373,7 @@ public class SubjectService {
      * @param examinationSubjects examinationSubjects
      * @return List
      * @author shimmerjordan
-     * @date 2021/06/17 10:54
+     * @date 2021/03/17 10:54
      */
     public List<SubjectDto> findSubjectDtoList(List<ExaminationSubject> examinationSubjects) {
         return findSubjectDtoList(examinationSubjects, false);
@@ -386,7 +386,7 @@ public class SubjectService {
 	 * @param findOptions findOptions
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/06/17 11:54
+	 * @date 2021/03/17 11:54
 	 */
 	public List<SubjectDto> findSubjectDtoList(List<ExaminationSubject> examinationSubjects, boolean findOptions) {
     	return findSubjectDtoList(examinationSubjects, findOptions, true);
@@ -400,7 +400,7 @@ public class SubjectService {
 	 * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2021/06/17 11:54
+     * @date 2021/03/17 11:54
      */
     public List<SubjectDto> findSubjectDtoList(List<ExaminationSubject> examinationSubjects, boolean findOptions, boolean findAnswer) {
         Map<String, Long[]> idMap = this.getSubjectIdByType(examinationSubjects);
@@ -450,7 +450,7 @@ public class SubjectService {
      * @param examinationId examinationId
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/10/13 18:36:58
+     * @date 2021/04/13 18:36:58
      */
     public SubjectDto findFirstSubjectByExaminationId(Long examinationId) {
         // 第一题

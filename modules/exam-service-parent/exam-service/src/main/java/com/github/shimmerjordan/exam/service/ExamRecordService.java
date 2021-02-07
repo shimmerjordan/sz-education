@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
  * 考试记录service
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:20
+ * @date 2021/03/8 21:20
  */
 @Slf4j
 @AllArgsConstructor
@@ -84,7 +84,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param examRecord examRecord
 	 * @return PageInfo
 	 * @author shimmerjordan
-	 * @date 2021/05/10 21:33
+	 * @date 2021/03/10 21:33
 	 */
     public PageInfo<ExaminationRecordDto> examRecordList(ExaminationRecord examRecord, String pageNum, String pageSize, String sort, String order) {
 		examRecord.setTenantCode(SysUtil.getTenantCode());
@@ -308,7 +308,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 *
 	 * @return ExaminationDashboardDto
 	 * @author shimmerjordan
-	 * @date 2021/10/27 20:07:38
+	 * @date 2021/04/27 20:07:38
 	 */
 	public ExaminationDashboardDto findExamDashboardData(String tenantCode) {
 		ExaminationDashboardDto dashboardDto = new ExaminationDashboardDto();

@@ -75,7 +75,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/03 12:17:44
+     * @date 2021/03/03 12:17:44
      */
     @Transactional
     public int createUser(UserDto userDto) {
@@ -175,7 +175,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param identifier identifier
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/04 00:12:44
+     * @date 2021/03/04 00:12:44
      */
     public List<String> getUserPermissions(User user, String identifier) {
         return this.getUserPermissions(user, identifier, this.getUserRoles(user));
@@ -189,7 +189,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param roles      roles
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/04 00:14:44
+     * @date 2021/03/04 00:14:44
      */
     public List<String> getUserPermissions(User user, String identifier, List<Role> roles) {
         // 用户权限
@@ -227,7 +227,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param user user
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/03 12:03:17
+     * @date 2021/03/03 12:03:17
      */
     private List<Role> getUserRoles(User user) {
         List<Role> roles = Lists.newArrayList();
@@ -244,7 +244,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param users users
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/03 12:13:38
+     * @date 2021/03/03 12:13:38
      */
     public List<Role> getUsersRoles(List<User> users) {
         // 流处理获取用户ID集合，根据用户ID批量查找角色
@@ -311,7 +311,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/03 12:26:24
+     * @date 2021/03/03 12:26:24
      */
     @Transactional
     @CacheEvict(value = "user", key = "#userDto.identifier")
@@ -342,7 +342,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/21 18:14
+     * @date 2021/03/21 18:14
      */
     @Transactional
     @CacheEvict(value = "user", key = "#userDto.identifier")
@@ -368,7 +368,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param tenantCode   tenantCode
      * @return UserVo
      * @author shimmerjordan
-     * @date 2021/07/03 13:00:39
+     * @date 2021/03/03 13:00:39
      */
     @Cacheable(value = "user#" + CommonConstant.CACHE_EXPIRE, key = "#identifier")
     public UserVo findUserByIdentifier(Integer identityType, String identifier, String tenantCode) {
@@ -401,7 +401,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param tenantCode tenantCode
      * @return UserVo
      * @author shimmerjordan
-     * @date 2021/07/10 18:04:15
+     * @date 2021/03/10 18:04:15
      */
     public UserVo findUserByIdentifier(String identifier, String tenantCode) {
         return this.findUserByIdentifier(null, identifier, tenantCode);
@@ -415,7 +415,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param tenantCode   tenantCode
      * @return boolean
      * @author shimmerjordan
-     * @date 2021/07/03 13:23:10
+     * @date 2021/03/03 13:23:10
      */
     public boolean checkIdentifierIsExist(Integer identityType, String identifier, String tenantCode) {
         UserAuths userAuths = new UserAuths();
@@ -462,7 +462,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/04 11:44:45
+     * @date 2021/03/04 11:44:45
      */
     @Transactional
     @Override
@@ -488,7 +488,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userVo userVo
      * @return int
      * @author shimmerjordan
-     * @date 2021/05/09 22:10
+     * @date 2021/03/09 22:10
      */
     public Integer userCount(UserVo userVo) {
         return this.dao.userCount(userVo);
@@ -500,7 +500,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userInfoDto userInfoDto
      * @param user        user
      * @author shimmerjordan
-     * @date 2021/06/21 17:49
+     * @date 2021/03/21 17:49
      */
     private void initUserAvatar(UserInfoDto userInfoDto, User user) {
         try {
@@ -523,7 +523,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/03 13:27:39
+     * @date 2021/03/03 13:27:39
      */
     @Transactional
     @CacheEvict(value = "user", key = "#userDto.identifier")
@@ -544,7 +544,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return boolean
      * @author shimmerjordan
-     * @date 2021/07/03 13:30:03
+     * @date 2021/03/03 13:30:03
      */
     @Transactional
     @CacheEvict(value = "user", key = "#userDto.identifier")
@@ -592,7 +592,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param encoded encoded
      * @return String
      * @author shimmerjordan
-     * @date 2021/07/05 12:39:13
+     * @date 2021/03/05 12:39:13
      */
     private String decryptCredential(String encoded, Integer identityType) {
         // 返回默认密码
@@ -620,7 +620,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param identifier identifier
 	 * @return boolean
      * @author shimmerjordan
-     * @date 2021/07/04 11:30:27
+     * @date 2021/03/04 11:30:27
      */
     @Transactional
     public boolean defaultRole(User user, String tenantCode, String identifier) {
@@ -649,7 +649,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param ids ids
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/03 13:59:32
+     * @date 2021/03/03 13:59:32
      */
     public List<UserVo> findUserVoListById(Long[] ids) {
         List<UserVo> userVos = Lists.newArrayList();
@@ -679,7 +679,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param finalRoleList finalRoleList
      * @return UserDto
      * @author shimmerjordan
-     * @date 2021/07/03 22:35:50
+     * @date 2021/03/03 22:35:50
      */
     public UserDto getUserDtoByUserAndUserAuths(User tempUser, List<UserAuths> userAuths, List<Dept> deptList, List<UserRole> userRoles, List<Role> finalRoleList) {
         UserDto userDto = new UserDto();
@@ -718,7 +718,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userInfoDtos userInfoDtos
      * @return boolean
      * @author shimmerjordan
-     * @date 2021/07/04 12:46:01
+     * @date 2021/03/04 12:46:01
      */
     @Transactional
     @CacheEvict(value = "user", allEntries = true)

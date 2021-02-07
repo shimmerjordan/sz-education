@@ -28,7 +28,7 @@ import java.time.LocalDateTime;
  * 处理登录成功事件
  *
  * @author shimmerjordan
- * @date 2021/11-11 23:48
+ * @date 2021/04-11 23:48
  */
 @Slf4j
 @AllArgsConstructor
@@ -77,7 +77,7 @@ public class LoginSuccessListener implements ApplicationListener<CustomAuthentic
 	 * @param logInfo logInfo
 	 * @param userDto userDto
 	 * @author shimmerjordan
-	 * @date 2021/05/30 23:30
+	 * @date 2021/03/30 23:30
 	 */
 	@Async
 	public void saveLoginInfo(Log logInfo, UserDto userDto) {
@@ -95,7 +95,7 @@ public class LoginSuccessListener implements ApplicationListener<CustomAuthentic
 	 *
 	 * @return ServletRequestAttributes
 	 * @author shimmerjordan
-	 * @date 2021/11-12 00:15
+	 * @date 2021/04-12 00:15
 	 */
 	private static ServletRequestAttributes currentRequestAttributes() {
 		try {

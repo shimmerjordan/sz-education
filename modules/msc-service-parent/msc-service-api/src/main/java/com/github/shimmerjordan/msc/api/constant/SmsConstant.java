@@ -2,7 +2,7 @@ package com.github.shimmerjordan.msc.api.constant;
 
 /**
  * @author shimmerjordan
- * @date 2021/6/22 13:18
+ * @date 2021/03/22 13:18
  */
 public class SmsConstant {
 

@@ -2,7 +2,7 @@ package com.github.shimmerjordan.user.api.constant;
 
 /**
  * @author shimmerjordan
- * @date 2021/07/06 16:16
+ * @date 2021/03/06 16:16
  */
 public class AttachmentConstant {
 

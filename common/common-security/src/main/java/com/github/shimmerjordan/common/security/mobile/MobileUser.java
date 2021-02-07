@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @author shimmerjordan
- * @date 2021/08/04 13:28
+ * @date 2021/04/04 13:28
  */
 @Data
 public class MobileUser implements Serializable {

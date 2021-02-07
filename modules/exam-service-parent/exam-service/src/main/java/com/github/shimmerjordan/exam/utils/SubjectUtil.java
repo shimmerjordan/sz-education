@@ -56,7 +56,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 16:50
+     * @date 2021/03/16 16:50
      */
     public static SubjectDto subjectChoicesToDto(SubjectChoices subjectChoice, boolean findAnswer) {
         if (subjectChoice == null)
@@ -93,7 +93,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 16:50
+     * @date 2021/03/16 16:50
      */
     public static List<SubjectDto> subjectChoicesToDto(List<SubjectChoices> subjectChoices, boolean findAnswer) {
         List<SubjectDto> subjectDtoList = new ArrayList<>();
@@ -110,7 +110,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 16:59
+     * @date 2021/03/16 16:59
      */
     public static SubjectDto subjectShortAnswerToDto(SubjectShortAnswer subjectShortAnswer, boolean findAnswer) {
         if (subjectShortAnswer == null)
@@ -145,7 +145,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 16:59
+     * @date 2021/03/16 16:59
      */
     public static List<SubjectDto> subjectShortAnswerToDto(List<SubjectShortAnswer> subjectShortAnswers, boolean findAnswer) {
         List<SubjectDto> subjectDtoList = new ArrayList<>();
@@ -162,7 +162,7 @@ public class SubjectUtil {
 	 * @param subjectJudgement subjectJudgement
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/02/22 12:23
+	 * @date 2021/02/22 12:23
 	 */
 	public static SubjectDto subjectJudgementToDto(SubjectJudgement subjectJudgement) {
 		return subjectJudgementToDto(subjectJudgement, true);
@@ -175,7 +175,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2020/02/22 12:23
+     * @date 2021/02/22 12:23
      */
     public static SubjectDto subjectJudgementToDto(SubjectJudgement subjectJudgement, boolean findAnswer) {
         if (subjectJudgement == null)
@@ -209,7 +209,7 @@ public class SubjectUtil {
 	 * @param subjectJudgements subjectJudgements
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/02/22 12:24
+	 * @date 2021/02/22 12:24
 	 */
 	public static List<SubjectDto> subjectJudgementsToDto(List<SubjectJudgement> subjectJudgements) {
 		return subjectJudgementsToDto(subjectJudgements, true);
@@ -222,7 +222,7 @@ public class SubjectUtil {
      * @param findAnswer findAnswer
 	 * @return List
      * @author shimmerjordan
-     * @date 2020/02/22 12:24
+     * @date 2021/02/22 12:24
      */
     public static List<SubjectDto> subjectJudgementsToDto(List<SubjectJudgement> subjectJudgements, boolean findAnswer) {
         List<SubjectDto> subjectDtoList = new ArrayList<>();

@@ -52,7 +52,7 @@ public interface UserRoleMapper extends CrudMapper<UserRole> {
      * @param userRoles userRoles
      * @return int
      * @author shimmerjordan
-     * @date 2021/09-03 13:14
+     * @date 2021/04-03 13:14
      */
     int insertBatch(List<UserRole> userRoles);
 }

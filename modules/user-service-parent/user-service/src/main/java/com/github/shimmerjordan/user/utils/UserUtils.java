@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  * 用户工具类
  *
  * @author shimmerjordan
- * @date 2021/05/26 22:32
+ * @date 2021/03/26 22:32
  */
 public class UserUtils {
 
@@ -46,7 +46,7 @@ public class UserUtils {
 	 * @param roles roles
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/07/03 13:11:05
+	 * @date 2021/03/03 13:11:05
 	 */
 	public static List<RoleVo> rolesToVo(List<Role> roles) {
 		return roles.stream().map(role -> {
@@ -66,7 +66,7 @@ public class UserUtils {
 	 * @param userAuths   userAuths
 	 * @return UserInfoDto
 	 * @author shimmerjordan
-	 * @date 2021/07/03 20:23:15
+	 * @date 2021/03/03 20:23:15
 	 */
 	public static void toUserInfoDto(UserInfoDto userInfoDto, User user, UserAuths userAuths) {
 		BeanUtils.copyProperties(userAuths, userInfoDto);
@@ -79,7 +79,7 @@ public class UserUtils {
 	 * @param identifier identifier
 	 * @return boolean
 	 * @author shimmerjordan
-	 * @date 2021/07/04 00:25:11
+	 * @date 2021/03/04 00:25:11
 	 */
 	public static boolean isAdmin(String identifier) {
 		SysProperties sysProperties = SpringContextHolder.getApplicationContext().getBean(SysProperties.class);

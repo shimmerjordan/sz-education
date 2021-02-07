@@ -10,7 +10,7 @@ import com.github.shimmerjordan.common.basic.enums.GenderEnum;
 /**
  * 性别转换
  * @author shimmerjordan
- * @date 2021/12/10 14:16
+ * @date 2021/05/10 14:16
  */
 public class GenderConverter implements Converter<Integer> {
 

@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  * 查询用户信息接口
  *
  * @author shimmerjordan
- * @date 2021/5/28 21:05
+ * @date 2021/03/28 21:05
  */
 public interface CustomUserDetailsService extends UserDetailsService {
 
@@ -21,7 +21,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
      * @param username   username
      * @return UserDetails
      * @author shimmerjordan
-     * @date 2021/05/28 21:06
+     * @date 2021/03/28 21:06
      */
     UserDetails loadUserByIdentifierAndTenantCode(String tenantCode, String username) throws UsernameNotFoundException;
 
@@ -33,7 +33,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
 	 * @param mobileUser mobileUser
      * @return UserDetails
      * @author shimmerjordan
-     * @date 2021/06/22 21:08
+     * @date 2021/03/22 21:08
      */
     UserDetails loadUserBySocialAndTenantCode(String tenantCode, String social, MobileUser mobileUser) throws UsernameNotFoundException;
 
@@ -45,7 +45,7 @@ public interface CustomUserDetailsService extends UserDetailsService {
      * @param wxUser     wxUser
      * @return UserDetails
      * @author shimmerjordan
-     * @date 2021/07/05 20:04:59
+     * @date 2021/03/05 20:04:59
      */
     UserDetails loadUserByWxCodeAndTenantCode(String tenantCode, String code, WxUser wxUser) throws UsernameNotFoundException;
 }

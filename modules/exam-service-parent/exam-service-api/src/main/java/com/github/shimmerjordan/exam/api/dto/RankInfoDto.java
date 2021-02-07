@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * 排名详情
  * @author shimmerjordan
- * @date 2021/12/8 23:33
+ * @date 2021/05/8 23:33
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)

@@ -93,7 +93,7 @@ public class AttachmentService extends CrudService<AttachmentMapper, Attachment>
 	 * @param attachment attachment
 	 * @return String
 	 * @author shimmerjordan
-	 * @date 2021/06/21 17:45
+	 * @date 2021/03/21 17:45
 	 */
 	@Cacheable(value = "attachment_preview#" + CommonConstant.CACHE_EXPIRE, key = "#attachment.id")
 	public String getPreviewUrl(Attachment attachment) {

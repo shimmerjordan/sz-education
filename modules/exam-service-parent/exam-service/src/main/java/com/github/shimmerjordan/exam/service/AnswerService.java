@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
  * 答题service
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:17
+ * @date 2021/03/8 21:17
  */
 @Slf4j
 @AllArgsConstructor
@@ -218,7 +218,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param nextSubjectType 下一题的类型，选择题、判断题
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/05/01 11:42
+     * @date 2021/03/01 11:42
      */
     @Transactional
     public SubjectDto saveAndNext(AnswerDto answerDto, Integer type, Long nextSubjectId, Integer nextSubjectType) {
@@ -242,7 +242,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
 	 * @param tenantCode       tenantCode
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2021/05/01 11:42
+	 * @date 2021/03/01 11:42
 	 */
 	@Transactional
 	public int save(AnswerDto answerDto, String userCode, String sysCode, String tenantCode) {
@@ -307,7 +307,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
 	 * 基于Redis的sort set数据结构
      * @param record record
      * @author shimmerjordan
-     * @date 2021/12/8 23:21
+     * @date 2021/05/8 23:21
      */
     private void updateRank(ExaminationRecord record) {
 		redisTemplate.opsForZSet().add(AnswerConstant.CACHE_PREFIX_RANK + record.getExaminationId(), JsonMapper.getInstance().toJson(record), record.getScore());
@@ -322,7 +322,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer answer
      * @return boolean
      * @author shimmerjordan
-     * @date 2021/05/03 14:35
+     * @date 2021/03/03 14:35
      */
     @Transactional
     public boolean submitAsync(Answer answer) {
@@ -426,7 +426,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answers answers
      * @return Map
      * @author shimmerjordan
-     * @date 2021/06/18 16:32
+     * @date 2021/03/18 16:32
      */
     private Map<String, List<Answer>> distinctAnswer(List<Answer> answers) {
         Map<String, List<Answer>> distinctMap = new HashMap<>();
@@ -464,7 +464,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param nextType         nextType
      * @return AnswerDto
      * @author shimmerjordan
-     * @date 2021/06/18 23:05
+     * @date 2021/03/18 23:05
      */
     public AnswerDto answerInfo(Long recordId, Long currentSubjectId, Integer nextSubjectType, Integer nextType) {
         ExaminationRecord record = examRecordService.get(recordId);
@@ -537,7 +537,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param examRecord examRecord
      * @return Boolean
      * @author shimmerjordan
-     * @date 2021/06/19 14:44
+     * @date 2021/03/19 14:44
      */
     public Boolean completeMarking(ExaminationRecord examRecord) {
         long start = System.currentTimeMillis();
@@ -568,7 +568,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param recordId recordId
      * @return List
      * @author shimmerjordan
-     * @date 2021/12/8 23:36
+     * @date 2021/05/8 23:36
      */
 	public List<RankInfoDto> getRankInfo(Long recordId) {
 		List<RankInfoDto> rankInfos = new ArrayList<>();
@@ -617,7 +617,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer   answer
      * @return List
      * @author shimmerjordan
-     * @date 2020/02/19 22:50
+     * @date 2021/02/19 22:50
      */
 	public PageInfo<AnswerDto> answerListInfo(String pageNum, String pageSize, String sort, String order, Long recordId, Answer answer) {
         List<AnswerDto> answerDtos = new ArrayList<>();

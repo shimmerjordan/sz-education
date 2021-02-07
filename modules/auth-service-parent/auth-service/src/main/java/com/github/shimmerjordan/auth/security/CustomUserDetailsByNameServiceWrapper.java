@@ -10,7 +10,7 @@ import org.springframework.util.Assert;
 
 /**
  * @author shimmerjordan
- * @date 2020/04-19 11:32
+ * @date 2021/04-19 11:32
  */
 public class CustomUserDetailsByNameServiceWrapper<T extends Authentication> implements AuthenticationUserDetailsService<T>, InitializingBean {
     private UserDetailsService userDetailsService = null;

@@ -28,7 +28,7 @@ import java.util.List;
  * 答题controller
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:24
+ * @date 2021/03/8 21:24
  */
 @Slf4j
 @AllArgsConstructor
@@ -47,7 +47,7 @@ public class AnswerController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:23
+     * @date 2021/03/10 21:23
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取答题信息", notes = "根据答题id获取答题详细信息")
@@ -66,7 +66,7 @@ public class AnswerController extends BaseController {
      * @param answer   answer
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/05/10 21:25
+     * @date 2021/03/10 21:25
      */
     @GetMapping("answerList")
     @ApiOperation(value = "获取答题列表")
@@ -92,7 +92,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:26
+     * @date 2021/03/10 21:26
      */
     @PostMapping
     @ApiOperation(value = "创建答题", notes = "创建答题")
@@ -109,7 +109,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:27
+     * @date 2021/03/10 21:27
      */
     @PutMapping
     @ApiOperation(value = "更新答题信息", notes = "根据答题id更新答题的基本信息")
@@ -126,7 +126,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/02/22 14:47
+     * @date 2021/02/22 14:47
      */
     @PutMapping("mark")
     @ApiOperation(value = "批改答题", notes = "根据答题id批改答题")
@@ -143,7 +143,7 @@ public class AnswerController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:28
+     * @date 2021/03/10 21:28
      */
     @DeleteMapping("{id}")
     @ApiOperation(value = "删除答题", notes = "根据ID删除答题")
@@ -294,7 +294,7 @@ public class AnswerController extends BaseController {
      * @param answer   answer
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/06/18 19:16
+     * @date 2021/03/18 19:16
      */
     @GetMapping("record/{recordId}/answerListInfo")
     @ApiOperation(value = "获取答题信息列表", notes = "根据考试记录id获取答题详细信息")
@@ -324,7 +324,7 @@ public class AnswerController extends BaseController {
      * @param nextType        0：下一题，1：上一题
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/18 22:50
+     * @date 2021/03/18 22:50
      */
     @GetMapping("record/{recordId}/answerInfo")
     @ApiOperation(value = "答题详情", notes = "答题详情")
@@ -341,7 +341,7 @@ public class AnswerController extends BaseController {
      * @param recordId recordId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/12/8 23:32
+     * @date 2021/05/8 23:32
      */
 	@GetMapping("record/{recordId}/rankInfo")
 	@ApiOperation(value = "排名列表", notes = "排名列表")

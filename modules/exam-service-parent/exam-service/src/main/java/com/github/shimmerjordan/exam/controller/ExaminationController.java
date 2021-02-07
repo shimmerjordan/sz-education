@@ -34,7 +34,7 @@ import java.util.List;
  * 考试controller
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:26
+ * @date 2021/03/8 21:26
  */
 @Slf4j
 @AllArgsConstructor
@@ -51,7 +51,7 @@ public class ExaminationController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:08
+     * @date 2021/03/10 21:08
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取考试信息", notes = "根据考试id获取考试详细信息")
@@ -66,7 +66,7 @@ public class ExaminationController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:08
+     * @date 2021/03/10 21:08
      */
     @GetMapping("/anonymousUser/{id}")
     @ApiOperation(value = "获取考试信息", notes = "根据考试id获取考试详细信息")
@@ -85,7 +85,7 @@ public class ExaminationController extends BaseController {
      * @param examination examination
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/05/10 21:10
+     * @date 2021/03/10 21:10
      */
     @GetMapping("examinationList")
     @ApiOperation(value = "获取考试列表")
@@ -114,7 +114,7 @@ public class ExaminationController extends BaseController {
      * @param subjectDto subjectDto
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/6/16 15:45
+     * @date 2021/03/16 15:45
      */
     @RequestMapping("subjectList")
     @ApiOperation(value = "获取题目列表")
@@ -153,7 +153,7 @@ public class ExaminationController extends BaseController {
      * @param examinationDto examinationDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:14
+     * @date 2021/03/10 21:14
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -170,7 +170,7 @@ public class ExaminationController extends BaseController {
      * @param examinationDto examinationDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:15
+     * @date 2021/03/10 21:15
      */
     @PutMapping
     @AdminTenantTeacherAuthorization
@@ -187,7 +187,7 @@ public class ExaminationController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/10 21:20
+     * @date 2021/03/10 21:20
      */
     @DeleteMapping("{id}")
     @AdminTenantTeacherAuthorization
@@ -238,7 +238,7 @@ public class ExaminationController extends BaseController {
      * @param examinationId examinationId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/18 14:31
+     * @date 2021/03/18 14:31
      */
     @ApiImplicitParam(name = "examinationId", value = "考试ID", required = true, paramType = "path")
     @GetMapping("/{examinationId}/subjectIds")
@@ -254,7 +254,7 @@ public class ExaminationController extends BaseController {
      * @param examinationId examinationId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/18 14:31
+     * @date 2021/03/18 14:31
      */
     @ApiImplicitParam(name = "examinationId", value = "考试ID", required = true, paramType = "path")
     @GetMapping("/anonymousUser/{examinationId}/subjectIds")

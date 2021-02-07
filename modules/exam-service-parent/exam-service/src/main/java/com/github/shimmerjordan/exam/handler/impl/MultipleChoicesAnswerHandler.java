@@ -36,7 +36,7 @@ public class MultipleChoicesAnswerHandler extends AbstractAnswerHandler {
 	 * @param answer  answer
 	 * @param subject subject
 	 * @author shimmerjordan
-	 * @date 2020/02/19 23:23
+	 * @date 2021/02/19 23:23
 	 */
 	public void judgeOptionRight(Answer answer, SubjectDto subject) {
 		String userAnswer = answer.getAnswer();

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 发送短信接口
  *
  * @author shimmerjordan
- * @date 2021/6/22 12:59
+ * @date 2021/03/22 12:59
  */
 @Slf4j
 @AllArgsConstructor
@@ -35,7 +35,7 @@ public class SmsController extends BaseController {
      * @param smsDto smsDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/22 13:12
+     * @date 2021/03/22 13:12
      */
     @PostMapping("sendSms")
     public ResponseBean<SmsResponse> sendSms(@RequestBody SmsDto smsDto) {

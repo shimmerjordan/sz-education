@@ -15,7 +15,7 @@ import java.util.List;
  * 用户授权Service
  *
  * @author shimmerjordan
- * @date 2021/07/03 11:45
+ * @date 2021/03/03 11:45
  */
 @AllArgsConstructor
 @Slf4j
@@ -28,7 +28,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userAuths userAuths
      * @return UserAuths
      * @author shimmerjordan
-     * @date 2021/07/03 11:52:27
+     * @date 2021/03/03 11:52:27
      */
     public UserAuths getByIdentifier(UserAuths userAuths) {
         return this.dao.getByIdentifier(userAuths);
@@ -40,7 +40,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userList userList
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/03 21:58:31
+     * @date 2021/03/03 21:58:31
      */
     public List<UserAuths> getListByUsers(List<User> userList) {
         return this.dao.getListByUserIds(userList.stream().map(User::getId).distinct().toArray(Long[]::new));
@@ -52,7 +52,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/04 11:39:50
+     * @date 2021/03/04 11:39:50
      */
     @Transactional
     public int deleteByIdentifier(UserAuths userAuths) {
@@ -65,7 +65,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/04 11:42:50
+     * @date 2021/03/04 11:42:50
      */
     @Transactional
     public int deleteByUserId(UserAuths userAuths) {
@@ -78,7 +78,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/09-03 13:07
+     * @date 2021/04-03 13:07
      */
     @Transactional
     public int insertBatch(List<UserAuths> userAuths) {

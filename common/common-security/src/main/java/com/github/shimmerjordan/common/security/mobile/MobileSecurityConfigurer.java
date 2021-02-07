@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  * 手机登录配置
  *
  * @author shimmerjordan
- * @date 2021/6/22 21:26
+ * @date 2021/03/22 21:26
  */
 @Data
 public class MobileSecurityConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {

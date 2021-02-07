@@ -20,7 +20,7 @@ import static org.springframework.web.cors.CorsConfiguration.ALL;
  * 跨域配置
  *
  * @author shimmerjordan
- * @date 2021/07/06 17:12
+ * @date 2021/03/06 17:12
  */
 @Configuration
 public class CorsConfig {

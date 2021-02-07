@@ -34,7 +34,7 @@ public class RoleService extends CrudService<RoleMapper, Role> {
      * @param role role
      * @return List
      * @author shimmerjordan
-     * @date 2021/05/15 23:32
+     * @date 2021/03/15 23:32
      */
     @Override
     @Cacheable(value = "role#" + CommonConstant.CACHE_EXPIRE, key = "#role.applicationCode")
@@ -48,7 +48,7 @@ public class RoleService extends CrudService<RoleMapper, Role> {
      * @param role role
      * @return Role
      * @author shimmerjordan
-     * @date 2021/09/21 12:07:47
+     * @date 2021/04/21 12:07:47
      */
     @Cacheable(value = "role#" + CommonConstant.CACHE_EXPIRE, key = "#role.roleCode")
     public Role findByRoleCode(Role role) {

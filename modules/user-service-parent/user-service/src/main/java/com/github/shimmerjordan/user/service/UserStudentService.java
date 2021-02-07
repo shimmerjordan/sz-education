@@ -13,7 +13,7 @@ import java.util.List;
  * 用户学生Service
  *
  * @author shimmerjordan
- * @date 2021/07/09 15:58
+ * @date 2021/03/09 15:58
  */
 @Service
 public class UserStudentService extends CrudService<UserStudentMapper, UserStudent> {
@@ -24,7 +24,7 @@ public class UserStudentService extends CrudService<UserStudentMapper, UserStude
      * @param userId userId
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/09 17:01:13
+     * @date 2021/03/09 17:01:13
      */
     public List<UserStudent> getByUserId(@NotBlank String userId) {
         return this.dao.getByUserId(userId);
@@ -36,7 +36,7 @@ public class UserStudentService extends CrudService<UserStudentMapper, UserStude
      * @param studentId studentId
      * @return UserStudent
      * @author shimmerjordan
-     * @date 2021/07/09 17:02:19
+     * @date 2021/03/09 17:02:19
      */
     public UserStudent getByStudentId(@NotBlank String studentId) {
         return this.dao.getByStudentId(studentId);
@@ -48,7 +48,7 @@ public class UserStudentService extends CrudService<UserStudentMapper, UserStude
      * @param userId userId
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/09 17:04:13
+     * @date 2021/03/09 17:04:13
      */
     @Transactional
     public int deleteByUserId(@NotBlank String userId) {
@@ -61,7 +61,7 @@ public class UserStudentService extends CrudService<UserStudentMapper, UserStude
      * @param studentId studentId
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/09 17:04:59
+     * @date 2021/03/09 17:04:59
      */
     @Transactional
     public int deleteByStudentId(@NotBlank String studentId) {

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 手机管理Controller
  *
  * @author shimmerjordan
- * @date 2021/07/02 09:34
+ * @date 2021/03/02 09:34
  */
 @Slf4j
 @AllArgsConstructor
@@ -35,7 +35,7 @@ public class MobileController extends BaseController {
      * @param mobile     mobile
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/07/02 09:49:05
+     * @date 2021/03/02 09:49:05
      */
     @GetMapping("sendSms/{mobile}")
     @ApiOperation(value = "发送短信", notes = "发送短信到指定的手机号")

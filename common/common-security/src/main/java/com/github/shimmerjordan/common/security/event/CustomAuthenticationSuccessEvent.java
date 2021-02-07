@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  * 登录成功事件
  *
  * @author shimmerjordan
- * @date 2021/11-11 23:40
+ * @date 2021/04-11 23:40
  */
 @Data
 public class CustomAuthenticationSuccessEvent extends ApplicationEvent {

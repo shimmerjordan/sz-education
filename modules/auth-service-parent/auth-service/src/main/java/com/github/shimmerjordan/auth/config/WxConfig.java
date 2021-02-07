@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * 微信相关配置
  *
  * @author shimmerjordan
- * @date 2021/07/05 20:29
+ * @date 2021/03/05 20:29
  */
 @Configuration
 @AllArgsConstructor

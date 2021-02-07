@@ -22,7 +22,7 @@ import java.net.URLEncoder;
 /**
  * 七牛云
  * @author shimmerjordan
- * @date 2021/12/8 20:25
+ * @date 2021/01/28 20:25
  */
 @Slf4j
 public class QiNiuUtil {

@@ -9,7 +9,7 @@ import java.util.Collection;
  * 手机登录token
  *
  * @author shimmerjordan
- * @date 2021/6/22 15:27
+ * @date 2021/03/22 15:27
  */
 public class MobileAuthenticationToken extends AbstractAuthenticationToken {
 

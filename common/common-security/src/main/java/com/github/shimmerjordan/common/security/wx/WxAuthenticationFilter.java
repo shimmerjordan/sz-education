@@ -28,7 +28,7 @@ import java.io.IOException;
  * 微信登录filter，登录时支持传入用户的资料，如姓名、电话、性别等
  *
  * @author shimmerjordan
- * @date 2021/07/05 19:32
+ * @date 2021/03/05 19:32
  */
 @Slf4j
 public class WxAuthenticationFilter extends AbstractAuthenticationProcessingFilter {

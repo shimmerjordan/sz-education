@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * 考试service
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:19
+ * @date 2021/03/8 21:19
  */
 @Slf4j
 @AllArgsConstructor
@@ -92,7 +92,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param examination examination
 	 * @return PageInfo
 	 * @author shimmerjordan
-	 * @date 2021/05/10 21:10
+	 * @date 2021/03/10 21:10
 	 */
 	public PageInfo<ExaminationDto> examinationList(String pageNum, String pageSize, String sort, String order, Examination examination) {
 		examination.setTenantCode(SysUtil.getTenantCode());
@@ -220,7 +220,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
      * @param order      order
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/06/16 16:00
+     * @date 2021/03/16 16:00
      */
     public PageInfo<SubjectDto> findSubjectPageById(SubjectDto subjectDto, String pageNum, String pageSize, String sort, String order) {
         // 返回结果
@@ -264,7 +264,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
      * @param examinationId examinationId
      * @return ExaminationSubject
      * @author shimmerjordan
-     * @date 2021/06/18 14:34
+     * @date 2021/03/18 14:34
      */
     public List<ExaminationSubject> findListByExaminationId(Long examinationId) {
         return examinationSubjectService.findListByExaminationId(examinationId);
@@ -276,7 +276,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param examination examination
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2021/10/27 20:08:58
+	 * @date 2021/04/27 20:08:58
 	 */
 	public int findExamUserCount(Examination examination) {
 		return this.dao.findExamUserCount(examination);

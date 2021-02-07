@@ -94,7 +94,7 @@ public class RoleController extends BaseController {
      * @param role role
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/15 23:29
+     * @date 2021/03/15 23:29
      */
     @GetMapping("allRoles")
     @ApiOperation(value = "获取全部角色列表")

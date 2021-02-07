@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 判断题Mapper
  *
  * @author shimmerjordan
- * @date 2021/07-16 13:00
+ * @date 2021/03-16 13:00
  */
 @Mapper
 public interface SubjectJudgementMapper extends CrudMapper<SubjectJudgement> {
@@ -19,7 +19,7 @@ public interface SubjectJudgementMapper extends CrudMapper<SubjectJudgement> {
      * @param subjectJudgement subjectJudgement
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:54
+     * @date 2021/03/16 22:54
      */
     int physicalDelete(SubjectJudgement subjectJudgement);
 
@@ -29,7 +29,7 @@ public interface SubjectJudgementMapper extends CrudMapper<SubjectJudgement> {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:54
+     * @date 2021/03/16 22:54
      */
     int physicalDeleteAll(Long[] ids);
 }

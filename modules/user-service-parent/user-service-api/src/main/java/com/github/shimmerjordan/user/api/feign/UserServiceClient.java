@@ -46,7 +46,7 @@ public interface UserServiceClient {
      * @param tenantCode   租户标识
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/07/06 14:14:11
+     * @date 2021/03/06 14:14:11
      */
     @GetMapping("/v1/user/anonymousUser/findUserByIdentifier/{identifier}")
 	ResponseBean<UserVo> findUserByIdentifier(@PathVariable("identifier") String identifier, @RequestParam(value = "identityType", required = false) Integer identityType, @RequestParam("tenantCode") String tenantCode);
@@ -77,7 +77,7 @@ public interface UserServiceClient {
      * @param userVo userVo
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/09 22:04
+     * @date 2021/03/09 22:04
      */
     @RequestMapping(value = "/v1/user/userCount", method = RequestMethod.POST)
     ResponseBean<Integer> findUserCount(@RequestBody UserVo userVo);
@@ -151,7 +151,7 @@ public interface UserServiceClient {
      * @param tenantCode 租户标识
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/26 10:21
+     * @date 2021/03/26 10:21
      */
     @GetMapping("/v1/tenant/anonymousUser/findTenantByTenantCode/{tenantCode}")
     ResponseBean<Tenant> findTenantByTenantCode(@PathVariable("tenantCode") String tenantCode);
@@ -163,7 +163,7 @@ public interface UserServiceClient {
      * @param tenantCode 租户标识
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/22 21:10
+     * @date 2021/03/22 21:10
      */
     @GetMapping("/v1/user/findUserBySocial/{social}")
     ResponseBean<UserVo> findUserBySocial(@PathVariable("social") String social, @RequestParam("tenantCode") String tenantCode);
@@ -174,7 +174,7 @@ public interface UserServiceClient {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/07/05 20:57:31
+     * @date 2021/03/05 20:57:31
      */
     @PostMapping("/v1/user/anonymousUser/register")
     ResponseBean<Boolean> registerUser(@RequestBody UserDto userDto);
@@ -185,7 +185,7 @@ public interface UserServiceClient {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/07/05 20:59:06
+     * @date 2021/03/05 20:59:06
      */
     @PutMapping("/v1/user/anonymousUser/updateLoginInfo")
     ResponseBean<Boolean> updateLoginInfo(UserDto userDto);

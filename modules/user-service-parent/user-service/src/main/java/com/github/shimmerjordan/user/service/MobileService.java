@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  * 手机管理Service
  *
  * @author shimmerjordan
- * @date 2021/07/02 09:35
+ * @date 2021/03/02 09:35
  */
 @Slf4j
 @AllArgsConstructor
@@ -38,7 +38,7 @@ public class MobileService {
      * @param mobile     mobile
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/07/02 09:36:52
+     * @date 2021/03/02 09:36:52
      */
     public ResponseBean<Boolean> sendSms(String mobile) {
         String key = CommonConstant.DEFAULT_CODE_KEY + LoginTypeEnum.SMS.getType() + "@" + mobile;

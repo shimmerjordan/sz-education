@@ -2,7 +2,7 @@ package com.github.shimmerjordan.user.api.constant;
 
 /**
  * @author shimmerjordan
- * @date 2021/5/27 10:25
+ * @date 2021/03/27 10:25
  */
 public class TenantConstant {
 

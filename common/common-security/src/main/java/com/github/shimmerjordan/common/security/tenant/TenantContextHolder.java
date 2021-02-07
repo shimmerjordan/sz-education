@@ -4,7 +4,7 @@ package com.github.shimmerjordan.common.security.tenant;
  * ThreadLocal保存租户code
  *
  * @author shimmerjordan
- * @date 2021/5/28 20:54
+ * @date 2021/03/28 20:54
  */
 public class TenantContextHolder {
 

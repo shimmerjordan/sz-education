@@ -5,7 +5,7 @@ import com.github.shimmerjordan.common.core.exceptions.CommonException;
 /**
  * oss exception
  * @author shimmerjordan
- * @date 2021/12/8 8:41 下午
+ * @date 2021/02/28 8:41
  */
 public class OssException extends CommonException {
 

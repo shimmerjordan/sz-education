@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 消息中心服务断路器工厂
  *
  * @author shimmerjordan
- * @date 2021/07/02 16:08
+ * @date 2021/03/02 16:08
  */
 @Component
 public class MscServiceClientFallbackFactory implements FallbackFactory<MscServiceClient> {

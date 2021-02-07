@@ -26,7 +26,7 @@ import java.util.List;
  * 选择题service
  *
  * @author shimmerjordan
- * @date 2021/05/8 21:23
+ * @date 2021/03/8 21:23
  */
 @AllArgsConstructor
 @Service
@@ -109,7 +109,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/09-14 16:47
+     * @date 2021/04-14 16:47
      */
     public SubjectChoices getByCurrentId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -128,7 +128,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/09-14 16:47
+     * @date 2021/04-14 16:47
      */
     public SubjectChoices getByPreviousId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -147,7 +147,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/10/07 20:40:16
+     * @date 2021/04/07 20:40:16
      */
     public SubjectChoices getPreviousByCurrentId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -183,7 +183,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:44
+     * @date 2021/03/16 22:44
      */
     @Transactional
     @CacheEvict(value = "subjectChoices", key = "#subjectChoices.id")
@@ -220,7 +220,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:44
+     * @date 2021/03/16 22:44
      */
     @Transactional
     @CacheEvict(value = "subjectChoices", allEntries = true)
@@ -238,7 +238,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      *
      * @param subjectId subjectId
      * @author shimmerjordan
-     * @date 2021/06/16 22:09
+     * @date 2021/03/16 22:09
      */
     @Transactional
     public void deleteOptionAndRelation(Long subjectId) {
@@ -258,7 +258,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param id id
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/06/16 17:36
+     * @date 2021/03/16 17:36
      */
     @Override
     public SubjectDto getSubject(Long id) {
@@ -281,7 +281,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param nextType      0：下一题，1：上一题
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/09/14 16:35
+     * @date 2021/04/14 16:35
      */
     @Override
     @Transactional
@@ -304,7 +304,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 17:50
+     * @date 2021/03/16 17:50
      */
     @Override
     @Transactional
@@ -322,7 +322,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * 保存选项
      * @param subjectChoices subjectChoices
      * @author shimmerjordan
-     * @date 2020/01/17 22:30:48
+     * @date 2021/01/17 22:30:48
      */
     @Transactional
     public void insertOptions(SubjectChoices subjectChoices) {
@@ -347,7 +347,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 17:50
+     * @date 2021/03/16 17:50
      */
     @Override
     @Transactional
@@ -367,7 +367,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 17:50
+     * @date 2021/03/16 17:50
      */
     @Override
     @Transactional
@@ -384,7 +384,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:50
+     * @date 2021/03/16 22:50
      */
     @Override
     @Transactional
@@ -401,7 +401,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 17:50
+     * @date 2021/03/16 17:50
      */
     @Override
     @Transactional
@@ -416,7 +416,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:51
+     * @date 2021/03/16 22:51
      */
     @Override
     @Transactional
@@ -431,7 +431,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 18:16
+     * @date 2021/03/16 18:16
      */
     @Override
     public List<SubjectDto> findSubjectList(SubjectDto subjectDto) {
@@ -447,7 +447,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectDto subjectDto
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/06/16 18:16
+     * @date 2021/03/16 18:16
      */
     @Override
     public PageInfo<SubjectDto> findSubjectPage(PageInfo pageInfo, SubjectDto subjectDto) {
@@ -472,7 +472,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param ids ids
      * @return List
      * @author shimmerjordan
-     * @date 2021/06/16 18:16
+     * @date 2021/03/16 18:16
      */
     @Override
     public List<SubjectDto> findSubjectListById(Long[] ids) {
@@ -485,7 +485,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectId subjectId
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/10/07 21:03:43
+     * @date 2021/04/07 21:03:43
      */
     private SubjectChoices getSubjectChoicesById(Long subjectId) {
         SubjectChoices subjectChoices = new SubjectChoices();

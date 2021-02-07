@@ -7,7 +7,7 @@ import lombok.Data;
  * 图片表
  *
  * @author shimmerjordan
- * @date 2021/6/16 13:52
+ * @date 2021/03/16 13:52
  */
 @Data
 public class Pictures extends BaseEntity<Pictures> {

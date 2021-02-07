@@ -19,7 +19,7 @@ public interface SubjectShortAnswerMapper extends CrudMapper<SubjectShortAnswer>
      * @param subjectShortAnswer subjectShortAnswer
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:54
+     * @date 2021/03/16 22:54
      */
     int physicalDelete(SubjectShortAnswer subjectShortAnswer);
 
@@ -29,7 +29,7 @@ public interface SubjectShortAnswerMapper extends CrudMapper<SubjectShortAnswer>
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 22:54
+     * @date 2021/03/16 22:54
      */
     int physicalDeleteAll(Long[] ids);
 }

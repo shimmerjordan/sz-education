@@ -26,7 +26,7 @@ public class GsonHelper {
      * 获取单例
      *
      * @author shimmerjordan
-     * @date 2020/11/23 18:10
+     * @date 2021/01/23 18:10
      */
     public static GsonHelper getInstance() {
         if (instance == null) {
@@ -46,7 +46,7 @@ public class GsonHelper {
      * @param clazz clazz
      * @return T
      * @author shimmerjordan
-     * @date 2020/11/23 18:09
+     * @date 2021/01/23 18:09
      */
     public <T> T fromJson(String json, Class<T> clazz) {
         return gson.fromJson(json, clazz);
@@ -59,7 +59,7 @@ public class GsonHelper {
      * @param type type
      * @return T
      * @author shimmerjordan
-     * @date 2020/11/28 15:41
+     * @date 2021/01/28 15:41
      */
     public <T> T fromJson(String json, Type type) {
         return gson.fromJson(json, type);
@@ -71,7 +71,7 @@ public class GsonHelper {
      * @param src
      * @return String
      * @author shimmerjordan
-     * @date 2020/11/23 18:09
+     * @date 2021/01/23 18:09
      */
     public String toJson(Object src) {
         return gson.toJson(src);

@@ -7,7 +7,7 @@ import lombok.Getter;
  * 用户授权类型
  *
  * @author shimmerjordan
- * @date 2021/07/03 13:35
+ * @date 2021/03/03 13:35
  */
 @Getter
 @AllArgsConstructor

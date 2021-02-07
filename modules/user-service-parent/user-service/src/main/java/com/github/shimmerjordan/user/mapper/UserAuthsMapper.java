@@ -11,7 +11,7 @@ import java.util.List;
  * UserAuthsMapper
  *
  * @author shimmerjordan
- * @date 2021/07/03 11:44
+ * @date 2021/03/03 11:44
  */
 @Mapper
 public interface UserAuthsMapper extends CrudMapper<UserAuths> {
@@ -22,7 +22,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userAuths userAuths
      * @return UserAuths
      * @author shimmerjordan
-     * @date 2021/07/03 11:52:27
+     * @date 2021/03/03 11:52:27
      */
     UserAuths getByIdentifier(UserAuths userAuths);
 
@@ -32,7 +32,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userIds userIds
      * @return List
      * @author shimmerjordan
-     * @date 2021/07/03 22:02:13
+     * @date 2021/03/03 22:02:13
      */
     List<UserAuths> getListByUserIds(@Param("userIds") Long[] userIds);
 
@@ -42,7 +42,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/04 11:39:50
+     * @date 2021/03/04 11:39:50
      */
     int deleteByIdentifier(UserAuths userAuths);
 
@@ -53,7 +53,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/04 11:43:50
+     * @date 2021/03/04 11:43:50
      */
     int deleteByUserId(UserAuths userAuths);
 
@@ -63,7 +63,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/09-03 13:07
+     * @date 2021/04-03 13:07
      */
     int insertBatch(List<UserAuths> userAuths);
 }

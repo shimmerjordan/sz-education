@@ -14,7 +14,7 @@ import java.util.List;
  * 考试题目关联service
  *
  * @author shimmerjordan
- * @date 2021/6/16 15:38
+ * @date 2021/03/16 15:38
  */
 @AllArgsConstructor
 @Service
@@ -31,7 +31,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/16 21:56
+     * @date 2021/03/16 21:56
      */
     @Transactional
     public int deleteBySubjectId(ExaminationSubject examinationSubject) {
@@ -44,7 +44,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return List
      * @author shimmerjordan
-     * @date 2021/06/17 12:18
+     * @date 2021/03/17 12:18
      */
     public List<ExaminationSubject> findListBySubjectId(ExaminationSubject examinationSubject) {
         return this.dao.findListBySubjectId(examinationSubject);
@@ -56,7 +56,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationId examinationId
      * @return int
      * @author shimmerjordan
-     * @date 2021/06/18 14:35
+     * @date 2021/03/18 14:35
      */
     public List<ExaminationSubject> findListByExaminationId(Long examinationId) {
         return this.dao.findListByExaminationId(examinationId);
@@ -68,7 +68,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return ExaminationSubject
      * @author shimmerjordan
-     * @date 2021/06/18 23:17
+     * @date 2021/03/18 23:17
      */
     public ExaminationSubject findByExaminationIdAndSubjectId(ExaminationSubject examinationSubject) {
         return this.dao.findByExaminationIdAndSubjectId(examinationSubject);
@@ -80,7 +80,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return ExaminationSubject
      * @author shimmerjordan
-     * @date 2021/10/07 20:59:43
+     * @date 2021/04/07 20:59:43
      */
     public ExaminationSubject getByPreviousId(ExaminationSubject examinationSubject) {
         return this.dao.getByPreviousId(examinationSubject);
@@ -92,7 +92,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return ExaminationSubject
      * @author shimmerjordan
-     * @date 2021/10/07 20:59:43
+     * @date 2021/04/07 20:59:43
      */
     public ExaminationSubject getPreviousByCurrentId(ExaminationSubject examinationSubject) {
         return this.dao.getPreviousByCurrentId(examinationSubject);
@@ -104,7 +104,7 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      * @param examinationSubject examinationSubject
      * @return List
      * @author shimmerjordan
-     * @date 2021/10/24 21:47:24
+     * @date 2021/04/24 21:47:24
      */
     public List<ExaminationSubject> findListByCategoryId(ExaminationSubject examinationSubject) {
         return this.dao.findListByCategoryId(examinationSubject);

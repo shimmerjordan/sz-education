@@ -8,7 +8,7 @@ import lombok.Data;
  * 用户授权信息
  *
  * @author shimmerjordan
- * @date 2021/07/03 11:10
+ * @date 2021/03/03 11:10
  */
 @Data
 public class UserAuths extends BaseEntity<UserAuths> {

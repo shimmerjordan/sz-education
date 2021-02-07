@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 租户
  *
  * @author shimmerjordan
- * @date 2021/5/22 22:44
+ * @date 2021/03/22 22:44
  */
 @Data
 public class Tenant extends BaseEntity<Tenant> {

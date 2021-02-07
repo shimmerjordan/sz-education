@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * 微信Service
  *
  * @author shimmerjordan
- * @date 2021/07/05 20:33
+ * @date 2021/03/05 20:33
  */
 @Slf4j
 @AllArgsConstructor
@@ -26,7 +26,7 @@ public class WxSessionService {
      * @param code code
      * @return WxSession
      * @author shimmerjordan
-     * @date 2021/07/05 20:37:02
+     * @date 2021/03/05 20:37:02
      */
     public WxSession getSession(String code) {
         WxSession session = null;
@@ -46,7 +46,7 @@ public class WxSessionService {
      * @param code code
      * @return WxSession
      * @author shimmerjordan
-     * @date 2021/07/06 14:01:13
+     * @date 2021/03/06 14:01:13
      */
     public WxSession code2Session(String code) {
         WxSession session = null;

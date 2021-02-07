@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
  * 手机号登录配置
  *
  * @author shimmerjordan
- * @date 2021/6/23 15:18
+ * @date 2021/03/23 15:18
  */
 @Configuration
 public class MobileLoginConfig {

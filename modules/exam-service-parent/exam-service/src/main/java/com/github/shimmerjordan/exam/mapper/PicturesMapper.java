@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 图片mapper
  *
  * @author shimmerjordan
- * @date 2021/6/16 14:50
+ * @date 2021/03/16 14:50
  */
 @Mapper
 public interface PicturesMapper extends CrudMapper<Pictures> {

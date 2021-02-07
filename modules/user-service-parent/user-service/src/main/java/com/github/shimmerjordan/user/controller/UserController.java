@@ -233,7 +233,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/21 20:09
+     * @date 2021/03/21 20:09
      */
     @PutMapping("anonymousUser/updatePassword")
     @ApiOperation(value = "修改用户密码", notes = "修改用户密码")
@@ -249,7 +249,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/06/21 18:08
+     * @date 2021/03/21 18:08
      */
     @PutMapping("updateAvatar")
     @ApiOperation(value = "更新用户头像", notes = "根据用户id更新用户的头像信息")
@@ -288,7 +288,7 @@ public class UserController extends BaseController {
      *
      * @param ids ids
      * @author shimmerjordan
-     * @date 2021/05/26 22:11
+     * @date 2021/03/26 22:11
      */
     @PostMapping("export")
     @AdminTenantTeacherAuthorization
@@ -333,7 +333,7 @@ public class UserController extends BaseController {
      * @param file file
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/28 12:44
+     * @date 2021/03/28 12:44
      */
     @PostMapping("import")
     @AdminTenantTeacherAuthorization
@@ -436,7 +436,7 @@ public class UserController extends BaseController {
      * @param userVo userVo
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/09 22:09
+     * @date 2021/03/09 22:09
      */
     @PostMapping("userCount")
     public ResponseBean<Integer> userCount(UserVo userVo) {
@@ -449,7 +449,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/6/7 12:00
+     * @date 2021/03/7 12:00
      */
     @PutMapping("anonymousUser/resetPassword")
     @AdminTenantTeacherAuthorization
@@ -466,7 +466,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/02/29 16:55
+     * @date 2021/02/29 16:55
      */
     @PutMapping("anonymousUser/updateLoginInfo")
     @ApiOperation(value = "更新用户登录信息", notes = "根据用户id更新用户的登录信息")

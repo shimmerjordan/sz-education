@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 学生Service
  *
  * @author shimmerjordan
- * @date 2021/07/09 15:28
+ * @date 2021/03/09 15:28
  */
 @AllArgsConstructor
 @Service
@@ -34,7 +34,7 @@ public class StudentService extends CrudService<StudentMapper, Student> {
      * @param studentDto studentDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/07/10 18:18:04
+     * @date 2021/03/10 18:18:04
      */
     @Transactional
     public int add(StudentDto studentDto) {

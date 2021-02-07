@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 租户Mapper
  *
  * @author shimmerjordan
- * @date 2021/5/22 22:50
+ * @date 2021/03/22 22:50
  */
 @Mapper
 public interface TenantMapper extends CrudMapper<Tenant> {
@@ -19,7 +19,7 @@ public interface TenantMapper extends CrudMapper<Tenant> {
      * @param tenantCode tenantCode
      * @return Tenant
      * @author shimmerjordan
-     * @date 2021/05/26 10:29
+     * @date 2021/03/26 10:29
      */
     Tenant getByTenantCode(String tenantCode);
 

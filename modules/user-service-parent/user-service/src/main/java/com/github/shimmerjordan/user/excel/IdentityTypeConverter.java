@@ -9,7 +9,7 @@ import com.github.shimmerjordan.user.api.enums.IdentityType;
 
 /**
  * @author shimmerjordan
- * @date 2021/12/10 15:04
+ * @date 2021/05/10 15:04
  */
 public class IdentityTypeConverter implements Converter<Integer> {
 

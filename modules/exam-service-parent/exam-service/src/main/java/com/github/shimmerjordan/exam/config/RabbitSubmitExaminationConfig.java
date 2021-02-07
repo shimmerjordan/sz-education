@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * MQ配置
  *
  * @author shimmerjordan
- * @date 2021/5/3 14:53
+ * @date 2021/03/3 14:53
  */
 @Configuration
 public class RabbitSubmitExaminationConfig {

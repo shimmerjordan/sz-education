@@ -50,7 +50,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 *
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/09-14 14:41
+	 * @date 2021/04-14 14:41
 	 */
 	public List<MenuDto> findUserMenu() {
 		List<MenuDto> menuDtoList = new ArrayList<>();
@@ -134,7 +134,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param tenantCode tenantCode
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/07/03 23:50:35
+	 * @date 2021/03/03 23:50:35
 	 */
 	private List<Menu> finMenuByRoleList(List<Role> roleList, String tenantCode) {
 		List<Menu> menus = Lists.newArrayList();
@@ -268,7 +268,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param menus menus
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2021/09-03 12:19
+	 * @date 2021/04-03 12:19
 	 */
 	@Transactional
 	public int insertBatch(List<Menu> menus) {
@@ -282,7 +282,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param tenantMenus  tenantMenus
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/09-14 14:45
+	 * @date 2021/04-14 14:45
 	 */
 	private List<Menu> mergeMenu(List<Menu> defaultMenus, List<Menu> tenantMenus) {
 		if (CollectionUtils.isEmpty(tenantMenus))
@@ -320,7 +320,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param tenantCode      tenantCode
 	 * @return
 	 * @author shimmerjordan
-	 * @date 2021/09-14 15:57
+	 * @date 2021/04-14 15:57
 	 */
 	@Transactional
 	public void updateRoleMenu(Long menuId, List<Long> childrenMenuIds, String userCode, String sysCode,

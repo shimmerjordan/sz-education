@@ -15,7 +15,7 @@ import java.net.URI;
  * 网关进来的协议是HTTPS，其它服务一般部署在内网，没必要走HTTPS
  *
  * @author shimmerjordan
- * @date 2021/08/03 12:03
+ * @date 2021/04/03 12:03
  */
 @Component
 public class HttpsToHttpFilter implements GlobalFilter, Ordered {

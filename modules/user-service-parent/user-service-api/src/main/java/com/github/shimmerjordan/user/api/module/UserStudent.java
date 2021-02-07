@@ -7,7 +7,7 @@ import lombok.Data;
  * 用户学生关联关系，一个用户可以绑定多个学生
  *
  * @author shimmerjordan
- * @date 2021/07/09 15:23
+ * @date 2021/03/09 15:23
  */
 @Data
 public class UserStudent extends BaseEntity<UserStudent> {

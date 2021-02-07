@@ -64,7 +64,7 @@ public class PageUtil {
      * @param source source
      * @param target target
      * @author shimmerjordan
-     * @date 2021/07/03 22:26:18
+     * @date 2021/03/03 22:26:18
      */
     public static void copyProperties(PageInfo<?> source, PageInfo<?> target) {
         target.setPageNum(source.getPageNum());

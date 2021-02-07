@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  * 提交考试消息消费者
  *
  * @author shimmerjordan
- * @date 2021/5/3 14:55
+ * @date 2021/03/3 14:55
  */
 @Slf4j
 @AllArgsConstructor
@@ -34,7 +34,7 @@ public class RabbitSubmitExaminationReceiver {
      *
      * @param answer answer
      * @author shimmerjordan
-     * @date 2021/05/03 14:56
+     * @date 2021/03/03 14:56
      */
     @RabbitListener(queues = {MqConstant.SUBMIT_EXAMINATION_QUEUE})
     public void submitExamination(Answer answer) {
