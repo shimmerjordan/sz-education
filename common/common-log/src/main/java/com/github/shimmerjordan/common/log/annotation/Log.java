@@ -6,7 +6,7 @@ import java.lang.annotation.*;
  * 日志注解
  *
  * @author shimmerjordan
- * @date 2021/3/12 23:50
+ * @date 2021/02/12 23:50
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
