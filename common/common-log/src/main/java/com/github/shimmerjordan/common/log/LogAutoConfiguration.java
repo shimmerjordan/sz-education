@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * @author shimmerjordan
- * @date 2021/3/12 23:51
+ * @date 2021/03/12 23:51
  */
 @EnableAsync
 @Configuration

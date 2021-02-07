@@ -18,7 +18,7 @@ import java.util.Objects;
  * 日志工具类
  *
  * @author shimmerjordan
- * @date 2021/3/13 00:01
+ * @date 2021/03/13 00:01
  */
 public class LogUtil {
 
