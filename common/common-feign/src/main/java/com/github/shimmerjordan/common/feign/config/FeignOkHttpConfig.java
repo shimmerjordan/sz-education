@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * okHttp配置
  *
  * @author shimmerjordan
- * @date 2021/07/02 22:31
+ * @date 2021/03/02 22:31
  */
 @Configuration
 @ConditionalOnClass(Feign.class)

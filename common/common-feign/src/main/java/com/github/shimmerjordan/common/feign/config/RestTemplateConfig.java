@@ -5,10 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * RestTemplateConfigo
+ * RestTemplateConfig
  *
  * @author shimmerjordan
- * @date 2021/3/16 20:41
+ * @date 2021/03/16 20:41
  */
 @Configuration
 public class RestTemplateConfig {
