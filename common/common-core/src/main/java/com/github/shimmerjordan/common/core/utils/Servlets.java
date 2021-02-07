@@ -20,7 +20,7 @@ public class Servlets {
      * @param request  request
      * @param fileName 原名，不进行转码前名称
      * @return String 示例 "filename=\"" + downloadName + "\"";
-     * @date 2020年10月30日 22:35:05
+     * @date 2020/12/30 22:35:05
      */
     public static String getDownName(HttpServletRequest request, String fileName) {
         String result = "";
