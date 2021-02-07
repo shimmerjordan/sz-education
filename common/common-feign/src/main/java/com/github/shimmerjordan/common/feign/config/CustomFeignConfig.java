@@ -15,7 +15,7 @@ import java.util.Map;
  * 服务间调用携带Authorization、Tenant-Code请求头
  *
  * @author shimmerjordan
- * @date 2021/03-15 14:14
+ * @date 2021/02/15 14:14
  */
 @Configuration
 public class CustomFeignConfig implements RequestInterceptor {
