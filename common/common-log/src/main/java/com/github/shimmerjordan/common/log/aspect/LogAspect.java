@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * 日志切面，异步记录日志
  *
  * @author shimmerjordan
- * @date 2021/3/12 23:52
+ * @date 2021/03/12 23:52
  */
 @Aspect
 public class LogAspect {
