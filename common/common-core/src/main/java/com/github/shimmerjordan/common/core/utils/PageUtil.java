@@ -7,7 +7,7 @@ import com.github.pagehelper.PageInfo;
  * 分页查询工具类
  *
  * @author shimmerjordan
- * @date 2020/12/4 20:16
+ * @date 2020/12/24 20:16
  */
 public class PageUtil {
 
@@ -28,7 +28,7 @@ public class PageUtil {
      * @param order 顺序
      * @return String
      * @author shimmerjordan
-     * @date 2020/12/04 20:18
+     * @date 2020/12/24 20:18
      */
     public static String orderBy(String sort, String order) {
         if (DESC.equals(order)) {
