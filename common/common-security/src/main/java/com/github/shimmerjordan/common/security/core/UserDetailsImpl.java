@@ -11,7 +11,7 @@ import java.util.Set;
  * UserDetails封装
  *
  * @author shimmerjordan
- * @date 2021/3/17 14:37
+ * @date 2021/03/17 14:37
  */
 @Data
 public class UserDetailsImpl implements UserDetails {

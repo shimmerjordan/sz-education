@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  * 登录失败事件
  *
  * @author shimmerjordan
- * @date 2021/04-11 23:46
+ * @date 2021/04/11 23:46
  */
 @Data
 public class CustomAuthenticationFailureEvent extends ApplicationEvent {
