@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
  * GrantedAuthority封装
  *
  * @author shimmerjordan
- * @date 2021/3/17 14:29
+ * @date 2021/03/17 14:29
  */
 public class GrantedAuthorityImpl implements GrantedAuthority {
 

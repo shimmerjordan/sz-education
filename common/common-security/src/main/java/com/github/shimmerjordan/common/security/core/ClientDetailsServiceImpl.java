@@ -10,7 +10,7 @@ import javax.sql.DataSource;
  * jdbc客户端service
  *
  * @author shimmerjordan
- * @date 2021/3/30 23:30
+ * @date 2021/03/30 23:30
  */
 public class ClientDetailsServiceImpl extends JdbcClientDetailsService {
 
