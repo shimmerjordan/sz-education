@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * 超级管理员权限注解
  *
  * @author shimmerjordan
- * @date 2021/04/02 12:33
+ * @date 2021/03/02 12:33
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
