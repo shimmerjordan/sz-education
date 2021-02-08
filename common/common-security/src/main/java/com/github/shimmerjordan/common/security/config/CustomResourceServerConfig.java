@@ -20,7 +20,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
  * 资源服务器配置
  *
  * @author shimmerjordan
- * @date 2021/03-15 11:37
+ * @date 2021/03/15 11:37
  */
 @Configuration
 @EnableResourceServer
