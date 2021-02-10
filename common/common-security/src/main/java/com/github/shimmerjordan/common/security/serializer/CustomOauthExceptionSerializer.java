@@ -12,7 +12,7 @@ import java.util.Map;
  * 自定义OauthException Serializer，定制异常返回结果
  *
  * @author shimmerjordan
- * @date 2020/2/29 14:12
+ * @date 2020/02/28 14:12
  */
 public class CustomOauthExceptionSerializer extends StdSerializer<CustomOauthException> {
 

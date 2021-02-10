@@ -8,7 +8,7 @@ import java.lang.reflect.Type;
  * 基于Gson的json工具类
  *
  * @author shimmerjordan
- * @date 2020-11-23 18:03
+ * @date 2020/11/23 18:03
  */
 public class GsonHelper {
 
