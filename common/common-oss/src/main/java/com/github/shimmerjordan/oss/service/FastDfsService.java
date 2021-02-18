@@ -93,7 +93,7 @@ public class FastDfsService {
      * @param extName     附件扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2021/3/8 15:51
+     * @date 2021/03/08 15:51
      */
     public String uploadAppenderFile(String groupName, InputStream inputStream, long size, String extName) {
         try {
@@ -116,7 +116,7 @@ public class FastDfsService {
      * @param size        附件大小
      * @return 是否续传成功
      * @author shimmerjordan
-     * @date 2021/3/8 15:53
+     * @date 2021/03/08 15:53
      */
     public boolean appendFile(String groupName, String path, InputStream inputStream, long size) {
         try {
@@ -159,7 +159,7 @@ public class FastDfsService {
      * @param filePath  文件存放的路径，如：C:\attach\1.rar
      * @return 文件存放的路径
      * @author shimmerjordan
-     * @date 2021/3/9 10:10
+     * @date 2021/03/09 10:10
      */
     public String downloadFile(String groupName, String path, String filePath) {
         if (path.startsWith(groupName + "/"))
@@ -233,7 +233,7 @@ public class FastDfsService {
      *
      * @return 组名
      * @author shimmerjordan
-     * @date 2021/3/9 10:43
+     * @date 2021/03/09 10:43
      */
     public String getGroup() {
         StorageNode storageNode = trackerClient.getStoreStorage();
@@ -247,7 +247,7 @@ public class FastDfsService {
      *
      * @return 可用的组列表
      * @author shimmerjordan
-     * @date 2021/3/9 10:42
+     * @date 2021/03/09 10:42
      */
     public List<String> listGroups() {
         List<String> groups = new ArrayList<String>();

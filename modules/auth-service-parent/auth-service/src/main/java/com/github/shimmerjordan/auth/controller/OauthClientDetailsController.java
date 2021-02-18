@@ -26,7 +26,7 @@ import java.util.List;
  * Oauth2客户端信息管理
  *
  * @author shimmerjordan
- * @date 2021/3/30 16:49
+ * @date 2021/03/30 16:49
  */
 @Slf4j
 @AllArgsConstructor

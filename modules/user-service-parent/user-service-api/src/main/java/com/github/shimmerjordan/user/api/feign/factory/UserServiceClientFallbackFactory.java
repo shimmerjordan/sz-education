@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 用户断路器工厂
  *
  * @author shimmerjordan
- * @date 2021/3/23 23:38
+ * @date 2021/03/23 23:38
  */
 @Component
 public class UserServiceClientFallbackFactory implements FallbackFactory<UserServiceClient> {

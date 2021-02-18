@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * Oauth2客户端Service
  *
  * @author shimmerjordan
- * @date 2021/3/30 16:48
+ * @date 2021/03/30 16:48
  */
 @Service
 public class OauthClientDetailsService extends CrudService<OauthClientDetailsMapper, OauthClientDetails> {

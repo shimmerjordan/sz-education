@@ -24,7 +24,7 @@ import java.net.URI;
  * 验证码过滤器
  *
  * @author shimmerjordan
- * @date 2021/3/18 16:40
+ * @date 2021/03/18 16:40
  */
 @AllArgsConstructor
 @Component

@@ -204,7 +204,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
      * @param examination examination
      * @return int
      * @author shimmerjordan
-     * @date 2021/3/1 15:32
+     * @date 2021/03/01 15:32
      */
     public int findExaminationCount(Examination examination) {
         return this.dao.findExaminationCount(examination);
@@ -247,7 +247,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param subjectDto subjectDto
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/3/12 1:00 下午
+	 * @date 2021/03/12 1:00 下午
 	 */
     public List<SubjectDto> allSubjectList(SubjectDto subjectDto) {
 		// 查询考试题目关联表
@@ -313,7 +313,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * 根据考试ID生成二维码
 	 * @param examinationId examinationId
 	 * @author shimmerjordan
-	 * @date 2021/3/15 1:16 下午
+	 * @date 2021/03/15 1:16 下午
 	 */
 	public byte[] produceCode(Long examinationId) {
 		Examination examination = this.get(examinationId);
@@ -332,7 +332,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * 根据考试ID生成二维码
 	 * @param examinationId examinationId
 	 * @author shimmerjordan
-	 * @date 2021/3/21 5:38 下午
+	 * @date 2021/03/21 5:38 下午
 	 */
 	public byte[] produceCodeV2(Long examinationId) {
 		Examination examination = this.get(examinationId);

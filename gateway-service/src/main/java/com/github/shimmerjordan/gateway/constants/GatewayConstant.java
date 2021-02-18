@@ -2,7 +2,7 @@ package com.github.shimmerjordan.gateway.constants;
 
 /**
  * @author shimmerjordan
- * @date 2021/3/18 16:55
+ * @date 2021/03/18 16:55
  */
 public class GatewayConstant {
 

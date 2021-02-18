@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * Oauth2客户端mapper
  *
  * @author shimmerjordan
- * @date 2021/3/30 16:39
+ * @date 2021/03/30 16:39
  */
 @Mapper
 public interface OauthClientDetailsMapper extends CrudMapper<OauthClientDetails> {

@@ -19,7 +19,7 @@ public interface ExaminationMapper extends CrudMapper<Examination> {
      * @param examination examination
      * @return int
      * @author shimmerjordan
-     * @date 2021/3/1 15:32
+     * @date 2021/03/01 15:32
      */
     int findExaminationCount(Examination examination);
 

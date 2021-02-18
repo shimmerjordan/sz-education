@@ -9,7 +9,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 /**
  * @author shimmerjordan
- * @date 2021/3/21 14:48
+ * @date 2021/03/21 14:48
  */
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {

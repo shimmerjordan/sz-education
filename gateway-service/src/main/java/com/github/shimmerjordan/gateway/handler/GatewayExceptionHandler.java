@@ -31,7 +31,7 @@ import java.util.List;
  * 网关统一异常处理
  *
  * @author shimmerjordan
- * @date 2021/3/18 20:52
+ * @date 2021/03/18 20:52
  */
 @Slf4j
 public class GatewayExceptionHandler implements ErrorWebExceptionHandler {

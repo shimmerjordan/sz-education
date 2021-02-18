@@ -9,7 +9,7 @@ import java.util.Map;
  * 断言信息
  *
  * @author shimmerjordan
- * @date 2021/3/27 11:08
+ * @date 2021/03/27 11:08
  */
 @Data
 public class RoutePredicateVo {

@@ -18,7 +18,7 @@ import java.util.List;
  * 网关异常处理
  *
  * @author shimmerjordan
- * @date 2021/3/18 20:50
+ * @date 2021/03/18 20:50
  */
 @Configuration
 public class GatewayExceptionConfig {

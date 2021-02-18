@@ -22,7 +22,7 @@ import java.util.Map;
  * Authentication管理
  *
  * @author shimmerjordan
- * @date 2021/3/18 14:13
+ * @date 2021/03/18 14:13
  */
 @RestController
 @RequestMapping("/v1/authentication")
@@ -66,7 +66,7 @@ public class AuthenticationController extends BaseController {
      *
      * @return Map
      * @author shimmerjordan
-     * @date 2021/3/7 4:25 下午
+     * @date 2021/03/07 4:25 下午
      */
 	@GetMapping("/jwks.json")
 	public Map<String, Object> keys() {

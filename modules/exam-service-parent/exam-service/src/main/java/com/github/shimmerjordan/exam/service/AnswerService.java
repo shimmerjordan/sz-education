@@ -757,7 +757,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param identifier identifier
      * @return StartExamDto
      * @author shimmerjordan
-     * @date 2021/3/21 5:51 下午
+     * @date 2021/03/21 5:51 下午
      */
     @Transactional
     public StartExamDto anonymousUserStart(Long examinationId, String identifier) {
