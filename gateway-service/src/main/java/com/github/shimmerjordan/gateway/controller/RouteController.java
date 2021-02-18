@@ -19,7 +19,7 @@ import javax.validation.Valid;
  * TODO：增加security认证
  *
  * @author shimmerjordan
- * @date 2021/4/2 15:03
+ * @date 2021/04/02 15:03
  */
 @Slf4j
 @AllArgsConstructor
@@ -34,7 +34,7 @@ public class RouteController extends BaseController {
      * @param id id
      * @return Route
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @GetMapping("/{id}")
     public Route get(@PathVariable Long id) {
@@ -55,7 +55,7 @@ public class RouteController extends BaseController {
      * @param route    route
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @GetMapping("routeList")
     public PageInfo<Route> userList(@RequestParam(value = CommonConstant.PAGE_NUM, required = false, defaultValue = CommonConstant.PAGE_NUM_DEFAULT) String pageNum,
@@ -71,7 +71,7 @@ public class RouteController extends BaseController {
      * @param route route
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @PutMapping
     public ResponseBean<Boolean> updateRoute(@RequestBody @Valid Route route) {
@@ -89,7 +89,7 @@ public class RouteController extends BaseController {
      * @param route route
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @PostMapping
     public ResponseBean<Boolean> add(@RequestBody @Valid Route route) {
@@ -106,7 +106,7 @@ public class RouteController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @DeleteMapping("/{id}")
     public ResponseBean<Boolean> delete(@PathVariable Long id) {
@@ -123,7 +123,7 @@ public class RouteController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/4/2 15:09
+     * @date 2021/04/02 15:09
      */
     @PostMapping("deleteAll")
     public ResponseBean<Boolean> deleteAll(@RequestBody Long[] ids) {

@@ -2,7 +2,7 @@ package com.github.shimmerjordan.exam.api.constants;
 
 /**
  * @author shimmerjordan
- * @date 2021/4/30 17:17
+ * @date 2021/04/30 17:17
  */
 public class ExamSubjectConstant {
 

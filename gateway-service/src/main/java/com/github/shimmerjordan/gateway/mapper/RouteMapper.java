@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * Route mapper
  *
  * @author shimmerjordan
- * @date 2021/4/2 15:00
+ * @date 2021/04/02 15:00
  */
 @Mapper
 public interface RouteMapper extends CrudMapper<Route> {

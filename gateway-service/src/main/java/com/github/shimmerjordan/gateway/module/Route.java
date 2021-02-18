@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 路由信息
  *
  * @author shimmerjordan
- * @date 2021/4/2 14:52
+ * @date 2021/04/02 14:52
  */
 @Data
 public class Route extends BaseEntity<Route> {
