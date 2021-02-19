@@ -192,7 +192,7 @@ public class RoleController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/4 10:00
+     * @date 2020/12/04 10:00
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization

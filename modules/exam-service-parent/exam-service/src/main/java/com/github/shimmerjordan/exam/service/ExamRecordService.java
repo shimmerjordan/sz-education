@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
  * 考试记录service
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:20
+ * @date 2021/03/08 21:20
  */
 @Slf4j
 @AllArgsConstructor
@@ -66,7 +66,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
      * @param examRecord examRecord
      * @return ExamRecord
      * @author shimmerjordan
-     * @date 2021/1/3 14:10
+     * @date 2021/01/03 14:10
      */
     @Override
     @Cacheable(value = "record#" + CommonConstant.CACHE_EXPIRE, key = "#examRecord.id")
@@ -135,7 +135,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
      * @param examRecord examRecord
      * @return ExamRecord
      * @author shimmerjordan
-     * @date 2021/1/3 14:10
+     * @date 2021/01/03 14:10
      */
     @Override
     @Transactional
@@ -150,7 +150,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
      * @param examRecord examRecord
      * @return ExamRecord
      * @author shimmerjordan
-     * @date 2021/1/3 14:10
+     * @date 2021/01/03 14:10
      */
     @Override
     @Transactional
@@ -177,7 +177,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:11
+     * @date 2021/01/03 14:11
      */
     @Override
     @Transactional
@@ -227,7 +227,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param examinationRecord examinationRecord
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/1/31 5:17 下午
+	 * @date 2021/01/31 5:17
 	 */
 	public int findExaminationRecordCount(ExaminationRecord examinationRecord) {
 		return this.dao.findExaminationRecordCount(examinationRecord);
@@ -239,7 +239,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param start start
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/1/31 10:17 下午
+	 * @date 2021/01/31 10:17
 	 */
 	public List<ExaminationRecord> findExaminationRecordCountByDate(Date start) {
 		return this.dao.findExaminationRecordCountByDate(start);
@@ -331,7 +331,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param pastDays pastDays
 	 * @return ExaminationDashboardDto
 	 * @author shimmerjordan
-	 * @date 2020/1/31 5:46 下午
+	 * @date 2021/01/31 5:46
 	 */
 	public ExaminationDashboardDto findExamRecordTendency(String tenantCode, int pastDays) {
 		ExaminationDashboardDto dashboardDto = new ExaminationDashboardDto();
@@ -367,7 +367,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param id id
 	 * @return ExaminationRecordDto
 	 * @author shimmerjordan
-	 * @date 2020/2/21 9:26 上午
+	 * @date 2021/02/21 9:26 上午
 	 */
 	public ExaminationRecordDto details(Long id) {
 		ExaminationRecord examRecord = this.get(id);

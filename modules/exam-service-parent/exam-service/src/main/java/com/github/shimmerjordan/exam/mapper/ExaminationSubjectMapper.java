@@ -61,7 +61,7 @@ public interface ExaminationSubjectMapper extends CrudMapper<ExaminationSubject>
      * @param examinationSubject examinationSubject
      * @return ExaminationSubject
      * @author shimmerjordan
-     * @date 2021/04-14 16:41
+     * @date 2021/04/14 16:41
      */
     ExaminationSubject getByPreviousId(ExaminationSubject examinationSubject);
 

@@ -26,7 +26,7 @@ import java.util.List;
  * 选择题service
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:23
+ * @date 2021/03/08 21:23
  */
 @AllArgsConstructor
 @Service
@@ -43,7 +43,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/1/3 14:24
+     * @date 2021/01/03 14:24
      */
     @Override
     @Cacheable(value = "subjectChoices#" + CommonConstant.CACHE_EXPIRE, key = "#subjectChoices.id")
@@ -91,7 +91,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:24
+     * @date 2021/01/03 14:24
      */
     @Override
     @Transactional
@@ -109,7 +109,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/04-14 16:47
+     * @date 2021/04/14 16:47
      */
     public SubjectChoices getByCurrentId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -128,7 +128,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return SubjectChoices
      * @author shimmerjordan
-     * @date 2021/04-14 16:47
+     * @date 2021/04/14 16:47
      */
     public SubjectChoices getByPreviousId(Long examinationId, SubjectChoices subjectChoices) {
         ExaminationSubject examinationSubject = new ExaminationSubject();
@@ -165,7 +165,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param subjectChoices subjectChoices
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:24
+     * @date 2021/01/03 14:24
      */
     @Override
     @Transactional
@@ -200,7 +200,7 @@ public class SubjectChoicesService extends CrudService<SubjectChoicesMapper, Sub
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:24
+     * @date 2021/01/03 14:24
      */
     @Override
     @Transactional

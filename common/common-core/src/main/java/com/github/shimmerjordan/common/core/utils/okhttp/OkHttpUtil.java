@@ -67,7 +67,7 @@ public class OkHttpUtil {
      * @param header header
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/7 20:37
+     * @date 2021/04/07 20:37
      */
     public String get(String url, Map<String, Object> header) throws Exception {
         return getResponseBody(url, header).string();
@@ -109,7 +109,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/9 10:32
+     * @date 2021/04/09 10:32
      */
     public String postJson(String url, Map<String, Object> header, Map<String, Object> data) {
         try {
@@ -134,7 +134,7 @@ public class OkHttpUtil {
      * @param object object
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/9 10:32
+     * @date 2021/04/09 10:32
      */
     public String postJson(String url, Map<String, Object> header, Object object) {
         try {
@@ -159,7 +159,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/9 10:32
+     * @date 2021/04/09 10:32
      */
     public String postForm(String url, Map<String, Object> header, Map<String, Object> data) throws Exception {
         logger.debug("post data:{}", data);
@@ -197,7 +197,7 @@ public class OkHttpUtil {
      * @param file   file
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/9 10:32
+     * @date 2021/04/09 10:32
      */
     public String put(String url, Map<String, Object> header, String file) throws Exception {
         RequestBody body = RequestBody.create(MediaType.parse("application/octet-stream"), new File(file));
@@ -237,7 +237,7 @@ public class OkHttpUtil {
      * @param inputStream inputStream
      * @return String
      * @author shimmerjordan
-     * @date 2021/1/15 16:49
+     * @date 2021/01/15 16:49
      */
     public String putStream(String url, Map<String, Object> header, InputStream inputStream) throws Exception {
         RequestBody body = OkHttpRequestBodyUtil.create(MediaType.parse("application/octet-stream"), inputStream);
@@ -257,7 +257,7 @@ public class OkHttpUtil {
      * @param data   data
      * @return String
      * @author shimmerjordan
-     * @date 2021/04/9 10:49
+     * @date 2021/04/09 10:49
      */
     public String patch(String url, Map<String, Object> header, Map<String, Object> data) throws Exception {
         logger.debug("patch data:{}", data);
@@ -302,7 +302,7 @@ public class OkHttpUtil {
      * @param data data
      * @return JSONObject
      * @author shimmerjordan
-     * @date 2021/04/4 20:24
+     * @date 2021/04/04 20:24
      */
     private JSONObject mapToJSONObject(Map<String, Object> data) {
         JSONObject jsonObject = new JSONObject();

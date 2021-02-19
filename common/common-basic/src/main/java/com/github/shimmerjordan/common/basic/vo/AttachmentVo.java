@@ -7,7 +7,7 @@ import lombok.Data;
  * 附件VO
  *
  * @author shimmerjordan
- * @date 2021/1/1 20:40
+ * @date 2021/01/01 20:40
  */
 @Data
 public class AttachmentVo extends BaseEntity<AttachmentVo> {

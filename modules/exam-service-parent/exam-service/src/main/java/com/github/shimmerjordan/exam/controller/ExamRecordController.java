@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  * 考试记录controller
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:27
+ * @date 2021/03/08 21:27
  */
 @Slf4j
 @AllArgsConstructor
@@ -228,7 +228,7 @@ public class ExamRecordController extends BaseController {
 	 * @param pastDays pastDays
 	 * @return ResponseBean
 	 * @author shimmerjordan
-	 * @date 2020/1/31 5:46 下午
+	 * @date 2021/01/31 5:46
 	 */
 	@GetMapping("dashboard/examRecordTendency")
 	public ResponseBean<ExaminationDashboardDto> findExamRecordTendency(@RequestParam @NotBlank String tenantCode,
@@ -241,7 +241,7 @@ public class ExamRecordController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/2/20 23:54
+     * @date 2021/02/20 23:54
      */
     @GetMapping("/{id}/details")
 	@ApiOperation(value = "成绩详情", notes = "根据考试记录id获取成绩详情")
@@ -257,7 +257,7 @@ public class ExamRecordController extends BaseController {
      * @param identifier identifier
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/3/21 5:51 下午
+     * @date 2021/3/21 5:51
      */
     @PostMapping("anonymousUser/start")
     @Log("开始考试(匿名)")

@@ -28,7 +28,7 @@ import java.util.List;
  * 答题controller
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:24
+ * @date 2021/03/08 21:24
  */
 @Slf4j
 @AllArgsConstructor
@@ -341,7 +341,7 @@ public class AnswerController extends BaseController {
      * @param recordId recordId
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/05/8 23:32
+     * @date 2021/05/08 23:32
      */
 	@GetMapping("record/{recordId}/rankInfo")
 	@ApiOperation(value = "排名列表", notes = "排名列表")

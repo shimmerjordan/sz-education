@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
  * 答题service
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:17
+ * @date 2021/03/08 21:17
  */
 @Slf4j
 @AllArgsConstructor
@@ -88,7 +88,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer answer
      * @return Answer
      * @author shimmerjordan
-     * @date 2021/1/3 14:27
+     * @date 2021/01/03 14:27
      */
     @Override
     @Cacheable(value = "answer#" + CommonConstant.CACHE_EXPIRE, key = "#answer.id")
@@ -114,7 +114,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer answer
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:27
+     * @date 2021/01/03 14:27
      */
     @Override
     @Transactional
@@ -130,7 +130,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer answer
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:27
+     * @date 2021/01/03 14:27
      */
     @Transactional
     @CacheEvict(value = "answer", key = "#answer.id")
@@ -170,7 +170,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param answer answer
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:27
+     * @date 2021/01/03 14:27
      */
     @Override
     @Transactional
@@ -185,7 +185,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:27
+     * @date 2021/01/03 14:27
      */
     @Override
     @Transactional
@@ -307,7 +307,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
 	 * 基于Redis的sort set数据结构
      * @param record record
      * @author shimmerjordan
-     * @date 2021/05/8 23:21
+     * @date 2021/05/08 23:21
      */
     private void updateRank(ExaminationRecord record) {
 		redisTemplate.opsForZSet().add(AnswerConstant.CACHE_PREFIX_RANK + record.getExaminationId(), JsonMapper.getInstance().toJson(record), record.getScore());
@@ -568,7 +568,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param recordId recordId
      * @return List
      * @author shimmerjordan
-     * @date 2021/05/8 23:36
+     * @date 2021/05/08 23:36
      */
 	public List<RankInfoDto> getRankInfo(Long recordId) {
 		List<RankInfoDto> rankInfos = new ArrayList<>();
@@ -665,7 +665,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
 	 * @param examRecordId examRecordId
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/2/21 1:08 下午
+	 * @date 2021/02/21 1:08
 	 */
 	public List<Answer> findListByExamRecordId(Long examRecordId) {
 		return this.dao.findListByExamRecordId(examRecordId);
@@ -757,7 +757,7 @@ public class AnswerService extends CrudService<AnswerMapper, Answer> {
      * @param identifier identifier
      * @return StartExamDto
      * @author shimmerjordan
-     * @date 2021/03/21 5:51 下午
+     * @date 2021/03/21 5:51
      */
     @Transactional
     public StartExamDto anonymousUserStart(Long examinationId, String identifier) {

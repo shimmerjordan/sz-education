@@ -8,7 +8,7 @@ import org.springframework.security.oauth2.common.exceptions.OAuth2Exception;
  * 自定义OauthException
  *
  * @author shimmerjordan
- * @date 2020/02/28 14:12
+ * @date 2021/02/28 14:12
  */
 @JsonSerialize(using = CustomOauthExceptionSerializer.class)
 public class CustomOauthException extends OAuth2Exception {

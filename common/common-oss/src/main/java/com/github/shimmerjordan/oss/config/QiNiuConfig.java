@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 七牛云配置
  * @author shimmerjordan
- * @date 2021/02/18 8:19 下午
+ * @date 2021/02/18 8:19
  */
 @Data
 @Configuration

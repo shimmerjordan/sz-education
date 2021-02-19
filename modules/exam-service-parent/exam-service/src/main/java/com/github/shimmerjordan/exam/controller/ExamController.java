@@ -7,7 +7,7 @@ import java.security.Principal;
 
 /**
  * @author shimmerjordan
- * @date 2021/03-16 15:30
+ * @date 2021/03/16 15:30
  */
 @RestController
 public class ExamController {

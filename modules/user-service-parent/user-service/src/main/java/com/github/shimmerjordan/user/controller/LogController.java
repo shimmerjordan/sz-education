@@ -125,7 +125,7 @@ public class LogController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/4 10:12
+     * @date 2020/12/04 10:12
      */
     @PostMapping("deleteAll")
     @AdminAuthorization

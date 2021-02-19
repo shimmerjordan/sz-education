@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * 知识库
  *
  * @author shimmerjordan
- * @date 2021/1/1 15:01
+ * @date 2021/01/01 15:01
  */
 @Data
 public class Knowledge extends BaseEntity<Knowledge> {

@@ -13,7 +13,7 @@ import java.util.List;
  * 考试记录DTO
  *
  * @author shimmerjordan
- * @date 2020/12-26 16:26
+ * @date 2020/12/26 16:26
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

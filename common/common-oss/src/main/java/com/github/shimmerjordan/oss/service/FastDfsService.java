@@ -55,7 +55,7 @@ public class FastDfsService {
      * @param extName     扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2020/1/5 12:02
+     * @date 2021/01/05 12:02
      */
     public String uploadFile(InputStream inputStream, long size, String extName) {
         return uploadFile(inputStream, size, extName, null);
@@ -70,7 +70,7 @@ public class FastDfsService {
      * @param metaDataSet 元数据集
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2020/1/5 12:02
+     * @date 2021/01/05 12:02
      */
     public String uploadFile(InputStream inputStream, long size, String extName, Set<MetaData> metaDataSet) {
         try {
@@ -136,7 +136,7 @@ public class FastDfsService {
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @return 字节数组
      * @author shimmerjordan
-     * @date 2020/1/5 11:59
+     * @date 2021/01/05 11:59
      */
     public byte[] downloadFile(String groupName, String path) {
         if (path.startsWith(groupName + "/"))
@@ -181,7 +181,7 @@ public class FastDfsService {
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @return 附件输入流
      * @author shimmerjordan
-     * @date 2020/1/5 12:00
+     * @date 2021/01/05 12:00
      */
     public InputStream downloadStream(String groupName, String path) {
         try {
@@ -199,7 +199,7 @@ public class FastDfsService {
      * @param groupName 组名，如：group1
      * @param path      路径名，如：M00/00/04/wKgAUFpO84CAA4HvAAAABs4Fkco168.txt
      * @author shimmerjordan
-     * @date 2020/1/5 12:01
+     * @date 2021/01/05 12:01
      */
     public void deleteFile(String groupName, String path) {
         if (path.startsWith(groupName + "/"))
@@ -218,7 +218,7 @@ public class FastDfsService {
      * @param extName     扩展名
      * @return 完整路径
      * @author shimmerjordan
-     * @date 2020/1/5 12:01
+     * @date 2021/01/05 12:01
      */
     public String modify(String groupName, String oldPath, InputStream inputStream, long size, String extName) {
         String path = uploadFile(inputStream, size, extName);

@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  * 题目分类service
  *
  * @author shimmerjordan
- * @date 2020/12/4 21:56
+ * @date 2020/12/04 21:56
  */
 @Service
 public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, SubjectCategory> {
@@ -34,7 +34,7 @@ public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, S
      * @param subjectCategory subjectCategory
      * @return SubjectCategory
      * @author shimmerjordan
-     * @date 2021/1/3 14:21
+     * @date 2021/01/03 14:21
      */
     @Override
     @Cacheable(value = "category#" + CommonConstant.CACHE_EXPIRE, key = "#subjectCategory.id")
@@ -48,7 +48,7 @@ public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, S
      * @param subjectCategory subjectCategory
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:21
+     * @date 2021/01/03 14:21
      */
     @Override
     @Transactional
@@ -63,7 +63,7 @@ public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, S
      * @param subjectCategory subjectCategory
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:21
+     * @date 2021/01/03 14:21
      */
     @Override
     @Transactional
@@ -78,7 +78,7 @@ public class SubjectCategoryService extends CrudService<SubjectCategoryMapper, S
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:23
+     * @date 2021/01/03 14:23
      */
     @Override
     @Transactional

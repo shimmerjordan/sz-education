@@ -2,7 +2,7 @@ package com.github.shimmerjordan.common.basic.utils.excel.exception;
 
 /**
  * @author shimmerjordan
- * @date 2021/05/9 21:47
+ * @date 2021/05/09 21:47
  */
 public class ExcelException extends RuntimeException {
 

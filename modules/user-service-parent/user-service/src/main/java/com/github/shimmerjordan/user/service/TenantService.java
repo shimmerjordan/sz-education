@@ -55,7 +55,7 @@ public class TenantService extends CrudService<TenantMapper, Tenant> {
      * @param tenant tenant
      * @return int
      * @author shimmerjordan
-     * @date 2021/04-02 11:41
+     * @date 2021/04/02 11:41
      */
     @Transactional
     @CacheEvict(value = "tenant", key = "#tenant.tenantCode")
@@ -148,7 +148,7 @@ public class TenantService extends CrudService<TenantMapper, Tenant> {
      * 查询单位数量
      * @return Integer
      * @author shimmerjordan
-     * @date 2021/05/18 5:09 下午
+     * @date 2021/05/18 5:09
      */
 	public Integer tenantCount() {
 		return this.dao.tenantCount();

@@ -81,7 +81,7 @@ public class RoleMenuService extends CrudService<RoleMenuMapper, RoleMenu> {
 	 * @param roleMenu roleMenu
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/04-14 15:49
+	 * @date 2021/04/14 15:49
 	 */
 	public List<RoleMenu> getByMenuId(RoleMenu roleMenu) {
 		return roleMenuMapper.getByMenuId(roleMenu);
@@ -93,7 +93,7 @@ public class RoleMenuService extends CrudService<RoleMenuMapper, RoleMenu> {
 	 * @param roleMenus roleMenus
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2021/04-14 16:00
+	 * @date 2021/04/14 16:00
 	 */
 	public List<RoleMenu> getByMenuIds(List<RoleMenu> roleMenus) {
 		return roleMenuMapper.getByMenuIds(roleMenus);

@@ -33,7 +33,7 @@ import java.util.Set;
  * 知识库controller
  *
  * @author shimmerjordan
- * @date 2021/1/1 15:11
+ * @date 2021/01/01 15:11
  */
 @Slf4j
 @AllArgsConstructor
@@ -52,7 +52,7 @@ public class KnowledgeController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取知识信息", notes = "根据知识id获取知识详细信息")
@@ -71,7 +71,7 @@ public class KnowledgeController extends BaseController {
      * @param knowledge knowledge
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @GetMapping("knowledgeList")
     @ApiOperation(value = "获取知识列表")
@@ -133,7 +133,7 @@ public class KnowledgeController extends BaseController {
      * @param knowledge knowledge
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @PostMapping
     @ApiOperation(value = "创建知识", notes = "创建知识")
@@ -150,7 +150,7 @@ public class KnowledgeController extends BaseController {
      * @param knowledge knowledge
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @PutMapping
     @ApiOperation(value = "更新知识信息", notes = "根据知识id更新知识的基本信息")
@@ -167,7 +167,7 @@ public class KnowledgeController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @DeleteMapping("{id}")
     @ApiOperation(value = "删除知识", notes = "根据ID删除知识")
@@ -192,7 +192,7 @@ public class KnowledgeController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/1/1 15:15
+     * @date 2021/01/01 15:15
      */
     @PostMapping("deleteAll")
     @ApiOperation(value = "批量删除知识", notes = "根据知识id批量删除知识")

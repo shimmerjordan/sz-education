@@ -24,7 +24,7 @@ import java.util.Random;
  * 课程service
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:18
+ * @date 2021/03/08 21:18
  */
 @Slf4j
 @Service
@@ -118,7 +118,7 @@ public class CourseService extends CrudService<CourseMapper, Course> {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:05
+     * @date 2021/01/03 14:05
      */
     @Override
     @Transactional

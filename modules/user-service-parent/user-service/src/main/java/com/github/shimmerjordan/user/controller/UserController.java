@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author shimmerjordan
- * @date 2020/12-25 16:20
+ * @date 2020/12/25 16:20
  */
 @Slf4j
 @AllArgsConstructor
@@ -354,7 +354,7 @@ public class UserController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/4 9:58
+     * @date 2020/12/04 9:58
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization
@@ -449,7 +449,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/03/7 12:00
+     * @date 2021/03/07 12:00
      */
     @PutMapping("anonymousUser/resetPassword")
     @AdminTenantTeacherAuthorization

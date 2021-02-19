@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  * 校验租户
  *
  * @author shimmerjordan
- * @date 2021/04-12 20:14
+ * @date 2021/04/12 20:14
  */
 @AllArgsConstructor
 @Aspect

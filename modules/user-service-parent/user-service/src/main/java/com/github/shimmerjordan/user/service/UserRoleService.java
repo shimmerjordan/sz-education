@@ -44,7 +44,7 @@ public class UserRoleService extends CrudService<UserRoleMapper, UserRole> {
      * @param userRoles userRoles
      * @return int
      * @author shimmerjordan
-     * @date 2021/04-03 13:13
+     * @date 2021/04/03 13:13
      */
     public int insertBatch(List<UserRole> userRoles) {
         return userRoleMapper.insertBatch(userRoles);

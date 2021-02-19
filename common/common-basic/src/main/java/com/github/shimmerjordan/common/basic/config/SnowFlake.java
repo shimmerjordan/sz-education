@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * ID生成配置
  *
  * @author shimmerjordan
- * @date 2021/2/26 11:17
+ * @date 2021/02/26 11:17
  */
 @Configuration
 @AllArgsConstructor

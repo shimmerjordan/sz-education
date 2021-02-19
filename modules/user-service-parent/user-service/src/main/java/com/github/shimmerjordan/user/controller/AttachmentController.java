@@ -202,7 +202,7 @@ public class AttachmentController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/4 10:01
+     * @date 2020/12/04 10:01
      */
     @PostMapping("deleteAll")
     @ApiOperation(value = "批量删除附件", notes = "根据附件id批量删除附件")

@@ -78,7 +78,7 @@ public class UserAuthsService extends CrudService<UserAuthsMapper, UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/04-03 13:07
+     * @date 2021/04/03 13:07
      */
     @Transactional
     public int insertBatch(List<UserAuths> userAuths) {

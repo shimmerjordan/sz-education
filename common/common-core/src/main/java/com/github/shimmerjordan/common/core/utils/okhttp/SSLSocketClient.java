@@ -35,7 +35,7 @@ public class SSLSocketClient {
      *
      * @return TrustManager
      * @author shimmerjordan
-     * @date 2020/12/4 16:55
+     * @date 2020/12/04 16:55
      */
     private static TrustManager[] getTrustManager() {
         return new TrustManager[]{

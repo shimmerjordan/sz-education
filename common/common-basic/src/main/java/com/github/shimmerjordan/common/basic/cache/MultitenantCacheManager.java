@@ -16,7 +16,7 @@ import java.util.Map;
  * 扩展CacheManager支持多租户
  *
  * @author shimmerjordan
- * @date 2021/2/9 15:12
+ * @date 2021/02/09 15:12
  */
 @Slf4j
 public class MultitenantCacheManager extends RedisCacheManager {

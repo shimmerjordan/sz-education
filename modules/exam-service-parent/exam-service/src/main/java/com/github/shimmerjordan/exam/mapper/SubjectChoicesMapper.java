@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 选择题Mapper
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:15
+ * @date 2021/03/08 21:15
  */
 @Mapper
 public interface SubjectChoicesMapper extends CrudMapper<SubjectChoices> {

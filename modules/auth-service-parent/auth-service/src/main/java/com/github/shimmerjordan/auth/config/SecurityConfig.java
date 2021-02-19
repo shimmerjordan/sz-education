@@ -21,7 +21,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
  * Spring Security配置
  *
  * @author shimmerjordan
- * @date 2021/03-14 14:35
+ * @date 2021/03/14 14:35
  */
 @Configuration
 @EnableWebSecurity

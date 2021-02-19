@@ -66,7 +66,7 @@ public class AuthenticationController extends BaseController {
      *
      * @return Map
      * @author shimmerjordan
-     * @date 2021/03/07 4:25 下午
+     * @date 2021/03/07 4:25
      */
 	@GetMapping("/jwks.json")
 	public Map<String, Object> keys() {

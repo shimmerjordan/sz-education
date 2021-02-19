@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 统计成绩
  * @author shimmerjordan
- * @date 2021/05/8 9:56 下午
+ * @date 2021/05/08 9:56
  */
 public interface IAnswerHandler {
 

@@ -63,7 +63,7 @@ public interface UserAuthsMapper extends CrudMapper<UserAuths> {
      * @param userAuths userAuths
      * @return int
      * @author shimmerjordan
-     * @date 2021/04-03 13:07
+     * @date 2021/04/03 13:07
      */
     int insertBatch(List<UserAuths> userAuths);
 }

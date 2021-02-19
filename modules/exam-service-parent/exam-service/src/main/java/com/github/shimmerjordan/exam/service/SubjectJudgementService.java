@@ -19,7 +19,7 @@ import java.util.List;
  * 判断题Service
  *
  * @author shimmerjordan
- * @date 2021/03-16 13:02
+ * @date 2021/03/16 13:02
  */
 @AllArgsConstructor
 @Slf4j
@@ -33,7 +33,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param id id
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/03-16 13:06
+     * @date 2021/03/16 13:06
      */
     @Override
     public SubjectDto getSubject(Long id) {
@@ -48,7 +48,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param nextType      0：下一题，1：上一题
      * @return SubjectDto
      * @author shimmerjordan
-     * @date 2021/04-14 17:03
+     * @date 2021/04/14 17:03
      */
     @Override
     public SubjectDto getNextByCurrentIdAndType(Long examinationId, Long previousId, Integer nextType) {
@@ -61,7 +61,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return List<SubjectDto>
      * @author shimmerjordan
-     * @date 2021/03-16 13:08
+     * @date 2021/03/16 13:08
      */
     @Override
     public List<SubjectDto> findSubjectList(SubjectDto subjectDto) {
@@ -75,7 +75,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return PageInfo<SubjectDto>
      * @author shimmerjordan
-     * @date 2021/03-16 13:08
+     * @date 2021/03/16 13:08
      */
     @Override
     public PageInfo<SubjectDto> findSubjectPage(PageInfo pageInfo, SubjectDto subjectDto) {
@@ -88,7 +88,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param ids ids
      * @return List<SubjectDto>
      * @author shimmerjordan
-     * @date 2021/03-16 13:09
+     * @date 2021/03/16 13:09
      */
     @Override
     public List<SubjectDto> findSubjectListById(Long[] ids) {
@@ -101,7 +101,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:10
+     * @date 2021/03/16 13:10
      */
     @Override
     @Transactional
@@ -119,7 +119,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:10
+     * @date 2021/03/16 13:10
      */
     @Override
     @Transactional
@@ -137,7 +137,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:10
+     * @date 2021/03/16 13:10
      */
     @Override
     @Transactional
@@ -168,7 +168,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:10
+     * @date 2021/03/16 13:10
      */
     @Override
     @Transactional
@@ -197,7 +197,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param subjectDto subjectDto
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:10
+     * @date 2021/03/16 13:10
      */
     @Override
     @Transactional
@@ -214,7 +214,7 @@ public class SubjectJudgementService extends CrudService<SubjectJudgementMapper,
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/03-16 13:11
+     * @date 2021/03/16 13:11
      */
     @Override
     @Transactional

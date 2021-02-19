@@ -4,7 +4,7 @@ package com.github.shimmerjordan.user.api.constant;
  * 角色常量
  *
  * @author shimmerjordan
- * @date 2021/1/11 13:58
+ * @date 2021/01/11 13:58
  */
 public class RoleConstant {
 

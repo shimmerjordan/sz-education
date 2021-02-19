@@ -11,7 +11,7 @@ import java.util.List;
  * 考试记录Mapper
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:12
+ * @date 2021/03/08 21:12
  */
 @Mapper
 public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
@@ -32,7 +32,7 @@ public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
 	 * @param examinationRecord examinationRecord
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/1/31 5:17 下午
+	 * @date 2021/01/31 5:17
 	 */
 	int findExaminationRecordCount(ExaminationRecord examinationRecord);
 
@@ -41,7 +41,7 @@ public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
 	 * @param start start
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/2/1 11:57 上午
+	 * @date 2021/02/02 11:57 上午
 	 */
 	List<ExaminationRecord> findExaminationRecordCountByDate(Date start);
 }

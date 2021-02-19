@@ -7,7 +7,7 @@ import lombok.Data;
  * 考试权限
  *
  * @author shimmerjordan
- * @date 2021/03-16 14:01
+ * @date 2021/03/16 14:01
  */
 @Data
 public class ExaminationAuth extends BaseEntity<ExaminationAuth> {

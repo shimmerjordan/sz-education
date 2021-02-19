@@ -10,7 +10,7 @@ import java.util.List;
  * 答题Mapper
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:09
+ * @date 2021/03/08 21:09
  */
 @Mapper
 public interface AnswerMapper extends CrudMapper<Answer> {
@@ -30,7 +30,7 @@ public interface AnswerMapper extends CrudMapper<Answer> {
      * @param examRecordId examRecordId
      * @return List
      * @author shimmerjordan
-     * @date 2020/2/21 1:08 下午
+     * @date 2021/02/21 1:08
      */
     List<Answer> findListByExamRecordId(Long examRecordId);
 }

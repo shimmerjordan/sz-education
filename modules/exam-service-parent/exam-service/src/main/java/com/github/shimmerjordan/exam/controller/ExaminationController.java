@@ -34,7 +34,7 @@ import java.util.List;
  * 考试controller
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:26
+ * @date 2021/03/08 21:26
  */
 @Slf4j
 @AllArgsConstructor
@@ -138,7 +138,7 @@ public class ExaminationController extends BaseController {
      * @param subjectDto subjectDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2021/03/12 1:00 下午
+     * @date 2021/03/12 1:00
      */
 	@RequestMapping("anonymousUser/allSubjectList")
 	@ApiOperation(value = "获取全部题目列表")
@@ -269,7 +269,7 @@ public class ExaminationController extends BaseController {
      * @param examinationId examinationId
      * @param response response
      * @author shimmerjordan
-     * @date 2021/03/15 1:16 下午
+     * @date 2021/03/15 1:16
      */
     @ApiOperation(value = "生成二维码", notes = "生成二维码")
     @ApiImplicitParams({
@@ -290,7 +290,7 @@ public class ExaminationController extends BaseController {
      * @param examinationId examinationId
      * @param response response
      * @author shimmerjordan
-     * @date 2021/03/21 5:38 下午
+     * @date 2021/03/21 5:38
      */
     @ApiOperation(value = "生成二维码(v2)", notes = "生成二维码(v2)")
     @ApiImplicitParams({

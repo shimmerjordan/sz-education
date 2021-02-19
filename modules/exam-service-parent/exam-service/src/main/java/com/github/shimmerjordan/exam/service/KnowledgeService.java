@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 知识库service
  *
  * @author shimmerjordan
- * @date 2021/1/1 15:09
+ * @date 2021/01/01 15:09
  */
 @Service
 public class KnowledgeService extends CrudService<KnowledgeMapper, Knowledge> {
@@ -24,7 +24,7 @@ public class KnowledgeService extends CrudService<KnowledgeMapper, Knowledge> {
      * @param knowledge knowledge
      * @return Knowledge
      * @author shimmerjordan
-     * @date 2021/1/1 15:09
+     * @date 2021/01/01 15:09
      */
     @Override
     @Cacheable(value = "knowledge#" + CommonConstant.CACHE_EXPIRE, key = "#knowledge.id")
@@ -38,7 +38,7 @@ public class KnowledgeService extends CrudService<KnowledgeMapper, Knowledge> {
      * @param knowledge knowledge
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/1 15:10
+     * @date 2021/01/01 15:10
      */
     @Override
     @Transactional
@@ -53,7 +53,7 @@ public class KnowledgeService extends CrudService<KnowledgeMapper, Knowledge> {
      * @param knowledge knowledge
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/1 15:10
+     * @date 2021/01/01 15:10
      */
     @Override
     @Transactional
@@ -68,7 +68,7 @@ public class KnowledgeService extends CrudService<KnowledgeMapper, Knowledge> {
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2021/1/3 14:15
+     * @date 2021/01/03 14:15
      */
     @Override
     @Transactional

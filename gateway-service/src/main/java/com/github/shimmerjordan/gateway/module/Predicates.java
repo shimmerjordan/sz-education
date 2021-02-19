@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
  * 断言
  *
  * @author shimmerjordan
- * @date 2021/04-16 17:51
+ * @date 2021/04/16 17:51
  */
 @Data
 public class Predicates extends BaseEntity<Predicates> {

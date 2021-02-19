@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 后台首页数据展示
  *
  * @author shimmerjordan
- * @date 2021/03-01 13:54
+ * @date 2021/03/01 13:54
  */
 @AllArgsConstructor
 @Api("后台首页数据展示")
@@ -75,7 +75,7 @@ public class DashboardController extends BaseController {
      * 过去一周考试记录数
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/1/31 6:08 下午
+     * @date 2021/01/31 6:08
      */
     @GetMapping("examRecordTendency")
 	@ApiOperation(value = "过去一周考试记录数", notes = "过去一周考试记录数")

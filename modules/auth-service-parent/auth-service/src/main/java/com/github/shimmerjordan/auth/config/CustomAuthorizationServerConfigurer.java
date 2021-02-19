@@ -46,7 +46,7 @@ import java.util.Collections;
  * 授权服务器配置
  *
  * @author shimmerjordan
- * @date 2021/03-14 11:40
+ * @date 2021/03/14 11:40
  */
 @Configuration
 public class CustomAuthorizationServerConfigurer extends AuthorizationServerConfigurerAdapter {

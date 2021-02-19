@@ -2,7 +2,7 @@ package com.github.shimmerjordan.common.core.utils;
 
 /**
  * @author shimmerjordan
- * @date 2021/1/23 19:59
+ * @date 2021/01/23 19:59
  */
 public class Assert {
 

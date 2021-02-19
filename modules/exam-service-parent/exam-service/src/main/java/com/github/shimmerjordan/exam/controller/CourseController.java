@@ -25,7 +25,7 @@ import javax.validation.Valid;
  * 课程controller
  *
  * @author shimmerjordan
- * @date 2021/03/8 21:25
+ * @date 2021/03/08 21:25
  */
 @Slf4j
 @AllArgsConstructor
@@ -150,7 +150,7 @@ public class CourseController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/4 11:26
+     * @date 2020/12/04 11:26
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization
