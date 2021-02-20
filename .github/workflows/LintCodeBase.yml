@@ -1,0 +1,65 @@
+---
+###########################
+###########################
+## Linter GitHub Actions ##
+###########################
+###########################
+name: Lint Code Base
+
+#
+# Documentation:
+# https://help.github.com/en/articles/workflow-syntax-for-github-actions
+#
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  push:
+    # Remove the line above to run when pushing to master
+  schedule:
+    - cron:  '0 0,3,6,9,12,15,18,21 * * *'
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    # Name the Job
+    name: Lint Code Base
+    # Set the agent to run on
+    runs-on: ubuntu-latest
+
+    ##################
+    # Load all steps #
+    ##################
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: github/super-linter@v3
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          
+    # Commits all changed files to the repository
+      - name: Commit to the repo
+        run: |
+          git config --global user.name "shimmerjordan"
+          git config --global user.email "shimmerjordan@foxmail.com"
+          git add .
+          # "echo" returns true so the build succeeds, even if no changed files
+          git commit -m 'Update generated files' || echo
+          git push origin HEAD:master --force
