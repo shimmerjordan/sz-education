@@ -12,8 +12,6 @@ target/
 out/
 bin/
 intellij/
-*.log
-*.log.*
 *.iml
 *.ipr
 *.iws
