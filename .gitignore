@@ -11,6 +11,7 @@ target/
 .idea/
 out/
 bin/
+logs/
 intellij/
 *.iml
 *.ipr
