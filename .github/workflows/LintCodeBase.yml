@@ -61,5 +61,5 @@ jobs:
           git config --global user.email "shimmerjordan@foxmail.com"
           git add .
           # "echo" returns true so the build succeeds, even if no changed files
-          git commit -m 'Update generated files' || echo
+          git commit -m 'Update Lint Code Base logs' || echo
           git push origin HEAD:master --force
