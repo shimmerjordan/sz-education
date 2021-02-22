@@ -4,21 +4,14 @@
 ## Linter GitHub Actions ##
 ###########################
 ###########################
-name: Lint Code Base
+name: Clear old Linter log
 
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
 
-#############################
-# Start the job on all push #
-#############################
 on:
-  push:
-    # Remove the line above to run when pushing to master
+  watch:
+    types: [started]
   schedule:
-    - cron:  '0 0/3 * * *'
+    - cron:  '0 0 1/4 * *'
 
 ###############
 # Set the Job #
@@ -26,7 +19,7 @@ on:
 jobs:
   build:
     # Name the Job
-    name: Lint Code Base
+    name: Clear old Linter log
     # Set the agent to run on
     runs-on: ubuntu-latest
 
@@ -39,22 +32,17 @@ jobs:
       ##########################
       - name: Checkout Code
         uses: actions/checkout@v2
-        with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
+	
 
-   
-      ################################
-      # Run Linter against code base #
-      ################################
-      - name: Lint Code Base
-        uses: github/super-linter@v3
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
-          DISABLE_ERRORS: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+      #########################
+      # clear linter old-log  #
+      #########################
+      - name: clear linter old-log
+        run: |
+          cat super-linter.log
+          cat /dev/null > super-linter.log
+          cat super-linter.log
+      
           
     # Commits all changed files to the repository
       - name: Commit to the repo
