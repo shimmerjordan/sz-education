@@ -18,7 +18,7 @@ on:
   push:
     # Remove the line above to run when pushing to master
   schedule:
-    - cron:  '0 0,3,6,9,12,15,18,21 * * *'
+    - cron:  '0 0/3 * * *'
 
 ###############
 # Set the Job #
@@ -43,6 +43,16 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
+      #########################
+      # clear linter old-log  #
+      #########################
+      - name: clear linter old-log
+        run: |
+          cat super-linter.log
+          cat /dev/null > super-linter.log
+          cat super-linter.log
+          
+
       ################################
       # Run Linter against code base #
       ################################
@@ -51,6 +61,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
+          DISABLE_ERRORS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
           
