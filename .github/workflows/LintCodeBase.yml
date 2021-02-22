@@ -48,7 +48,9 @@ jobs:
       #########################
       - name: clear linter old-log
         run: |
+          cat super-linter.log
           cat /dev/null > super-linter.log
+          cat super-linter.log
           
 
       ################################
