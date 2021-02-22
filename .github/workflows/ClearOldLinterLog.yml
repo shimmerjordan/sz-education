@@ -11,7 +11,7 @@ on:
   watch:
     types: [started]
   schedule:
-    - cron:  '0 0 1/4 * *'
+    - cron:  '0 0 * * *'
 
 ###############
 # Set the Job #
