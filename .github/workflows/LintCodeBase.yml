@@ -48,7 +48,7 @@ jobs:
       ######################
       - name: delete linter old-log
         run: |
-          rm -f super-linter.log
+          rm -f ./super-linter.log
           
 
       ################################
@@ -59,6 +59,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
+          DISABLE_ERRORS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
           
