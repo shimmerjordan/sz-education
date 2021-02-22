@@ -43,12 +43,12 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      ######################
-      # delete linter old-log  #
-      ######################
-      - name: delete linter old-log
+      #########################
+      # clear linter old-log  #
+      #########################
+      - name: clear linter old-log
         run: |
-          rm -f ./super-linter.log
+          cat /dev/null > super-linter.log
           
 
       ################################
