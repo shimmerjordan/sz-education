@@ -18,7 +18,7 @@ on:
   push:
     # Remove the line above to run when pushing to master
   schedule:
-    - cron:  '0 0,3,6,9,12,15,18,21 * * *'
+    - cron:  '0 0/3 * * *'
 
 ###############
 # Set the Job #
