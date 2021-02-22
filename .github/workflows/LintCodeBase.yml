@@ -44,9 +44,9 @@ jobs:
           fetch-depth: 0
 
       ######################
-      # delete linter log  #
+      # delete linter old-log  #
       ######################
-      - name: delete linter log
+      - name: delete linter old-log
         run: |
           rm -f super-linter.log
           
