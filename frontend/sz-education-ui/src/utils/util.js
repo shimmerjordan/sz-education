@@ -237,7 +237,7 @@ export const checkMultipleSelect = (multipleSelection, obj) => {
  * 设置浏览器头部标题
  */
 export const setTitle = function (title) {
-  title = title ? `${title}——硕果云` : '硕果云'
+  title = title ? `${title}——轼辙云` : '轼辙云'
   window.document.title = title
 }
 

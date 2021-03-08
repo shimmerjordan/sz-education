@@ -5,7 +5,7 @@
         <div class="clever-main-menu">
           <div class="classy-nav-container breakpoint-off">
             <nav class="classy-navbar justify-content-between" id="cleverNav">
-              <a class="nav-brand hidden-sm-only" href="/">硕果云</a>
+              <a class="nav-brand hidden-sm-only" href="/">轼辙云</a>
               <div class="classy-menu">
                 <div class="classynav">
                   <div class="search-area hidden-sm-only">
@@ -27,13 +27,13 @@
                     </el-submenu>
                     <el-submenu index="/u">
                       <template slot="title">帮助</template>
-                      <el-menu-item index="u-source" @click="open('https://gitee.com/shimmerjordan/sz-education')">
+                      <el-menu-item index="u-source" @click="open('https://github.com/shimmerjordan/sz-education')">
                         源码地址
                       </el-menu-item>
                       <el-menu-item index="u-deploy" @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322870')">
                         部署文档
                       </el-menu-item>
-                      <el-menu-item index="c-log" @click="open('https://gitee.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md')">
+                      <el-menu-item index="c-log" @click="open('https://github.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md')">
                         更新日志
                       </el-menu-item>
                       <el-menu-item index="c-overview"  @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322864#6__112')">
