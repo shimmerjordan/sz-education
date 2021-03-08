@@ -36,7 +36,7 @@
                       <el-menu-item index="c-log" @click="open('https://github.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md')">
                         更新日志
                       </el-menu-item>
-                      <el-menu-item index="c-overview"  @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322864#6__112')">
+                      <el-menu-item index="c-overview"  @click="open('https://shimmerjordan.site/2021/03/08/introToSZ-education/')">
                         规划总览
                       </el-menu-item>
                       <el-menu-item index="u-admin" @click="open('http://118.25.138.130:81')">
