@@ -30,7 +30,7 @@
                       <el-menu-item index="u-source" @click="open('https://github.com/shimmerjordan/sz-education')">
                         源码地址
                       </el-menu-item>
-                      <el-menu-item index="u-deploy" @click="open('https://www.kancloud.cn/shimmerjordan/sz-education/1322870')">
+                      <el-menu-item index="u-deploy" @click="open('https://shimmerjordan.site/2021/03/10/sz-educationLocalDeploy/')">
                         部署文档
                       </el-menu-item>
                       <el-menu-item index="c-log" @click="open('https://github.com/shimmerjordan/sz-education/blob/master/CHANGELOG.md')">
