@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * 部门
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:25
+ * @date 2021/01/26 22:25
  */
 @Data
 public class Dept extends BaseEntity<Dept> {

@@ -46,7 +46,7 @@ import java.util.stream.Stream;
  * 用户service实现
  *
  * @author shimmerjordan
- * @date 2020/12/25 16:17
+ * @date 2021/01/25 16:17
  */
 @AllArgsConstructor
 @Slf4j
@@ -263,7 +263,7 @@ public class UserService extends CrudService<UserMapper, User> {
      * @param userDto userDto
      * @return int
      * @author shimmerjordan
-     * @date 2020/12/26 15:15
+     * @date 2021/01/26 15:15
      */
     @Transactional
     @CacheEvict(value = "user", key = "#id")

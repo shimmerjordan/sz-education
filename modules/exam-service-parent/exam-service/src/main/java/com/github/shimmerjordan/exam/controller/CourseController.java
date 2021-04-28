@@ -150,7 +150,7 @@ public class CourseController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/04 11:26
+     * @date 2021/01/04 11:26
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization

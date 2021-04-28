@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 角色mapper
  *
  * @author shimmerjordan
- * @date 2020/12/26 09:33
+ * @date 2021/01/26 09:33
  */
 @Mapper
 public interface RoleMapper extends CrudMapper<Role> {

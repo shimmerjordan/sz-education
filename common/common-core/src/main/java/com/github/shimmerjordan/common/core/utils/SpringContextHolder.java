@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 /**
- * 以静态变量保存Spring ApplicationContext
+ * 以静态变量保存Spring ApplicationContext，可在任何代码任何地方任何时候取出ApplicaitonContext.
  *
  * @author shimmerjordan
- * @date 2020/12/24 19:04
+ * @date 2021/01/24 19:04
  */
 @Service
 @Lazy(false)

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  * 提交考试消息消费者
  *
  * @author shimmerjordan
- * @date 2021/03/3 14:55
+ * @date 2021/03/03 14:55
  */
 @Slf4j
 @AllArgsConstructor

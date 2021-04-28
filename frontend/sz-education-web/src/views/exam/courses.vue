@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="clever-category bg-img" style="background-image: url(static/img/bg-img/bg2.jpg);">
-      <h3>艺术 & 设计</h3>
+      <h3>课程</h3>
     </div>
     <div class="content-container">
       <div class="course-card-list">
@@ -23,7 +23,7 @@
                   <i class="el-icon-user-solid" aria-hidden="true"></i> 10
                 </div>
                 <div class="rating">
-                  <i class="el-icon-star-on" aria-hidden="true"></i> 4.5
+                  <i class="el-icon-star-on" aria-hidden="true"></i> 4.6
                 </div>
               </div>
               <div class="course-fee h-100">

@@ -30,7 +30,7 @@ import java.util.stream.Stream;
  * 角色controller
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:50
+ * @date 2021/01/26 22:50
  */
 @Slf4j
 @AllArgsConstructor
@@ -192,7 +192,7 @@ public class RoleController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/04 10:00
+     * @date 2021/01/04 10:00
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization

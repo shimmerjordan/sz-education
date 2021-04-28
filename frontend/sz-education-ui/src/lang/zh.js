@@ -81,7 +81,7 @@ export default {
     lock: '锁屏'
   },
   login: {
-    title: '轼辙云教学平台',
+    title: '轼辙云教务管理系统',
     logIn: '登录',
     tenantCode: '单位ID',
     identifier: '账号',

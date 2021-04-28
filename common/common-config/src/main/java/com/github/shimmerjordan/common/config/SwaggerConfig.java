@@ -81,9 +81,9 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("轼辙云")
-                .description("https://gitee.com/shimmerjordan/sz-education")
-                .termsOfServiceUrl("https://gitee.com/shimmerjordan/sz-education")
-                .contact(new Contact("shimmerjordan", "https://gitee.com/shimmerjordan/sz-education", "shimmerjordan@foxmail.com"))
+                .description("https://github.com/shimmerjordan/sz-education")
+                .termsOfServiceUrl("https://github.com/shimmerjordan/sz-education")
+                .contact(new Contact("shimmerjordan", "https://github.com/shimmerjordan/sz-education", "shimmerjordan@foxmail.com"))
                 .version("3.7.0")
                 .build();
     }

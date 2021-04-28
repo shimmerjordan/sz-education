@@ -52,7 +52,7 @@ CREATE TABLE `sys_dept`  (
 -- ----------------------------
 -- Records of sys_dept
 -- ----------------------------
-INSERT INTO `sys_dept` VALUES (596290673729212416, '基础平台部', '基础平台部', '管理员', -1, 30, 'admin', '2020-02-23 14:37:56', 'admin', '2020-02-23 14:27:13', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_dept` VALUES (596290673729212416, '基础平台部', '基础平台部', '管理员', -1, 30, 'admin', '2021-02-23 14:37:56', 'admin', '2021-02-23 14:27:13', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_log
@@ -111,10 +111,10 @@ CREATE TABLE `sys_menu`  (
 -- ----------------------------
 -- Records of sys_menu
 -- ----------------------------
-INSERT INTO `sys_menu` VALUES ('571348650370928640', '个人管理', 'personal', '/api/user/v1/personal/**', '-1', 'user', '30', '0', 1, 'admin', '2021-04-26 14:55:33', 'admin', '2020-02-22 13:03:09', '0', 'EXAM', 'Layout', '/personal', NULL, '个人管理', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571348650370928640', '个人管理', 'personal', '/api/user/v1/personal/**', '-1', 'user', '30', '0', 1, 'admin', '2021-04-26 14:55:33', 'admin', '2021-02-22 13:03:09', '0', 'EXAM', 'Layout', '/personal', NULL, '个人管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571349816924311552', '个人资料', 'personal:message', '/api/user/v1/user/updateInfo', '571348650370928640', '', '29', '0', 1, 'admin', '2021-04-26 15:00:11', 'admin', '2021-04-26 15:00:11', '0', 'EXAM', 'views/personal/message', 'message', NULL, '个人资料', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571350099653955584', '修改密码', 'personal:password', '/api/user/v1/user/updateInfo', '571348650370928640', '', '30', '0', 1, 'admin', '2021-04-26 15:01:18', 'admin', '2021-04-26 15:01:18', '0', 'EXAM', 'views/personal/password', 'password', NULL, '修改密码', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571351763521769472', '附件管理', 'attachment', '/api/user/v1/attachment/**', '-1', 'documentation', '10', '0', 1, 'admin', '2021-04-26 15:07:55', 'admin', '2020-02-22 13:02:22', '0', 'EXAM', 'Layout', '/attachment', NULL, '附件管理', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571351763521769472', '附件管理', 'attachment', '/api/user/v1/attachment/**', '-1', 'documentation', '10', '0', 1, 'admin', '2021-04-26 15:07:55', 'admin', '2021-02-22 13:02:22', '0', 'EXAM', 'Layout', '/attachment', NULL, '附件管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571352087896657920', '附件列表', 'attachment:list', '/api/user/v1/attachment/list', '571351763521769472', '', '30', '0', 1, 'admin', '2021-04-26 15:09:12', 'admin', '2021-04-26 15:09:12', '0', 'EXAM', 'views/attachment/list', 'list', NULL, '附件列表', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571352797233156096', '考务管理', 'exam', '/api/exam/**', '-1', 'nested', '8', '0', 1, 'admin', '2021-04-26 15:12:02', 'admin', '2021-05-23 21:28:32', '0', 'EXAM', 'Layout', '/exam', NULL, '考务管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571353230286655488', '课程管理', 'exam:course', '/api/exam/v1/course/**', '571352797233156096', '', '1', '0', 1, 'admin', '2021-04-26 15:13:45', 'admin', '2021-04-26 15:13:45', '0', 'EXAM', 'views/exam/course', 'course', NULL, '课程管理', 'gitee');
@@ -142,12 +142,12 @@ INSERT INTO `sys_menu` VALUES ('571358407353831424', '删除题目分类', 'exam
 INSERT INTO `sys_menu` VALUES ('571358617991778304', '导入题目', 'exam:subject:bank:import', NULL, '571353992756596736', '', '7', '1', 1, 'admin', '2021-04-26 15:35:09', 'admin', '2021-04-26 15:35:09', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571358928483520512', '导出题目', 'exam:subject:bank:export', NULL, '571353992756596736', '', '8', '1', 1, 'admin', '2021-04-26 15:36:23', 'admin', '2021-04-26 15:36:23', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571359163205160960', '导出成绩', 'exam:examRecord:export', NULL, '571354428217626624', '', '30', '1', 1, 'admin', '2021-04-26 15:37:19', 'admin', '2021-04-26 15:37:19', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('571361163502292992', '系统监控', 'sys', '/api/monitor/**', '-1', 'monitoring', '7', '0', 1, 'admin', '2021-04-26 15:45:16', 'admin', '2020-02-22 13:01:08', '0', 'EXAM', 'Layout', '/monitor', NULL, '系统监控', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571361163502292992', '系统监控', 'sys', '/api/monitor/**', '-1', 'monitoring', '7', '0', 1, 'admin', '2021-04-26 15:45:16', 'admin', '2021-02-22 13:01:08', '0', 'EXAM', 'Layout', '/monitor', NULL, '系统监控', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571361526066319360', '日志监控', 'monitor:log', '/api/user/v1/log/**', '571361163502292992', '', '30', '0', 1, 'admin', '2021-04-26 15:46:43', 'admin', '2021-04-26 15:46:43', '0', 'EXAM', 'views/monitor/log', 'log', NULL, '日志监控', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571361746552492032', 'consul监控', 'monitor:service', '/api/monitor/service/**', '571361163502292992', '', '31', '0', 1, 'admin', '2021-04-26 15:47:35', 'admin', '2020-02-23 16:20:39', '0', 'EXAM', NULL, 'http://118.25.138.130:8500', NULL, 'consul监控', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571362994005610496', 'zipkin监控', 'monitor:link', '/api/monitor/**', '571361163502292992', '', '32', '0', 1, 'admin', '2021-04-26 15:52:33', 'admin', '2020-02-23 16:18:46', '0', 'EXAM', NULL, 'http://118.25.138.130:9411/zipkin', NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('571363268497641472', '服务监控', 'monitor:admin', '/api/monitor/**', '571361163502292992', '', '33', '0', 1, 'admin', '2021-04-26 15:53:38', 'admin', '2020-02-23 16:20:24', '0', 'EXAM', NULL, 'http://118.25.138.130:9186/admin', NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('571363537549660160', '接口文档', 'monitor:document', '/api/monitor/**', '571361163502292992', '', '34', '0', 1, 'admin', '2021-04-26 15:54:42', 'admin', '2020-02-23 16:19:58', '0', 'EXAM', NULL, 'http://118.25.138.130:9180/swagger-ui.html', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571361746552492032', 'consul监控', 'monitor:service', '/api/monitor/service/**', '571361163502292992', '', '31', '0', 1, 'admin', '2021-04-26 15:47:35', 'admin', '2021-02-23 16:20:39', '0', 'EXAM', NULL, 'http://118.25.138.130:8500', NULL, 'consul监控', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571362994005610496', 'zipkin监控', 'monitor:link', '/api/monitor/**', '571361163502292992', '', '32', '0', 1, 'admin', '2021-04-26 15:52:33', 'admin', '2021-02-23 16:18:46', '0', 'EXAM', NULL, 'http://118.25.138.130:9411/zipkin', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571363268497641472', '服务监控', 'monitor:admin', '/api/monitor/**', '571361163502292992', '', '33', '0', 1, 'admin', '2021-04-26 15:53:38', 'admin', '2021-02-23 16:20:24', '0', 'EXAM', NULL, 'http://118.25.138.130:9186/admin', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571363537549660160', '接口文档', 'monitor:document', '/api/monitor/**', '571361163502292992', '', '34', '0', 1, 'admin', '2021-04-26 15:54:42', 'admin', '2021-02-23 16:19:58', '0', 'EXAM', NULL, 'http://118.25.138.130:9180/swagger-ui.html', NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571364115214372864', '删除日志', 'monitor:log:del', NULL, '571361526066319360', '', '30', '1', 1, 'admin', '2021-04-26 15:57:00', 'admin', '2021-04-26 15:57:00', '0', 'EXAM', NULL, NULL, NULL, '删除日志', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571365178965364736', '首页', 'dashboard', '/', '-1', 'dashboard', '0', '0', 1, 'admin', '2021-04-26 16:01:14', 'admin', '2020-04-05 19:47:03', '0', 'EXAM', 'Layout', 'dashboard', NULL, '首页', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571367565360762880', '系统管理', 'sys', '/api/user/v1/**', '-1', 'component', '1', '0', 1, 'admin', '2021-04-26 16:10:43', 'admin', '2021-05-23 21:52:26', '0', 'EXAM', 'Layout', '/sys', NULL, '系统管理', 'gitee');
@@ -182,7 +182,7 @@ INSERT INTO `sys_menu` VALUES ('571374951823708160', '修改路由', 'sys:route:
 INSERT INTO `sys_menu` VALUES ('571375033570693120', '删除路由', 'sys:route:del', NULL, '571369965811273728', '', '3', '1', 1, 'admin', '2021-04-26 16:40:23', 'admin', '2021-04-26 16:40:23', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571375135655858176', '刷新路由', 'sys:route:refresh', NULL, '571369965811273728', '', '4', '1', 1, 'admin', '2021-04-26 16:40:47', 'admin', '2021-04-26 16:40:47', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571454722205159424', '修改题目', 'exam:exam:subject:edit', NULL, '571353525381107712', '', '9', '1', 1, 'admin', '2021-04-26 21:57:02', 'admin', '2021-04-26 21:57:02', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('581237996276289536', '租户中心', 'tenant', '/api/user/v1/tenent/**', '-1', 'example', '3', '0', 1, 'admin', '2021-05-23 21:52:17', 'admin', '2020-02-22 12:58:27', '0', 'EXAM', 'Layout', '/tenant', NULL, '租户管理', 'gitee');
+INSERT INTO `sys_menu` VALUES ('581237996276289536', '租户中心', 'tenant', '/api/user/v1/tenent/**', '-1', 'example', '3', '0', 1, 'admin', '2021-05-23 21:52:17', 'admin', '2021-02-22 12:58:27', '0', 'EXAM', 'Layout', '/tenant', NULL, '租户管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('581238351663861760', '单位管理', 'tenant:tenant', '/api/user/tenant/**', '581237996276289536', '', '1', '0', 1, 'admin', '2021-05-23 21:53:41', 'admin', '2021-05-23 21:55:30', '0', 'EXAM', 'views/tenant/tenant', 'tenant', NULL, '单位管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('581238560250793984', '新增单位', 'tenant:tenant:add', NULL, '581238351663861760', '', '1', '1', 1, 'admin', '2021-05-23 21:54:31', 'admin', '2021-05-23 21:55:05', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('581238795467362304', '修改单位', 'tenant:tenant:edit', '', '581238351663861760', '', '2', '1', 1, 'admin', '2021-05-23 21:55:27', 'admin', '2021-05-23 21:55:27', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
@@ -190,7 +190,7 @@ INSERT INTO `sys_menu` VALUES ('581238883182841856', '删除单位', 'tenant:ten
 INSERT INTO `sys_menu` VALUES ('624972495417643008', '查看首页', 'dashboard:view', NULL, '571365178965364736', '', '30', '1', NULL, 'admin', '2021-09-21 14:17:34', 'admin', '2021-09-21 14:17:34', '0', 'EXAM', NULL, NULL, NULL, '查看首页', 'gitee');
 INSERT INTO `sys_menu` VALUES ('625058053556932608', '编辑考试', 'exam:exam:edit', '/api/exam/v1/examination/**', '571353525381107712', '', '2', '1', NULL, 'admin', '2021-09-21 19:57:33', 'admin', '2021-09-21 19:57:33', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('625058859773464576', '编辑题目', 'exam:exam:subject:edit', NULL, '571353525381107712', '', '9', '1', NULL, 'admin', '2021-09-21 20:00:45', 'admin', '2021-09-21 20:00:45', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('681171474660331520', 'elk日志', 'monitor:elk', '/api/monitor/**', '571361163502292992', '', '35', '0', NULL, 'admin', '2020-02-23 16:12:15', 'admin', '2020-02-23 16:18:07', '0', 'EXAM', NULL, 'http://118.25.138.130:5601/app/kibana', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('681171474660331520', 'elk日志', 'monitor:elk', '/api/monitor/**', '571361163502292992', '', '35', '0', NULL, 'admin', '2021-02-23 16:12:15', 'admin', '2021-02-23 16:18:07', '0', 'EXAM', NULL, 'http://118.25.138.130:5601/app/kibana', NULL, NULL, 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_role
@@ -220,7 +220,7 @@ INSERT INTO `sys_role` VALUES (596116511031169024, '普通用户', 'role_user', 
 INSERT INTO `sys_role` VALUES (596117256346406912, '超级管理员', 'role_admin', '超级管理员', 0, 0, 'admin', '2021-10-07 15:02:17', 'admin', '2021-10-07 14:53:50', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_role` VALUES (596330074307956736, '教师', 'role_teacher', '教师', 0, 0, 'admin', '2021-09-08 20:57:57', 'admin', '2021-09-08 20:57:57', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_role` VALUES (624964171867492352, '租户管理员', 'role_tenant_admin', '租户管理员', 0, 0, 'admin', '2021-10-08 21:55:13', 'admin', '2021-10-08 21:46:48', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_role` VALUES (681167029125910528, '预览', 'role_preview', '预览权限', 0, 0, 'admin', '2020-02-23 15:54:35', 'admin', '2020-02-23 15:54:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_role` VALUES (681167029125910528, '预览', 'role_preview', '预览权限', 0, 0, 'admin', '2021-02-23 15:54:35', 'admin', '2021-02-23 15:54:35', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_role_menu
@@ -1264,7 +1264,7 @@ CREATE TABLE `sys_user`  (
 INSERT INTO `sys_user` VALUES (596078038307966976, '管理员', '15521089123', '0', 'shimmerjordan@foxmail.com', '1995-07-03', 0, 0, 596290673729212416, '管理员', NULL, NULL, NULL, 530100, 530000, '2020-04-05 19:47:18', NULL, NULL, '测试', NULL, 'admin', '2020-04-05 19:58:07', 'admin', '2020-04-05 19:47:18', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user` VALUES (596307222997372928, '梁同学', '15521089123', '0', 'shimmerjordan@foxmail.com', '2021-07-01', 0, 1, 596290673729212416, '梁同学', NULL, NULL, NULL, NULL, NULL, '2020-04-05 19:36:13', NULL, NULL, NULL, NULL, 'admin', '2020-04-05 19:56:36', 'student', '2020-04-05 19:38:57', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user` VALUES (596332387600830464, '林老师', '15521089123', NULL, 'shimmerjordan@foxmail.com', '2021-07-03', 0, 1, 596290673729212416, '林老师', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2020-03-05 22:17:01', 'admin', '2020-03-05 22:06:27', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_user` VALUES (681167776798347264, '预览权限', '15521089123', '0', NULL, '2020-02-23', 0, 0, 596290673729212416, '', 596329627606192128, NULL, NULL, NULL, NULL, '2020-04-05 19:30:45', NULL, NULL, NULL, NULL, 'admin', '2020-04-05 19:56:38', 'preview', '2020-04-05 19:30:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (681167776798347264, '预览权限', '15521089123', '0', NULL, '2021-02-23', 0, 0, 596290673729212416, '', 596329627606192128, NULL, NULL, NULL, NULL, '2020-04-05 19:30:45', NULL, NULL, NULL, NULL, 'admin', '2020-04-05 19:56:38', 'preview', '2020-04-05 19:30:59', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_user_auths
@@ -1289,10 +1289,10 @@ CREATE TABLE `sys_user_auths`  (
 -- ----------------------------
 -- Records of sys_user_auths
 -- ----------------------------
-INSERT INTO `sys_user_auths` VALUES (596329627606192128, 596078038307966976, 1, 'admin', '$2a$10$fi16OaJpNVcMuhudn5pxf.0Um3OI0mOODA9Rx3.oLERDrry9RRCRe', 'admin', '2020-02-29 16:13:29', 'admin', '2021-07-04 13:21:02', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user_auths` VALUES (596329627606192128, 596078038307966976, 1, 'admin', '$2a$10$fi16OaJpNVcMuhudn5pxf.0Um3OI0mOODA9Rx3.oLERDrry9RRCRe', 'admin', '2021-02-29 16:13:29', 'admin', '2021-07-04 13:21:02', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user_auths` VALUES (596329627648135168, 596307222997372928, 1, 'student', '$2a$10$5XMiXaS3XbkZvcdFHFA6HeZGWAfzxQtLVXRZi8Oyic/rbRLExT5Na', 'admin', '2021-07-04 13:21:03', 'admin', '2021-07-04 13:21:03', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user_auths` VALUES (596332387693105152, 596332387600830464, 1, 'teacher', '$2a$10$8CNmKhP0UJm9WVeDRkowteGHtJEz77xUNaKoVQook6ESYemueK8sC', 'admin', '2021-07-04 13:32:01', 'admin', '2021-07-04 13:32:01', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_user_auths` VALUES (681167777872089088, 681167776798347264, 1, 'preview', '$2a$10$tzwo3TcjyyHnX85WlyO2Huq/gdR7gxhNBGrARAl9PctT6AFZ30Dnu', 'admin', '2020-02-23 15:57:34', 'admin', '2020-02-23 15:57:34', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user_auths` VALUES (681167777872089088, 681167776798347264, 1, 'preview', '$2a$10$tzwo3TcjyyHnX85WlyO2Huq/gdR7gxhNBGrARAl9PctT6AFZ30Dnu', 'admin', '2021-02-23 15:57:34', 'admin', '2021-02-23 15:57:34', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_user_role

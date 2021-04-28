@@ -2,7 +2,7 @@
   <div class="menu-wrapper">
     <div style="background-color: #282828;">
       <div class="logo">
-        <span>sg-</span>admin<div class="el-form--inline"></div>
+        <span>sz-</span>admin<div class="el-form--inline"></div>
       </div>
     </div>
     <template v-for="(item, index) in menu">

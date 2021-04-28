@@ -3,7 +3,7 @@
     <div class="login-wrap animated flipInY">
       <div class="text-center">
         <h3>
-          <span class="light-font">SG-</span>Admin
+          <span class="light-font">SZ-</span>Admin
         </h3>
       </div>
       <el-row>

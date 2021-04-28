@@ -7,7 +7,7 @@ import lombok.Data;
  * 部门vo
  *
  * @author shimmerjordan
- * @date 2020/12/31 22:02
+ * @date 2021/01/31 22:02
  */
 @Data
 public class DeptVo extends BaseEntity<DeptVo> {

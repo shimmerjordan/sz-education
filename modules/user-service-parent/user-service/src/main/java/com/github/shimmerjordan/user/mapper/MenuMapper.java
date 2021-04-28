@@ -11,7 +11,7 @@ import java.util.List;
  * 菜单mapper
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:34
+ * @date 2021/01/26 22:34
  */
 @Mapper
 public interface MenuMapper extends CrudMapper<Menu> {

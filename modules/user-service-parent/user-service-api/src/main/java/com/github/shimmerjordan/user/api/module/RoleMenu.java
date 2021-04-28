@@ -7,7 +7,7 @@ import lombok.Data;
  * 角色菜单关联
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:24
+ * @date 2021/01/26 22:24
  */
 @Data
 public class RoleMenu extends BaseEntity<RoleMenu> {

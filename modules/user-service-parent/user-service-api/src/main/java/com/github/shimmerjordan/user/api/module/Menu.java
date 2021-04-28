@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * 菜单
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:21
+ * @date 2021/01/26 22:21
  */
 @Data
 public class Menu extends BaseEntity<Menu> {

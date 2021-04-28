@@ -33,7 +33,7 @@ import java.util.stream.Stream;
  * 菜单service
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:45
+ * @date 2021/01/26 22:45
  */
 @AllArgsConstructor
 @Service
@@ -113,7 +113,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param tenantCode 租户标识
 	 * @return List
 	 * @author shimmerjordan
-	 * @date 2020/12/27 16:00
+	 * @date 2021/01/27 16:00
 	 */
 	@Cacheable(value = "menu#" + CommonConstant.CACHE_EXPIRE, key = "#role")
 	public List<Menu> findMenuByRole(String role, String tenantCode) {
@@ -245,7 +245,7 @@ public class MenuService extends CrudService<MenuMapper, Menu> {
 	 * @param menu menu
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/12/27 16:22
+	 * @date 2021/01/27 16:22
 	 */
 	@Override
 	@Transactional

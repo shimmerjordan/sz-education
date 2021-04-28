@@ -214,7 +214,7 @@ public class ExaminationController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/03 22:03
+     * @date 2021/01/03 22:03
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization

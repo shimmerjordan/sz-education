@@ -6,7 +6,7 @@ import java.util.UUID;
  * id生成工具类
  *
  * @author shimmerjordan
- * @date 2020/12/23 12:03
+ * @date 2021/01/23 12:03
  */
 public class IdGen {
 

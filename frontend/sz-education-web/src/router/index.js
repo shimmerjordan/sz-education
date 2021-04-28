@@ -6,12 +6,12 @@ Vue.use(Router)
 export const constantRouterMap = [
   {
     path: '/',
-    name: 'Index',
-    component: () => import('@/views/Index'),
+    name: 'index',
+    component: () => import('@/views/header'),
     redirect: '/home',
     children: [
       {
-        path: 'home',
+        path: '/home',
         name: 'home',
         component: () => import('@/views/home/home')
       },

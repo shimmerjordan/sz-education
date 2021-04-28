@@ -159,7 +159,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
      * @param ids ids
      * @return int
      * @author shimmerjordan
-     * @date 2020/12/04 9:51
+     * @date 2021/01/04 9:51
      */
     @Override
     @Transactional
@@ -175,7 +175,7 @@ public class ExaminationService extends CrudService<ExaminationMapper, Examinati
 	 * @param ids ids
 	 * @return int
 	 * @author shimmerjordan
-	 * @date 2020/12/04 9:51
+	 * @date 2021/01/04 9:51
 	 */
 	@Transactional
     public void deleteExaminationSubject(Long[] ids) {

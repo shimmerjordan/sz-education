@@ -62,6 +62,8 @@ public class SubjectController extends BaseController {
         return new ResponseBean<>(subjectService.get(id, type));
     }
 
+
+
     /**
      * 获取分页数据
      *
@@ -223,7 +225,7 @@ public class SubjectController extends BaseController {
      * @param ids  ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/04 9:55
+     * @date 2021/01/04 9:55
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization

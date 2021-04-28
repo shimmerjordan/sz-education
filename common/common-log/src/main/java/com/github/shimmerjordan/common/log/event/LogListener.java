@@ -3,6 +3,7 @@ package com.github.shimmerjordan.common.log.event;
 import com.github.shimmerjordan.common.basic.model.Log;
 import com.github.shimmerjordan.user.api.feign.UserServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
@@ -14,6 +15,7 @@ import org.springframework.scheduling.annotation.Async;
  * @date 2021/03/12 23:59
  */
 public class LogListener {
+
 
     @Autowired
     private UserServiceClient userServiceClient;

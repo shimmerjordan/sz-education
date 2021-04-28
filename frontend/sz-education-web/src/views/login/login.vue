@@ -250,7 +250,7 @@ export default {
     handleLogin () {
       if (getToken()) {
         // 已经登录，重定向到首页
-        this.$router.push('/home')
+        this.$router.push('/home').catch(() => {})
       } else {
         this.$refs.loginForm.validate(valid => {
           if (valid) {
@@ -259,7 +259,7 @@ export default {
             this.$store.dispatch('LoginByUsername', this.login.form).then(() => {
               this.login.loading = false
               // 重定向到首页
-              this.$router.push({ path: this.redirect || '/' })
+              this.$router.push({ path: this.redirect || '/' }).catch(() => {})
             }).catch(() => {
               this.login.loading = false
               this.refreshLoginCode()

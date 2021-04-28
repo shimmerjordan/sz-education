@@ -39,9 +39,7 @@
                       <el-menu-item index="c-overview"  @click="open('https://shimmerjordan.site/2021/03/08/introToSZ-education/')">
                         规划总览
                       </el-menu-item>
-                      <el-menu-item index="u-admin" @click="open('http://118.25.138.130:81')">
-                        管理后台
-                      </el-menu-item>
+
                     </el-submenu>
                     <el-submenu v-if="login" index="/user-info">
                       <template slot="title">

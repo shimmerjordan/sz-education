@@ -7,7 +7,7 @@ import lombok.Data;
  * 角色
  *
  * @author shimmerjordan
- * @date 2020/12/25 13:58
+ * @date 2021/01/25 13:58
  */
 @Data
 public class RoleVo extends BaseEntity<RoleVo> {

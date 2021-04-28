@@ -1,5 +1,5 @@
 FROM nginx:1.13.6-alpine
-MAINTAINER shimmerjordan(shimmerjordan@foxmail.com)
+MAINTAINER tangyi(shimmerjordan@foxmail.com)
 
 ARG TZ="Asia/Guangzhou"
 

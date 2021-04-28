@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author shimmerjordan
- * @date 2020/12/25 16:20
+ * @date 2021/01/25 16:20
  */
 @Slf4j
 @AllArgsConstructor
@@ -126,7 +126,7 @@ public class UserController extends BaseController {
      * @param userVo   userVo
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/12/26 22:56
+     * @date 2021/01/26 22:56
      */
     @GetMapping("userList")
     @ApiOperation(value = "获取用户列表")
@@ -174,7 +174,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/26 14:34
+     * @date 2021/01/26 14:34
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -192,7 +192,7 @@ public class UserController extends BaseController {
      * @param userDto userDto
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/26 15:06
+     * @date 2021/01/26 15:06
      */
     @PutMapping("/{id:[a-zA-Z0-9,]+}")
     @AdminTenantTeacherAuthorization
@@ -265,7 +265,7 @@ public class UserController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/26 15:28
+     * @date 2021/01/26 15:28
      */
     @DeleteMapping("/{id}")
     @AdminTenantTeacherAuthorization
@@ -354,7 +354,7 @@ public class UserController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/04 9:58
+     * @date 2021/01/04 9:58
      */
     @PostMapping("deleteAll")
     @AdminTenantTeacherAuthorization
@@ -379,7 +379,7 @@ public class UserController extends BaseController {
      * @param ids ids
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/31 21:16
+     * @date 2021/01/31 21:16
      */
     @PostMapping(value = "findById")
     @ApiOperation(value = "根据ID查询用户", notes = "根据ID查询用户")

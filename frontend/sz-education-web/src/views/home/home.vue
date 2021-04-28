@@ -19,7 +19,7 @@
                 <img src="static/img/core-img/star.png" alt="">
               </div>
               <h2>
-                <count-to :start-val="0" :end-val="200" :duration="2600" class="counter"/>
+                <count-to :start-val="0" :end-val="187" :duration="2600" class="counter"/>
               </h2>
               <h5>用户数</h5>
             </div>
@@ -81,13 +81,13 @@
             <div class="single-popular-course" v-show="showCourses">
               <img src="static/img/bg-img/c1.jpg" alt="">
               <div class="course-content">
-                <h4>英语语法</h4>
+                <h4>推荐系统导论</h4>
                 <div class="meta d-flex align-items-center">
                   <a href="#">Tanma</a>
                   <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                  <a href="#">艺术 &amp; 设计</a>
+                  <a href="#">人工智能 &amp; 机器学习</a>
                 </div>
-                <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+                <p>涵盖传统以及新兴的深度学习类推荐算法，以及数据清洗、数据挖掘领域的算法。</p>
               </div>
               <div class="seat-rating-fee d-flex justify-content-between">
                 <div class="seat-rating h-100 d-flex align-items-center">
@@ -180,15 +180,15 @@
             <div class="single-blog-area mb-80" v-show="showBlog">
               <img src="static/img/blog-img/1.jpg" alt="">
               <div class="blog-content">
-                <a href="#" class="blog-headline">
-                  <h4>英语语法师</h4>
+                <a href="https://shimmerjordan.site/2021/03/08/introToSZ-education/" class="blog-headline">
+                  <h4>Introduction to sz-education</h4>
                 </a>
                 <div class="meta d-flex align-items-center">
-                  <a href="#">Tanma</a>
+                  <a href="https://cv.shimmerjordan.site/">shimmerjordan</a>
                   <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                  <a href="#">艺术 &amp; 设计</a>
+                  <a href="https://shimmerjordan.site/tags">技术 &amp; 设计</a>
                 </div>
-                <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+                <p>轼辙云考务系统，实现考试的无纸化以及高效化。</p>
               </div>
             </div>
           </transition>
@@ -198,15 +198,15 @@
             <div class="single-blog-area mb-80" v-show="showBlog">
               <img src="static/img/blog-img/2.jpg" alt="">
               <div class="blog-content">
-                <a href="#" class="blog-headline">
-                  <h4>英语语法师</h4>
+                <a href="https://shimmerjordan.site/2021/01/08/addTwoNumbers/" class="blog-headline">
+                  <h4>Add Two Numbers</h4>
                 </a>
                 <div class="meta d-flex align-items-center">
-                  <a href="#">Tanma</a>
+                  <a href="https://cv.shimmerjordan.site/">shimmerjordan</a>
                   <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                  <a href="#">艺术 &amp; 设计</a>
+                  <a href="https://shimmerjordan.site/tags">算法 &amp; 设计</a>
                 </div>
-                <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+                <p>什么是两数相加最好的策略？如果考虑溢出问题，传统算术真的可行吗？</p>
               </div>
             </div>
           </transition>

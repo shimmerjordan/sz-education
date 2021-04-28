@@ -36,7 +36,7 @@ import java.util.stream.Stream;
  * 菜单controller
  *
  * @author shimmerjordan
- * @date 2020/12/26 22:48
+ * @date 2021/01/26 22:48
  */
 @Slf4j
 @AllArgsConstructor
@@ -75,7 +75,7 @@ public class MenuController extends BaseController {
      * @param menu menu
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/27 16:12
+     * @date 2021/01/27 16:12
      */
     @PostMapping
     @AdminTenantTeacherAuthorization
@@ -111,7 +111,7 @@ public class MenuController extends BaseController {
      * @param id id
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/27 16:19
+     * @date 2021/01/27 16:19
      */
     @DeleteMapping("/{id}")
     @AdminTenantTeacherAuthorization
@@ -130,7 +130,7 @@ public class MenuController extends BaseController {
      * @param id
      * @return Menu
      * @author shimmerjordan
-     * @date 2020/12/27 16:11
+     * @date 2021/01/27 16:11
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "获取菜单信息", notes = "根据菜单id获取菜单详细信息")
@@ -149,7 +149,7 @@ public class MenuController extends BaseController {
      * @param menu     menu
      * @return PageInfo
      * @author shimmerjordan
-     * @date 2020/12/26 23:17
+     * @date 2021/01/26 23:17
      */
     @GetMapping("menuList")
     @ApiOperation(value = "获取菜单列表")
@@ -177,7 +177,7 @@ public class MenuController extends BaseController {
      * @param tenantCode 租户标识
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/27 15:58
+     * @date 2021/01/27 15:58
      */
     @GetMapping("anonymousUser/findMenuByRole/{role}")
     @ApiOperation(value = "根据角色查找菜单", notes = "根据角色id获取角色菜单")

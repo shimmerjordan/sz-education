@@ -1,0 +1,2 @@
+useEslint: false
+

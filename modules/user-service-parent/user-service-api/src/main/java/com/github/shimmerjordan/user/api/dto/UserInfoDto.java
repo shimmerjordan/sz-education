@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * @author shimmerjordan
- * @date 2020/12/13 17:18
+ * @date 2021/01/13 17:18
  */
 @Data
 public class UserInfoDto implements Serializable {

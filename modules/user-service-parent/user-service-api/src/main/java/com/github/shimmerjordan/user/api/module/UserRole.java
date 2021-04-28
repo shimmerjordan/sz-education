@@ -7,7 +7,7 @@ import lombok.Data;
  * 用户角色关系
  *
  * @author shimmerjordan
- * @date 2020/12/26 09:29
+ * @date 2021/01/26 09:29
  */
 @Data
 public class UserRole extends BaseEntity<UserRole> {

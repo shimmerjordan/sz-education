@@ -169,7 +169,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/24 20:06
+     * @date 2021/01/24 20:06
      */
     @PostMapping("save")
     @ApiOperation(value = "保存答题，并返回下一题", notes = "保存答题，并返回下一题")
@@ -260,7 +260,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/24 20:44
+     * @date 2021/01/24 20:44
      */
     @PostMapping("submit")
     @ApiOperation(value = "提交答卷", notes = "提交答卷")
@@ -276,7 +276,7 @@ public class AnswerController extends BaseController {
      * @param answer answer
      * @return ResponseBean
      * @author shimmerjordan
-     * @date 2020/12/24 20:44
+     * @date 2021/01/24 20:44
      */
     @PostMapping("anonymousUser/submit")
     @ApiOperation(value = "提交答卷", notes = "提交答卷")

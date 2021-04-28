@@ -165,7 +165,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
      * @param examRecord examRecord
      * @return ExamRecord
      * @author shimmerjordan
-     * @date 2020/12/26 13:58
+     * @date 2021/01/26 13:58
      */
     public ExaminationRecord getByUserIdAndExaminationId(ExaminationRecord examRecord) {
         return this.dao.getByUserIdAndExaminationId(examRecord);
@@ -252,7 +252,7 @@ public class ExamRecordService extends CrudService<ExamRecordMapper, Examination
 	 * @param request request
 	 * @param response response
 	 * @author shimmerjordan
-	 * @date 2020/12/31 22:28
+	 * @date 2021/01/31 22:28
 	 */
 	public void exportExamRecord(Long[] ids, HttpServletRequest request, HttpServletResponse response) {
 		try {

@@ -63,7 +63,7 @@ public class CustomUserDetailsAuthenticationProvider extends AbstractUserDetails
     /**
      * 加载用户信息
      *
-     * @param username       username
+     * @param username username
      * @param authentication authentication
      * @return UserDetails
      * @throws AuthenticationException

@@ -22,7 +22,7 @@ public interface ExamRecordMapper extends CrudMapper<ExaminationRecord> {
      * @param examRecord examRecord
      * @return Score
      * @author shimmerjordan
-     * @date 2020/12/26 13:56
+     * @date 2021/01/26 13:56
      */
     ExaminationRecord getByUserIdAndExaminationId(ExaminationRecord examRecord);
 
