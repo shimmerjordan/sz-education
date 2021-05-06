@@ -115,6 +115,7 @@ public class SubjectController extends BaseController {
 		return new ResponseBean<>(subject);
     }
 
+
     /**
      * 更新
      *
@@ -218,6 +219,7 @@ public class SubjectController extends BaseController {
             throw new CommonException("Import subject failed");
         }
     }
+
 
     /**
      * 批量删除

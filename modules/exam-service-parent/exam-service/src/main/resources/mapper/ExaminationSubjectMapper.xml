@@ -11,11 +11,30 @@
         <result column="tenant_code" property="tenantCode"/>
     </resultMap>
 
+    <resultMap id="subjectResultMap" type="com.github.shimmerjordan.exam.api.dto.SubjectDto">
+        <id column="id" property="id"/>
+        <result column="examination_id" property="examinationId"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="subject_id" property="subjectId"/>
+        <result column="type" property="type"/>
+        <result column="application_code" property="applicationCode"/>
+        <result column="tenant_code" property="tenantCode"/>
+    </resultMap>
+
     <sql id="examinationSubjectColumns">
         a.id,
         a.examination_id,
         a.category_id,
         a.subject_id,
+        a.type,
+        a.application_code,
+        a.tenant_code
+    </sql>
+
+    <sql id="subjectColumns">
+        a.id,
+        a.examination_id,
+        a.category_id,
         a.type,
         a.application_code,
         a.tenant_code
@@ -80,16 +99,25 @@
         FROM exam_examination_subject a WHERE a.subject_id = #{subjectId}
     </select>
 
-    <select id="findListById" resultMap="examinationSubjectResultMap">
+
+    <!-- 组卷Auto1（RAND） -->
+    <select id="findListByAuto1" resultType="java.lang.Long">
         SELECT
-        <include refid="examinationSubjectColumns"/>
-        FROM exam_examination_subject a WHERE a.id IN
-        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
-            #{item}
-        </foreach>
+        subject_id
+        FROM exam_examination_subject a ORDER BY RAND() LIMIT 20
     </select>
 
-    <!-- 根据上一题ID查询下一题 -->
+
+<select id="findListById" resultMap="examinationSubjectResultMap">
+   SELECT
+   <include refid="examinationSubjectColumns"/>
+   FROM exam_examination_subject a WHERE a.id IN
+   <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+       #{item}
+   </foreach>
+</select>
+
+<!-- 根据上一题ID查询下一题 -->
     <select id="getByPreviousId" resultMap="examinationSubjectResultMap">
         SELECT
         <include refid="examinationSubjectColumns"/>

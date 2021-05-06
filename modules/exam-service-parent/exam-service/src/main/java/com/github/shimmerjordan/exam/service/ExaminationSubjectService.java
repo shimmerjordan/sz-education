@@ -2,6 +2,7 @@ package com.github.shimmerjordan.exam.service;
 
 import com.github.pagehelper.PageInfo;
 import com.github.shimmerjordan.common.core.service.CrudService;
+import com.github.shimmerjordan.exam.api.dto.SubjectDto;
 import com.github.shimmerjordan.exam.api.module.ExaminationSubject;
 import com.github.shimmerjordan.exam.mapper.ExaminationSubjectMapper;
 import lombok.AllArgsConstructor;
@@ -48,6 +49,18 @@ public class ExaminationSubjectService extends CrudService<ExaminationSubjectMap
      */
     public List<ExaminationSubject> findListBySubjectId(ExaminationSubject examinationSubject) {
         return this.dao.findListBySubjectId(examinationSubject);
+    }
+
+    /**
+     * 自动组卷Auto1
+     *
+     * @param examinationId examinationId
+     * @return List
+     * @author shimmerjordan
+     * @date 2021/04/27 15:36
+     */
+    public List<Long> findListByAuto1(Long examinationId) {
+        return this.dao.findListByAuto1(examinationId);
     }
 
     /**

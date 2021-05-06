@@ -125,6 +125,7 @@ export default {
     remark: '备注',
     search: '搜索',
     query: '查询',
+    generate: '生成',
     add: '新增',
     del: '删除',
     import: '导入',

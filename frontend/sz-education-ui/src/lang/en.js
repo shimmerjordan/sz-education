@@ -114,6 +114,7 @@ export default {
     add: 'Add',
     export: 'Export',
     reviewer: 'reviewer',
+    generate: 'Generate',
     id: 'ID',
     date: 'Date',
     author: 'Author',

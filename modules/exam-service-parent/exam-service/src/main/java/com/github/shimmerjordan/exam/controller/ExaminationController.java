@@ -8,11 +8,14 @@ import com.github.shimmerjordan.common.core.web.BaseController;
 import com.github.shimmerjordan.common.log.annotation.Log;
 import com.github.shimmerjordan.common.security.annotations.AdminTenantTeacherAuthorization;
 import com.github.shimmerjordan.common.security.utils.SysUtil;
+import com.github.shimmerjordan.exam.api.constants.ExamSubjectConstant;
 import com.github.shimmerjordan.exam.api.dto.ExaminationDto;
 import com.github.shimmerjordan.exam.api.dto.SubjectDto;
 import com.github.shimmerjordan.exam.api.module.Examination;
 import com.github.shimmerjordan.exam.api.module.ExaminationSubject;
 import com.github.shimmerjordan.exam.service.ExaminationService;
+import com.github.shimmerjordan.exam.service.ExaminationSubjectService;
+import com.github.shimmerjordan.exam.service.SubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -28,6 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,7 +47,9 @@ import java.util.List;
 @RequestMapping("/v1/examination")
 public class ExaminationController extends BaseController {
 
+    private final SubjectService subjectService;
     private final ExaminationService examinationService;
+    private final ExaminationSubjectService examinationSubjectService;
 
     /**
      * 根据ID获取
@@ -231,6 +237,49 @@ public class ExaminationController extends BaseController {
         }
         return new ResponseBean<>(success);
     }
+
+
+    /**
+     * 自动组卷Auto1
+     *
+     * @param id id
+     * @return ResponseBean
+     * @author shimmerjordan
+     * @date 2021/04/11 23:43
+     */
+    @PostMapping("Auto1/{id}")
+    @AdminTenantTeacherAuthorization
+    @ApiOperation(value = "自动组卷Auto1", notes = "自动组卷Auto1")
+    @ApiImplicitParam(name = "examinationDto", value = "考试信息", required = true, dataType = "examinationDto")
+    @Log("自动组卷Auto1")
+    public List<SubjectDto> generateSubAuto1(@PathVariable Long id) {
+        boolean success = false;
+
+        try {
+            Examination examination = examinationService.get(id);
+            if (examination != null) {
+                examination.setCommonValue(SysUtil.getUser(), SysUtil.getSysCode(), SysUtil.getTenantCode());
+                List<Long> subjectIdList = examinationSubjectService.findListByAuto1(id);
+                List<SubjectDto> subjectDtoList = new ArrayList<SubjectDto>();
+                Long tempId = -1L;
+                for(int i = 0; i < subjectIdList.size(); i++){
+                    tempId = subjectIdList.get(i);
+                    SubjectDto subjectDtoTemp = subjectService.get(tempId);
+                    subjectDtoList.add(subjectDtoTemp);
+                }
+                int temp = subjectService.importSubject(subjectDtoList, id, ExamSubjectConstant.DEFAULT_CATEGORY_ID);
+                if(temp != 0){
+                    success = true;
+                    return subjectDtoList;
+                }
+
+            }
+        } catch (Exception e) {
+            log.error("Auto Generating examination failed", e);
+        }
+        return null;
+    }
+
 
     /**
      * 根据考试ID查询题目id列表

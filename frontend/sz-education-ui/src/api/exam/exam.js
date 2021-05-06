@@ -69,3 +69,10 @@ export function generateQrCode (id) {
     method: 'get'
   })
 }
+
+export function generateSubject (id) {
+  return request({
+    url: apiList.exam + 'Auto1/' + id,
+    method: 'post'
+  })
+}

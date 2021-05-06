@@ -74,7 +74,20 @@ public class SubjectService {
         if (CollectionUtils.isNotEmpty(examinationSubjects)) {
             type = examinationSubjects.get(0).getType();
         }
-        return subjectService(type).getSubject(id);
+
+        SubjectDto subjectDtoFlag = subjectService(type).getSubject(id);
+
+        if(examinationSubjects.get(0).getExaminationId() != null){
+            subjectDtoFlag.setExaminationId(examinationSubjects.get(0).getExaminationId());
+        }
+        System.out.println(examinationSubjects.get(0).getSubjectId());
+        System.out.println(subjectDtoFlag.getSubjectId());
+        subjectDtoFlag.setSubjectId(examinationSubjects.get(0).getSubjectId());
+        if(examinationSubjects.get(0).getCategoryId() != null){
+            subjectDtoFlag.setCategoryId(examinationSubjects.get(0).getCategoryId());
+        }
+
+        return subjectDtoFlag;
     }
 
     /**
@@ -188,8 +201,15 @@ public class SubjectService {
         examinationSubject.setCategoryId(subjectDto.getCategoryId());
         examinationSubject.setSubjectId(subjectDto.getId());
         examinationSubject.setType(subjectDto.getType());
+        System.out.println("INSERT:" + subjectDto);
         examinationSubjectService.insert(examinationSubject);
-        return subjectService(subjectDto.getType()).insertSubject(subjectDto);
+        int flag = 0;
+        if(examinationSubjectService.findByExaminationIdAndSubjectId(examinationSubject) != null){
+            flag = subjectService(subjectDto.getType()).updateSubject(subjectDto);
+        } else {
+            flag = subjectService(subjectDto.getType()).insertSubject(subjectDto);
+        }
+        return flag;
     }
 
     /**
@@ -203,6 +223,7 @@ public class SubjectService {
     @Transactional
     public int update(SubjectDto subjectDto) {
         int update;
+        System.out.println("UPDATE:" + subjectDto);
         if ((update = subjectService(subjectDto.getType()).updateSubject(subjectDto)) == 0)
             update = this.insert(subjectDto);
         return update;
@@ -309,15 +330,17 @@ public class SubjectService {
         String creator = SysUtil.getUser(), sysCode = SysUtil.getSysCode(), tenantCode = SysUtil.getTenantCode();
         // 暂时循环遍历保存
         for (SubjectDto subject : subjects) {
-            if (examinationId != null)
-                subject.setExaminationId(examinationId);
+            // if (examinationId == null)
+            // subject.setExaminationId(examinationId);
             if (categoryId == null)
                 categoryId = ExamSubjectConstant.DEFAULT_CATEGORY_ID;
             subject.setCategoryId(categoryId);
-            if (subject.getId() == null) {
+            if (subject.getExaminationId() != examinationId) {
+                subject.setExaminationId(examinationId);
                 subject.setCommonValue(creator, sysCode, tenantCode);
                 updated += this.insert(subject);
             } else {
+                subject.setExaminationId(examinationId);
                 subject.setCommonValue(creator, sysCode, tenantCode);
                 updated += this.update(subject);
             }

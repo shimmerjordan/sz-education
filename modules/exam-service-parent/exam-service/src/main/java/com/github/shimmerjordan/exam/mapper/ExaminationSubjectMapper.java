@@ -1,6 +1,7 @@
 package com.github.shimmerjordan.exam.mapper;
 
 import com.github.shimmerjordan.common.core.persistence.CrudMapper;
+import com.github.shimmerjordan.exam.api.dto.SubjectDto;
 import com.github.shimmerjordan.exam.api.module.ExaminationSubject;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -34,6 +35,16 @@ public interface ExaminationSubjectMapper extends CrudMapper<ExaminationSubject>
      * @date 2021/03/17 12:18
      */
     List<ExaminationSubject> findListBySubjectId(ExaminationSubject examinationSubject);
+
+    /**
+     * 自动组卷Auto1
+     *
+     * @param examinationId examinationId
+     * @return List
+     * @author shimmerjordan
+     * @date 2021/04/27 17:15
+     */
+    List<Long> findListByAuto1(Long examinationId);
 
     /**
      * 根据考试id查询题目id列表

@@ -26,6 +26,12 @@ public class SubjectDto extends BaseEntity<SubjectDto> {
     private Long examinationId;
 
     /**
+     * 题目ID
+     */
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long subjectId;
+
+    /**
      * 考试记录ID
      */
     @JsonFormat(shape = JsonFormat.Shape.STRING)

@@ -6,6 +6,7 @@
       <el-button v-if="exam_btn_subject_add" class="filter-item" type="primary" icon="el-icon-check" @click="handleCreateSubject">{{ $t('table.add') }}</el-button>
       <el-button v-if="exam_btn_subject_import" class="filter-item" type="success" icon="el-icon-upload2" @click="handleImportSubject">{{ $t('table.import') }}</el-button>
       <el-button v-if="exam_btn_subject_export" class="filter-item" type="success" icon="el-icon-download" @click="handleExportSubject">{{ $t('table.export') }}</el-button>
+      <el-button  class="filter-item" type="primary" icon="el-icon-check" @click="handleAuto1Subject">{{ $t('table.generate') }}</el-button>
     </div>
     <spinner-loading v-if="subject.listLoading"/>
     <el-table
@@ -127,7 +128,7 @@
 
 <script>
 
-import { fetchSubjectListById } from '@/api/exam/exam'
+import { fetchSubjectListById, generateSubject } from '@/api/exam/exam'
 import { getSubject, delSubject, exportSubject } from '@/api/exam/subject'
 import { getToken } from '@/utils/auth'
 import waves from '@/directive/waves'
@@ -337,6 +338,15 @@ export default {
     },
     handleSubjectSelectionChange (val) {
       this.multipleSubjectSelection = val
+    },
+    // 自动Auto1生成卷面
+    handleAuto1Subject () {
+      let examinationId = this.subject.listQuery.examinationId
+      generateSubject(examinationId).then(response => {
+        console.log(examinationId)
+        console.log(response.data)
+        this.lnitializationData()
+      })
     },
     // 修改题目
     handleUpdateSubject (row) {
