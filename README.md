@@ -22,10 +22,6 @@ The exams support single choice, multiple choice, indefinite choice, judgement a
 
 轼 means handrail at the front of the car and 辙 means the tyre tracks left by the car going by. By naming the platform this way, I want to express that the ultimate victory will come to those who are forward-looking and have a habit of looking back and taking stock of the past.
 
-Deploying this project locally can be found in this article at {% post_link sz-educationLocalDeploy Instruction for deploying sz-education locally %} 
-
-For some factors, the deployment tutorial requires authorization to view, you can try the password or contact me.
-
 # 1. Function Overview
 
 The project is divided into two parts: the front-end website and the back-end management. The front-end mainly provides examination functions, while the back-end provides basic management and examination management functions.
@@ -81,6 +77,7 @@ Backstage management is divided into: [system management](#1), [system monitorin
     padding: 2px;">System Functions</div>
 </center>
 
+
 # 2.  Technology Selection
 
 |          Technology Name           |                     Tool                      |
@@ -115,6 +112,7 @@ Backstage management is divided into: [system management](#1), [system monitorin
     color: #999;
     padding: 2px;">System Architecture Diagram</div>
 </center>
+
 
 # 4. Core Dependencies
 
@@ -165,30 +163,30 @@ monitor-service        //Spring boot amdin monitoring service
 
 ## Front Desk Examination Subsystem
 
-| ![Front Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_login.png) | ![Front Home](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_home.png) |
+| ![Front Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_login.png) | ![Front Home](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_home.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Courses List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_courses.png) | ![Exams List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_exams.png) |
-| ![Exam Interface one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_exam.png) | ![Exam Interface two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_exam1.png) |
-| ![Exam records](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_record.png) | ![Answer Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_web_incorrect_answer.png) |
+| ![Courses List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_courses.png) | ![Exams List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exams.png) |
+| ![Exam Interface one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exam.png) | ![Exam Interface two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exam1.png) |
+| ![Exam records](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_record.png) | ![Answer Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_incorrect_answer.png) |
 
 ## Back office management subsystem
 
-| ![Backend Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_login.png) | ![Backend Exam Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_exam.png) |
+| ![Backend Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_login.png) | ![Backend Exam Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Backend Exam Share](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_exam_share.png) | ![Backend Exam Add](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_addExam.png) |
-| ![Backend Exam Add Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_addExam_detail1.png) | ![Backend Score Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_score_manage.png) |
-| ![Backend Score Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_score_detail.png) | ![Backend Score Mark](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_score_mark.png) |
-| ![Backend Subjects Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_subjects_manage.png) | ![Backend Subjects Adding Rich Edit](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_subjects_rich_edit.png) |
-| ![Backend Menu Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_menu_manage.png) | ![Backend Client Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_client_manage.png) |
-| ![Backend Role Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_role_manage.png) | ![Backend Route Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_route_manage.png) |
-| ![Backend User Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_user_manage.png) | ![Backend Msg Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_msg.png) |
+| ![Backend Exam Share](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam_share.png) | ![Backend Exam Add](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_addExam.png) |
+| ![Backend Exam Add Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_addExam_detail1.png) | ![Backend Score Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_manage.png) |
+| ![Backend Score Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_detail.png) | ![Backend Score Mark](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_mark.png) |
+| ![Backend Subjects Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_subjects_manage.png) | ![Backend Subjects Adding Rich Edit](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_subjects_rich_edit.png) |
+| ![Backend Menu Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_menu_manage.png) | ![Backend Client Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_client_manage.png) |
+| ![Backend Role Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_role_manage.png) | ![Backend Route Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_route_manage.png) |
+| ![Backend User Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_user_manage.png) | ![Backend Msg Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_msg.png) |
 
 ## Systems Monitoring
 
-| ![Consul Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_consul.png) | ![Log Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_log_manage.png) |
+| ![Consul Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_consul.png) | ![Log Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_log_manage.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Spring Boot Admin Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_spring_boot_admin.png) | ![Spring Boot Admin Monitor Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_spring_boot_admin01.png) |
-| ![Zipkin Monitor one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_zipkin1.png) | ![Zipkin Monitor two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/image_ui_zipkin2.png) |
+| ![Spring Boot Admin Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_spring_boot_admin.png) | ![Spring Boot Admin Monitor Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_spring_boot_admin01.png) |
+| ![Zipkin Monitor one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_zipkin1.png) | ![Zipkin Monitor two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_zipkin2.png) |
 
 # System deployment
 
