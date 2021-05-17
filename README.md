@@ -165,7 +165,7 @@ monitor-service        //Spring boot amdin monitoring service
 
 | ![Front Login](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/image_web_login.png) | ![Front Home](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/image_web_home.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Courses List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_courses.png) | ![Exams List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exams.png) |
+| ![Courses List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/image/images_web_courses.png) | ![Exams List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/image_web_exams.png) |
 | ![Exam Interface one](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exam.png) | ![Exam Interface two](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exam1.png) |
 | ![Exam records](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_record.png) | ![Answer Details](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_incorrect_answer.png) |
 
