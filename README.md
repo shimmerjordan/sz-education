@@ -166,7 +166,7 @@ monitor-service        //Spring boot amdin monitoring service
 | ![Front Login](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_login.png) | ![Front Home](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_home.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Courses List](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_courses.png) | ![Exams List](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_exams.png) |
-| ![Exam Interface one](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_exam.png) | ![Exam Interface two](https://github.com/shimmerjordan/sz-education/blob/master/images/images_web_exam1.png) |
+| ![Exam Interface one](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_exam.png) | ![Exam Interface two](https://github.com/shimmerjordan/sz-education/blob/master/docs/images/images_web_exam1.png) |
 | ![Exam records](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_record.png) | ![Answer Details](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_incorrect_answer.png) |
 
 ## Back office management subsystem
