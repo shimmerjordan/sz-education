@@ -10,8 +10,8 @@ name: Clear old Linter log
 on:
   watch:
     types: [started]
-  schedule:
-   - cron:  '0 0/16 * * *'
+  # schedule:
+  #  - cron:  '0 0/16 * * *'
 
 ###############
 # Set the Job #

@@ -1,3 +1,18 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : shimmerjordan
+ Source Server Type    : MySQL
+ Source Server Version : 80022
+ Source Host           : localhost:3306
+ Source Schema         : microservice-user
+
+ Target Server Type    : MySQL
+ Target Server Version : 80022
+ File Encoding         : 65001
+
+ Date: 17/05/2021 08:17:22
+*/
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -7,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_attachment`;
 CREATE TABLE `sys_attachment`  (
-  `id` bigint(20) NOT NULL,
+  `id` bigint NOT NULL,
   `attach_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '附件名称',
   `attach_type` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '附件类型',
   `attach_size` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '附件大小',
@@ -17,37 +32,42 @@ CREATE TABLE `sys_attachment`  (
   `busi_module` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '业务模块',
   `busi_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '业务类型 0-普通，1-头像',
   `preview_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '预览地址',
-  `upload_type` tinyint(4) NULL DEFAULT NULL COMMENT '上传类型',
+  `upload_type` tinyint NULL DEFAULT NULL COMMENT '上传类型',
   `creator` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NULL DEFAULT NULL COMMENT '删除标记',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NULL DEFAULT NULL COMMENT '删除标记',
   `application_code` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '租户编号',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of sys_attachment
+-- ----------------------------
+INSERT INTO `sys_attachment` VALUES (839503846928683008, 'Ju Qiaodan.jpg', 'jpg', '77373', NULL, 'C:/attach/EXAM/1/839503846928683008', '839503846928683008', NULL, '1', NULL, NULL, 'admin', '2021-05-05 14:08:34', 'admin', '2021-05-05 14:08:34', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_dept
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_dept`;
 CREATE TABLE `sys_dept`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
+  `id` bigint NOT NULL COMMENT '主键',
   `dept_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '部门名称',
   `dept_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `dept_leader` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `parent_id` bigint(20) NULL DEFAULT NULL COMMENT '父级部门id',
-  `sort` int(11) NULL DEFAULT NULL COMMENT '排序号',
+  `parent_id` bigint NULL DEFAULT NULL COMMENT '父级部门id',
+  `sort` int NULL DEFAULT NULL COMMENT '排序号',
   `creator` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
   `application_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '部门表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '部门表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_dept
@@ -59,8 +79,8 @@ INSERT INTO `sys_dept` VALUES (596290673729212416, '基础平台部', '基础平
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_log`;
 CREATE TABLE `sys_log`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
-  `type` int(11) NULL DEFAULT NULL COMMENT '日志类型',
+  `id` bigint NOT NULL COMMENT '主键',
+  `type` int NULL DEFAULT NULL COMMENT '日志类型',
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '日志标题',
   `ip` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '操作用户的IP地址',
   `user_agent` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '操作用户代理信息',
@@ -71,14 +91,192 @@ CREATE TABLE `sys_log`  (
   `service_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '服务ID',
   `time` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '耗时',
   `creator` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记',
   `application_code` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '租户编号',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of sys_log
+-- ----------------------------
+INSERT INTO `sys_log` VALUES (805409649418440704, 0, '用户登录', '192.168.0.107', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '273', 'student', '2021-01-31 12:10:24', 'student', '2021-01-31 12:10:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (805450767736639488, 0, '用户登录', '192.168.0.107', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '281', 'preview', '2021-01-31 14:53:48', 'preview', '2021-01-31 14:53:48', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (805454603184377856, 0, '用户登录', '192.168.0.107', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '362', 'preview', '2021-01-31 15:09:02', 'preview', '2021-01-31 15:09:02', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (820684893783724032, 0, '注册用户', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/user/anonymousUser/register', 'POST', 'identifier=%5Bshimmerjordan%5D&email=%5Bshimmerjordan%40foxmail.com%5D&randomStr=%5B94061615708121159%5D&code=%5B3336%5D&password=%5Bshimmerjordan%5D&credential=%5Bshimmerjordan%5D', NULL, NULL, '713', 'anonymousUser', '2021-03-14 15:48:46', 'anonymousUser', '2021-03-14 15:48:46', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (820684930731347968, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '334', 'shimmerjordan', '2021-03-14 15:48:55', 'shimmerjordan', '2021-03-14 15:48:55', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (820707542933049344, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '253', 'shimmerjordan', '2021-03-14 17:18:46', 'shimmerjordan', '2021-03-14 17:18:46', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821072284742717440, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '209', 'shimmerjordan', '2021-03-15 17:28:07', 'shimmerjordan', '2021-03-15 17:28:07', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821340444460978176, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '158', 'shimmerjordan', '2021-03-16 11:13:42', 'shimmerjordan', '2021-03-16 11:13:42', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821341464456990720, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '107', 'shimmerjordan', '2021-03-16 11:17:45', 'shimmerjordan', '2021-03-16 11:17:45', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821342302827057152, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '105', 'shimmerjordan', '2021-03-16 11:21:05', 'shimmerjordan', '2021-03-16 11:21:05', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821402900155731968, 0, '用户登录', '192.168.0.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '155', 'shimmerjordan', '2021-03-16 15:21:52', 'shimmerjordan', '2021-03-16 15:21:52', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (821410056741457920, 0, '更新用户基本信息', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/user/updateInfo', 'PUT', '', NULL, 'web_app', '96', 'shimmerjordan', '2021-03-16 15:50:19', 'shimmerjordan', '2021-03-16 15:50:19', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (829729898049441792, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '213', 'shimmerjordan', '2021-04-08 14:50:23', 'shimmerjordan', '2021-04-08 14:50:23', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (833667597747752960, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '131', 'shimmerjordan', '2021-04-19 11:37:24', 'shimmerjordan', '2021-04-19 11:37:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (833748808360923136, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '188', 'shimmerjordan', '2021-04-19 17:00:06', 'shimmerjordan', '2021-04-19 17:00:06', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (836230047047225344, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '268', 'shimmerjordan', '2021-04-26 13:19:40', 'shimmerjordan', '2021-04-26 13:19:40', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (836246463368531968, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '254', 'preview', '2021-04-26 14:24:54', 'preview', '2021-04-26 14:24:54', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (836246901451001856, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '153', 'admin', '2021-04-26 14:26:38', 'admin', '2021-04-26 14:26:38', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (836247357870968832, 0, '新增考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/examination/', 'POST', '', NULL, 'web_app', '96', 'admin', '2021-04-26 14:28:27', 'admin', '2021-04-26 14:28:27', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (836336943926218752, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '147', 'admin', '2021-04-26 20:24:26', 'admin', '2021-04-26 20:24:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838771468832739328, 0, '用户登录', '172.20.10.8', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '155', 'admin', '2021-05-03 13:38:22', 'admin', '2021-05-03 13:38:22', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780104854343680, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '19', 'admin', '2021-05-03 14:12:41', 'admin', '2021-05-03 14:12:41', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780257212436480, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '5', 'admin', '2021-05-03 14:13:17', 'admin', '2021-05-03 14:13:17', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780287298179072, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '7', 'admin', '2021-05-03 14:13:24', 'admin', '2021-05-03 14:13:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780291857387520, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '6', 'admin', '2021-05-03 14:13:25', 'admin', '2021-05-03 14:13:25', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780295976194048, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '6', 'admin', '2021-05-03 14:13:26', 'admin', '2021-05-03 14:13:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780301151965184, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '12', 'admin', '2021-05-03 14:13:28', 'admin', '2021-05-03 14:13:28', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838780464293613568, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '6', 'admin', '2021-05-03 14:14:06', 'admin', '2021-05-03 14:14:06', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838781435216269312, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '8', 'admin', '2021-05-03 14:17:58', 'admin', '2021-05-03 14:17:58', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838781442497581056, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '6', 'admin', '2021-05-03 14:18:00', 'admin', '2021-05-03 14:18:00', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838782014055387136, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '83', 'admin', '2021-05-03 14:20:16', 'admin', '2021-05-03 14:20:16', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838783118948306944, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '63', 'admin', '2021-05-03 14:24:39', 'admin', '2021-05-03 14:24:39', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838783126636466176, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '7', 'admin', '2021-05-03 14:24:41', 'admin', '2021-05-03 14:24:41', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838783682981531648, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '6', 'admin', '2021-05-03 14:26:54', 'admin', '2021-05-03 14:26:54', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838783922170105856, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '41', 'admin', '2021-05-03 14:27:51', 'admin', '2021-05-03 14:27:51', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838788349090205696, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '20', 'admin', '2021-05-03 14:45:26', 'admin', '2021-05-03 14:45:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838851637761150976, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '890', 'admin', '2021-05-03 18:56:56', 'admin', '2021-05-03 18:56:56', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838851637761150977, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '890', 'admin', '2021-05-03 18:56:56', 'admin', '2021-05-03 18:56:56', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838861991643844608, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '667', 'admin', '2021-05-03 19:38:04', 'admin', '2021-05-03 19:38:04', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838863799992848384, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '137', 'admin', '2021-05-03 19:45:15', 'admin', '2021-05-03 19:45:15', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838865087900028928, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '422', 'admin', '2021-05-03 19:50:22', 'admin', '2021-05-03 19:50:22', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838865107562926080, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '362', 'admin', '2021-05-03 19:50:27', 'admin', '2021-05-03 19:50:27', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838866253509693440, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '865', 'admin', '2021-05-03 19:55:00', 'admin', '2021-05-03 19:55:00', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838868159434985472, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '1036', 'admin', '2021-05-03 20:02:35', 'admin', '2021-05-03 20:02:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838868216578183168, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '250', 'admin', '2021-05-03 20:02:48', 'admin', '2021-05-03 20:02:48', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838868237109301248, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '256', 'admin', '2021-05-03 20:02:53', 'admin', '2021-05-03 20:02:53', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838871120252899328, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '203', 'admin', '2021-05-03 20:14:21', 'admin', '2021-05-03 20:14:21', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838881907948261376, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '257', 'admin', '2021-05-03 20:57:13', 'admin', '2021-05-03 20:57:13', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838882919459196928, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '561', 'admin', '2021-05-03 21:01:14', 'admin', '2021-05-03 21:01:14', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838907881406468096, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '510', 'admin', '2021-05-03 22:40:25', 'admin', '2021-05-03 22:40:25', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838911980537516032, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '649', 'admin', '2021-05-03 22:56:42', 'admin', '2021-05-03 22:56:42', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838914508356456448, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '259', 'admin', '2021-05-03 23:06:45', 'admin', '2021-05-03 23:06:45', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (838915147417391104, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '223', 'admin', '2021-05-03 23:09:17', 'admin', '2021-05-03 23:09:17', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839270584373350400, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '875', 'admin', '2021-05-04 22:41:40', 'admin', '2021-05-04 22:41:40', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839271020283170816, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '89', 'admin', '2021-05-04 22:43:24', 'admin', '2021-05-04 22:43:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839271884011999232, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '262', 'admin', '2021-05-04 22:46:50', 'admin', '2021-05-04 22:46:50', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839272547240513536, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '392', 'admin', '2021-05-04 22:49:28', 'admin', '2021-05-04 22:49:28', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839299111760039936, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '222', 'admin', '2021-05-05 00:35:02', 'admin', '2021-05-05 00:35:02', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839299575117385728, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '997', 'admin', '2021-05-05 00:36:52', 'admin', '2021-05-05 00:36:52', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839299594650259456, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '62', 'admin', '2021-05-05 00:36:57', 'admin', '2021-05-05 00:36:57', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839299717669195776, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '613', 'admin', '2021-05-05 00:37:26', 'admin', '2021-05-05 00:37:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839301375467851776, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '668', 'admin', '2021-05-05 00:44:01', 'admin', '2021-05-05 00:44:01', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839301414374215680, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '374', 'admin', '2021-05-05 00:44:11', 'admin', '2021-05-05 00:44:11', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839302724876111872, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '183', 'admin', '2021-05-05 00:49:23', 'admin', '2021-05-05 00:49:23', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839302792710590464, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '23', 'admin', '2021-05-05 00:49:39', 'admin', '2021-05-05 00:49:39', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839302999703687168, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '684', 'admin', '2021-05-05 00:50:29', 'admin', '2021-05-05 00:50:29', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839303095774220288, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '71', 'admin', '2021-05-05 00:50:52', 'admin', '2021-05-05 00:50:52', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839303103911170048, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '63', 'admin', '2021-05-05 00:50:53', 'admin', '2021-05-05 00:50:53', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839303112551436288, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '422', 'admin', '2021-05-05 00:50:56', 'admin', '2021-05-05 00:50:56', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475876264546304, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '507', 'admin', '2021-05-05 12:17:26', 'admin', '2021-05-05 12:17:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475960544890880, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '176', 'admin', '2021-05-05 12:17:46', 'admin', '2021-05-05 12:17:46', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475982036504576, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '173', 'admin', '2021-05-05 12:17:51', 'admin', '2021-05-05 12:17:51', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475990366392320, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '693', 'admin', '2021-05-05 12:17:53', 'admin', '2021-05-05 12:17:53', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475996469104640, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '329', 'admin', '2021-05-05 12:17:54', 'admin', '2021-05-05 12:17:54', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839475999463837696, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '22', 'admin', '2021-05-05 12:17:55', 'admin', '2021-05-05 12:17:55', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476006380244992, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '325', 'admin', '2021-05-05 12:17:57', 'admin', '2021-05-05 12:17:57', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476011371466752, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '99', 'admin', '2021-05-05 12:17:58', 'admin', '2021-05-05 12:17:58', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476017327378432, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '121', 'admin', '2021-05-05 12:17:59', 'admin', '2021-05-05 12:17:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476020275974144, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '62', 'admin', '2021-05-05 12:18:00', 'admin', '2021-05-05 12:18:00', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476039813042176, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '368', 'admin', '2021-05-05 12:18:05', 'admin', '2021-05-05 12:18:05', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839476304775614464, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '173', 'admin', '2021-05-05 12:19:08', 'admin', '2021-05-05 12:19:08', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839477775848050688, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '733', 'admin', '2021-05-05 12:24:59', 'admin', '2021-05-05 12:24:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839480685138939904, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '494', 'admin', '2021-05-05 12:36:32', 'admin', '2021-05-05 12:36:32', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839481292562239488, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '247', 'admin', '2021-05-05 12:38:57', 'admin', '2021-05-05 12:38:57', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839481883174768640, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '534', 'admin', '2021-05-05 12:41:18', 'admin', '2021-05-05 12:41:18', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839483944461275136, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '657', 'admin', '2021-05-05 12:49:29', 'admin', '2021-05-05 12:49:29', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839484049843163136, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '8', 'admin', '2021-05-05 12:49:54', 'admin', '2021-05-05 12:49:54', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839484318039543808, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '152', 'admin', '2021-05-05 12:50:58', 'admin', '2021-05-05 12:50:58', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839484538253086720, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '111', 'admin', '2021-05-05 12:51:51', 'admin', '2021-05-05 12:51:51', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839484562315808768, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '119', 'admin', '2021-05-05 12:51:57', 'admin', '2021-05-05 12:51:57', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839484968936804352, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '447', 'admin', '2021-05-05 12:53:33', 'admin', '2021-05-05 12:53:33', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839486457700814848, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '162', 'admin', '2021-05-05 12:59:28', 'admin', '2021-05-05 12:59:28', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839486468899606528, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '350', 'admin', '2021-05-05 12:59:31', 'admin', '2021-05-05 12:59:31', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839487075752480768, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '152', 'admin', '2021-05-05 13:01:56', 'admin', '2021-05-05 13:01:56', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839487081507065856, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '65', 'admin', '2021-05-05 13:01:57', 'admin', '2021-05-05 13:01:57', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839487088163426304, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '388', 'admin', '2021-05-05 13:01:59', 'admin', '2021-05-05 13:01:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839487757154914304, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '465', 'admin', '2021-05-05 13:04:38', 'admin', '2021-05-05 13:04:38', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839489960255033344, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '84', 'admin', '2021-05-05 13:13:23', 'admin', '2021-05-05 13:13:23', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839489975258058752, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '452', 'admin', '2021-05-05 13:13:27', 'admin', '2021-05-05 13:13:27', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491494518853632, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '511', 'admin', '2021-05-05 13:19:29', 'admin', '2021-05-05 13:19:29', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491502920044544, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '16', 'admin', '2021-05-05 13:19:31', 'admin', '2021-05-05 13:19:31', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491507680579584, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '60', 'admin', '2021-05-05 13:19:32', 'admin', '2021-05-05 13:19:32', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491510910193664, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '53', 'admin', '2021-05-05 13:19:33', 'admin', '2021-05-05 13:19:33', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491515754614784, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '124', 'admin', '2021-05-05 13:19:34', 'admin', '2021-05-05 13:19:34', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491517944041472, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '38', 'admin', '2021-05-05 13:19:35', 'admin', '2021-05-05 13:19:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491522582941696, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '146', 'admin', '2021-05-05 13:19:36', 'admin', '2021-05-05 13:19:36', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491524499738624, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '119', 'admin', '2021-05-05 13:19:36', 'admin', '2021-05-05 13:19:36', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491528270417920, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '15', 'admin', '2021-05-05 13:19:37', 'admin', '2021-05-05 13:19:37', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839491651046084608, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '74', 'admin', '2021-05-05 13:20:07', 'admin', '2021-05-05 13:20:07', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494196757925888, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '34', 'admin', '2021-05-05 13:30:14', 'admin', '2021-05-05 13:30:14', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494423388753920, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '136', 'admin', '2021-05-05 13:31:08', 'admin', '2021-05-05 13:31:08', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494429139144704, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '79', 'admin', '2021-05-05 13:31:09', 'admin', '2021-05-05 13:31:09', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494433035653120, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '114', 'admin', '2021-05-05 13:31:10', 'admin', '2021-05-05 13:31:10', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494436944744448, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '21', 'admin', '2021-05-05 13:31:11', 'admin', '2021-05-05 13:31:11', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494439922700288, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '104', 'admin', '2021-05-05 13:31:12', 'admin', '2021-05-05 13:31:12', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494446809747456, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '115', 'admin', '2021-05-05 13:31:13', 'admin', '2021-05-05 13:31:13', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494450114859008, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '320', 'admin', '2021-05-05 13:31:14', 'admin', '2021-05-05 13:31:14', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494453805846528, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '23', 'admin', '2021-05-05 13:31:15', 'admin', '2021-05-05 13:31:15', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494456645390336, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '104', 'admin', '2021-05-05 13:31:16', 'admin', '2021-05-05 13:31:16', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494461745664000, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '104', 'admin', '2021-05-05 13:31:17', 'admin', '2021-05-05 13:31:17', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494463071064064, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '105', 'admin', '2021-05-05 13:31:17', 'admin', '2021-05-05 13:31:17', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494468251029504, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '15', 'admin', '2021-05-05 13:31:18', 'admin', '2021-05-05 13:31:18', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839494470763417600, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '92', 'admin', '2021-05-05 13:31:19', 'admin', '2021-05-05 13:31:19', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496740116762624, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '74', 'admin', '2021-05-05 13:40:20', 'admin', '2021-05-05 13:40:20', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496801601064960, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '217', 'admin', '2021-05-05 13:40:35', 'admin', '2021-05-05 13:40:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496812787273728, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '156', 'admin', '2021-05-05 13:40:37', 'admin', '2021-05-05 13:40:37', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496816826388480, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '44', 'admin', '2021-05-05 13:40:38', 'admin', '2021-05-05 13:40:38', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496822404812800, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '110', 'admin', '2021-05-05 13:40:40', 'admin', '2021-05-05 13:40:40', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496825319854080, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '61', 'admin', '2021-05-05 13:40:40', 'admin', '2021-05-05 13:40:40', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496829237334016, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '29', 'admin', '2021-05-05 13:40:41', 'admin', '2021-05-05 13:40:41', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496831489675264, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '32', 'admin', '2021-05-05 13:40:42', 'admin', '2021-05-05 13:40:42', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496835881111552, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '112', 'admin', '2021-05-05 13:40:43', 'admin', '2021-05-05 13:40:43', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496837453975552, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '48', 'admin', '2021-05-05 13:40:43', 'admin', '2021-05-05 13:40:43', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496841111408640, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '14', 'admin', '2021-05-05 13:40:44', 'admin', '2021-05-05 13:40:44', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496842675884032, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '105', 'admin', '2021-05-05 13:40:44', 'admin', '2021-05-05 13:40:44', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496846526255104, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '38', 'admin', '2021-05-05 13:40:45', 'admin', '2021-05-05 13:40:45', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496847444807680, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '8', 'admin', '2021-05-05 13:40:46', 'admin', '2021-05-05 13:40:46', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839496853400719360, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '22', 'admin', '2021-05-05 13:40:47', 'admin', '2021-05-05 13:40:47', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839497325687738368, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '122', 'admin', '2021-05-05 13:42:40', 'admin', '2021-05-05 13:42:40', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839497756845412352, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '53', 'admin', '2021-05-05 13:44:22', 'admin', '2021-05-05 13:44:22', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839497814449983488, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '149', 'admin', '2021-05-05 13:44:36', 'admin', '2021-05-05 13:44:36', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839498129635151872, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '145', 'admin', '2021-05-05 13:45:51', 'admin', '2021-05-05 13:45:51', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839498640371355648, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '235', 'admin', '2021-05-05 13:47:53', 'admin', '2021-05-05 13:47:53', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839500240162787328, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '404', 'admin', '2021-05-05 13:54:14', 'admin', '2021-05-05 13:54:14', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839502654240591872, 0, '自动组卷Auto1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/Auto1/836247357539618816', 'POST', '', NULL, 'web_app', '489', 'admin', '2021-05-05 14:03:50', 'admin', '2021-05-05 14:03:50', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839503821205016576, 0, '更新用户基本信息', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/user/updateInfo', 'PUT', '', NULL, 'web_app', '58', 'admin', '2021-05-05 14:08:28', 'admin', '2021-05-05 14:08:28', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839503847318753280, 0, '上传文件', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/attachment/upload', 'POST', 'busiType=%5B1%5D', NULL, 'web_app', '109', 'admin', '2021-05-05 14:08:34', 'admin', '2021-05-05 14:08:34', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839503849298464768, 0, '更新用户头像', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/user/updateAvatar', 'PUT', '', NULL, 'web_app', '82', 'admin', '2021-05-05 14:08:35', 'admin', '2021-05-05 14:08:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839503856063877120, 0, '更新用户基本信息', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/user/updateInfo', 'PUT', '', NULL, 'web_app', '52', 'admin', '2021-05-05 14:08:37', 'admin', '2021-05-05 14:08:37', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (839503936586125312, 0, '更新用户基本信息', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/user/updateInfo', 'PUT', '', NULL, 'web_app', '76', 'admin', '2021-05-05 14:08:56', 'admin', '2021-05-05 14:08:56', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840305837456101376, 0, '用户登录', '192.168.43.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '283', 'admin', '2021-05-07 19:15:24', 'admin', '2021-05-07 19:15:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840319400149127168, 0, '更新知识', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/knowledge/', 'PUT', '', NULL, 'web_app', '549', 'admin', '2021-05-07 20:09:17', 'admin', '2021-05-07 20:09:17', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840319414309097472, 0, '更新知识', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/knowledge/', 'PUT', '', NULL, 'web_app', '273', 'admin', '2021-05-07 20:09:21', 'admin', '2021-05-07 20:09:21', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840336576943886336, 0, '批量删除题目', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/subject/deleteAll', 'POST', '', NULL, 'web_app', '317', 'admin', '2021-05-07 21:17:33', 'admin', '2021-05-07 21:17:33', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840340905000046592, 0, '用户登录', '192.168.43.222', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '188', 'shimmerjordan', '2021-05-07 21:34:45', 'shimmerjordan', '2021-05-07 21:34:45', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840341988766257152, 0, '更新考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examination/', 'PUT', '', NULL, 'web_app', '175', 'admin', '2021-05-07 21:39:03', 'admin', '2021-05-07 21:39:03', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (840342040016457728, 0, '开始考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36', '/v1/examRecord/start', 'POST', '', NULL, 'web_app', '258', 'shimmerjordan', '2021-05-07 21:39:15', 'shimmerjordan', '2021-05-07 21:39:15', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843244436052905984, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '243', 'teacher', '2021-05-15 21:52:20', 'teacher', '2021-05-15 21:52:20', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843587580544028672, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '221', 'teacher', '2021-05-16 20:35:52', 'teacher', '2021-05-16 20:35:52', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843588112356610048, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '123', 'shimmerjordan', '2021-05-16 20:37:59', 'shimmerjordan', '2021-05-16 20:37:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843588207693139968, 0, '开始考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/examRecord/start', 'POST', '', NULL, 'web_app', '226', 'shimmerjordan', '2021-05-16 20:38:22', 'shimmerjordan', '2021-05-16 20:38:22', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843589078896218112, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '143', 'admin', '2021-05-16 20:41:50', 'admin', '2021-05-16 20:41:50', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843593007423950848, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '49', 'admin', '2021-05-16 20:57:26', 'admin', '2021-05-16 20:57:26', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843595889925820416, 0, '用户登录', '172.22.108.137', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/oauth/token', 'POST', NULL, NULL, 'auth-service', '109', 'shimmerjordan', '2021-05-16 21:08:53', 'shimmerjordan', '2021-05-16 21:08:53', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596118813184000, 0, '开始考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/examRecord/start', 'POST', '', NULL, 'web_app', '104', 'shimmerjordan', '2021-05-16 21:09:48', 'shimmerjordan', '2021-05-16 21:09:48', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596751691714560, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '207', 'admin', '2021-05-16 21:12:19', 'admin', '2021-05-16 21:12:19', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596759392456704, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '103', 'admin', '2021-05-16 21:12:21', 'admin', '2021-05-16 21:12:21', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596847179239424, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '40', 'admin', '2021-05-16 21:12:42', 'admin', '2021-05-16 21:12:42', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596863935483904, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '74', 'admin', '2021-05-16 21:12:46', 'admin', '2021-05-16 21:12:46', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596872097599488, 0, '批改答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/mark', 'PUT', '', NULL, 'web_app', '150', 'admin', '2021-05-16 21:12:48', 'admin', '2021-05-16 21:12:48', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596904397934592, 0, '开始考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/examRecord/start', 'POST', '', NULL, 'web_app', '103', 'shimmerjordan', '2021-05-16 21:12:55', 'shimmerjordan', '2021-05-16 21:12:55', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843596919388377088, 0, '提交答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/submit', 'POST', '', NULL, 'web_app', '287', 'shimmerjordan', '2021-05-16 21:12:59', 'shimmerjordan', '2021-05-16 21:12:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843597030424186880, 0, '开始考试', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/examRecord/start', 'POST', '', NULL, 'web_app', '76', 'shimmerjordan', '2021-05-16 21:13:25', 'shimmerjordan', '2021-05-16 21:13:25', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_log` VALUES (843597189371531264, 0, '提交答题', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', '/v1/answer/submit', 'POST', '', NULL, 'web_app', '92', 'shimmerjordan', '2021-05-16 21:14:03', 'shimmerjordan', '2021-05-16 21:14:03', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -93,11 +291,11 @@ CREATE TABLE `sys_menu`  (
   `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '图标',
   `sort` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '排序',
   `type` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '类型',
-  `data_level` int(11) NULL DEFAULT NULL,
+  `data_level` int NULL DEFAULT NULL,
   `creator` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modifier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `del_flag` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `application_code` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `component` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '模块',
@@ -106,7 +304,7 @@ CREATE TABLE `sys_menu`  (
   `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `tenant_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '租户编号',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -144,12 +342,12 @@ INSERT INTO `sys_menu` VALUES ('571358928483520512', '导出题目', 'exam:subje
 INSERT INTO `sys_menu` VALUES ('571359163205160960', '导出成绩', 'exam:examRecord:export', NULL, '571354428217626624', '', '30', '1', 1, 'admin', '2021-04-26 15:37:19', 'admin', '2021-04-26 15:37:19', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571361163502292992', '系统监控', 'sys', '/api/monitor/**', '-1', 'monitoring', '7', '0', 1, 'admin', '2021-04-26 15:45:16', 'admin', '2021-02-22 13:01:08', '0', 'EXAM', 'Layout', '/monitor', NULL, '系统监控', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571361526066319360', '日志监控', 'monitor:log', '/api/user/v1/log/**', '571361163502292992', '', '30', '0', 1, 'admin', '2021-04-26 15:46:43', 'admin', '2021-04-26 15:46:43', '0', 'EXAM', 'views/monitor/log', 'log', NULL, '日志监控', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571361746552492032', 'consul监控', 'monitor:service', '/api/monitor/service/**', '571361163502292992', '', '31', '0', 1, 'admin', '2021-04-26 15:47:35', 'admin', '2021-02-23 16:20:39', '0', 'EXAM', NULL, 'http://118.25.138.130:8500', NULL, 'consul监控', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571362994005610496', 'zipkin监控', 'monitor:link', '/api/monitor/**', '571361163502292992', '', '32', '0', 1, 'admin', '2021-04-26 15:52:33', 'admin', '2021-02-23 16:18:46', '0', 'EXAM', NULL, 'http://118.25.138.130:9411/zipkin', NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('571363268497641472', '服务监控', 'monitor:admin', '/api/monitor/**', '571361163502292992', '', '33', '0', 1, 'admin', '2021-04-26 15:53:38', 'admin', '2021-02-23 16:20:24', '0', 'EXAM', NULL, 'http://118.25.138.130:9186/admin', NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('571363537549660160', '接口文档', 'monitor:document', '/api/monitor/**', '571361163502292992', '', '34', '0', 1, 'admin', '2021-04-26 15:54:42', 'admin', '2021-02-23 16:19:58', '0', 'EXAM', NULL, 'http://118.25.138.130:9180/swagger-ui.html', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571361746552492032', 'consul监控', 'monitor:service', '/api/monitor/service/**', '571361163502292992', '', '31', '0', 1, 'admin', '2021-04-26 15:47:35', 'admin', '2021-02-23 16:20:39', '0', 'EXAM', NULL, 'http://localhost:8500/ui', NULL, 'consul监控', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571362994005610496', 'zipkin监控', 'monitor:link', '/api/monitor/**', '571361163502292992', '', '32', '0', 1, 'admin', '2021-04-26 15:52:33', 'admin', '2021-02-23 16:18:46', '0', 'EXAM', NULL, 'http://localhost:9411', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571363268497641472', '服务监控', 'monitor:admin', '/api/monitor/**', '571361163502292992', '', '33', '0', 1, 'admin', '2021-04-26 15:53:38', 'admin', '2021-02-23 16:20:24', '0', 'EXAM', NULL, 'http://localhost:9186/', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('571363537549660160', '接口文档', 'monitor:document', '/api/monitor/**', '571361163502292992', '', '34', '0', 1, 'admin', '2021-04-26 15:54:42', 'admin', '2021-02-23 16:19:58', '0', 'EXAM', NULL, 'http://localhost:9180/swagger-ui.html?urls.primaryName=user-service/', NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('571364115214372864', '删除日志', 'monitor:log:del', NULL, '571361526066319360', '', '30', '1', 1, 'admin', '2021-04-26 15:57:00', 'admin', '2021-04-26 15:57:00', '0', 'EXAM', NULL, NULL, NULL, '删除日志', 'gitee');
-INSERT INTO `sys_menu` VALUES ('571365178965364736', '首页', 'dashboard', '/', '-1', 'dashboard', '0', '0', 1, 'admin', '2021-04-26 16:01:14', 'admin', '2020-04-05 19:47:03', '0', 'EXAM', 'Layout', 'dashboard', NULL, '首页', 'gitee');
+INSERT INTO `sys_menu` VALUES ('571365178965364736', '首页', 'dashboard', '/', '-1', 'dashboard', '0', '0', 1, 'admin', '2021-04-26 16:01:14', 'admin', '2021-04-05 19:47:03', '0', 'EXAM', 'Layout', 'dashboard', NULL, '首页', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571367565360762880', '系统管理', 'sys', '/api/user/v1/**', '-1', 'component', '1', '0', 1, 'admin', '2021-04-26 16:10:43', 'admin', '2021-05-23 21:52:26', '0', 'EXAM', 'Layout', '/sys', NULL, '系统管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571367969767165952', '用户管理', 'sys:user', '/api/user/v1/user/**', '571367565360762880', '', '2', '0', 1, 'admin', '2021-04-26 16:12:19', 'admin', '2021-04-26 16:12:19', '0', 'EXAM', 'views/sys/user', 'user', NULL, '用户管理', 'gitee');
 INSERT INTO `sys_menu` VALUES ('571368181252362240', '部门管理', 'sys:dept', '/api/user/v1/dept/**', '571367565360762880', '', '8', '0', 1, 'admin', '2021-04-26 16:13:09', 'admin', '2021-04-26 16:13:09', '0', 'EXAM', 'views/sys/dept', 'dept', NULL, '部门管理', 'gitee');
@@ -190,28 +388,28 @@ INSERT INTO `sys_menu` VALUES ('581238883182841856', '删除单位', 'tenant:ten
 INSERT INTO `sys_menu` VALUES ('624972495417643008', '查看首页', 'dashboard:view', NULL, '571365178965364736', '', '30', '1', NULL, 'admin', '2021-09-21 14:17:34', 'admin', '2021-09-21 14:17:34', '0', 'EXAM', NULL, NULL, NULL, '查看首页', 'gitee');
 INSERT INTO `sys_menu` VALUES ('625058053556932608', '编辑考试', 'exam:exam:edit', '/api/exam/v1/examination/**', '571353525381107712', '', '2', '1', NULL, 'admin', '2021-09-21 19:57:33', 'admin', '2021-09-21 19:57:33', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
 INSERT INTO `sys_menu` VALUES ('625058859773464576', '编辑题目', 'exam:exam:subject:edit', NULL, '571353525381107712', '', '9', '1', NULL, 'admin', '2021-09-21 20:00:45', 'admin', '2021-09-21 20:00:45', '0', 'EXAM', NULL, NULL, NULL, NULL, 'gitee');
-INSERT INTO `sys_menu` VALUES ('681171474660331520', 'elk日志', 'monitor:elk', '/api/monitor/**', '571361163502292992', '', '35', '0', NULL, 'admin', '2021-02-23 16:12:15', 'admin', '2021-02-23 16:18:07', '0', 'EXAM', NULL, 'http://118.25.138.130:5601/app/kibana', NULL, NULL, 'gitee');
+INSERT INTO `sys_menu` VALUES ('681171474660331520', 'elk日志', 'monitor:elk', '/api/monitor/**', '571361163502292992', '', '35', '0', NULL, 'admin', '2021-02-23 16:12:15', 'admin', '2021-02-23 16:18:07', '0', 'EXAM', NULL, 'https://cv.shimmerjordan.site/work-single.html', NULL, NULL, 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role`;
 CREATE TABLE `sys_role`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
+  `id` bigint NOT NULL COMMENT '主键',
   `role_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '角色名称',
   `role_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '角色code',
   `role_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '角色描述',
-  `is_default` tinyint(4) NOT NULL DEFAULT 0 COMMENT '是否默认 0-否，1-是',
-  `status` tinyint(4) NOT NULL DEFAULT 0 COMMENT '启用禁用状态 0-启用，1-禁用',
+  `is_default` tinyint NOT NULL DEFAULT 0 COMMENT '是否默认 0-否，1-是',
+  `status` tinyint NOT NULL DEFAULT 0 COMMENT '启用禁用状态 0-启用，1-禁用',
   `creator` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
   `application_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '租户code',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_role
@@ -220,18 +418,18 @@ INSERT INTO `sys_role` VALUES (596116511031169024, '普通用户', 'role_user', 
 INSERT INTO `sys_role` VALUES (596117256346406912, '超级管理员', 'role_admin', '超级管理员', 0, 0, 'admin', '2021-10-07 15:02:17', 'admin', '2021-10-07 14:53:50', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_role` VALUES (596330074307956736, '教师', 'role_teacher', '教师', 0, 0, 'admin', '2021-09-08 20:57:57', 'admin', '2021-09-08 20:57:57', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_role` VALUES (624964171867492352, '租户管理员', 'role_tenant_admin', '租户管理员', 0, 0, 'admin', '2021-10-08 21:55:13', 'admin', '2021-10-08 21:46:48', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_role` VALUES (681167029125910528, '预览', 'role_preview', '预览权限', 0, 0, 'admin', '2021-02-23 15:54:35', 'admin', '2021-02-23 15:54:35', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_role` VALUES (681167029125910528, '预览', 'role_preview', '预览权限', 0, 0, 'admin', '2021-04-08 14:45:47', 'admin', '2021-02-23 15:54:35', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_role_menu
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role_menu`;
 CREATE TABLE `sys_role_menu`  (
-  `id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `menu_id` bigint(20) NOT NULL,
+  `id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
+  `menu_id` bigint NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_role_menu
@@ -1179,44 +1377,48 @@ INSERT INTO `sys_role_menu` VALUES (681171867557564468, 681167029125910528, 5713
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_student`;
 CREATE TABLE `sys_student`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
+  `id` bigint NOT NULL COMMENT '主键',
   `student_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '学生姓名',
   `phone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '电话号码',
   `born` date NULL DEFAULT NULL,
-  `sex` tinyint(4) NULL DEFAULT NULL COMMENT '难度等级',
+  `sex` tinyint NULL DEFAULT NULL COMMENT '难度等级',
   `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '部门id',
   `grade` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '详细描述',
   `school` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '就读学校',
   `wechat` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '微信',
-  `city_id` bigint(20) NULL DEFAULT NULL COMMENT '城市id',
-  `county_id` bigint(20) NULL DEFAULT NULL COMMENT '县id',
+  `city_id` bigint NULL DEFAULT NULL COMMENT '城市id',
+  `county_id` bigint NULL DEFAULT NULL COMMENT '县id',
   `creator` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
   `application_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生表' ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of sys_student
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for sys_tenant
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_tenant`;
 CREATE TABLE `sys_tenant`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
+  `id` bigint NOT NULL COMMENT '主键',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '租户标识',
   `tenant_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '租户名称',
   `tenant_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '租户描述信息',
-  `status` tinyint(4) NOT NULL DEFAULT 0 COMMENT '状态',
+  `status` tinyint NOT NULL DEFAULT 0 COMMENT '状态',
   `creator` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `modifier` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '租户信息表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '租户信息表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_tenant
@@ -1228,63 +1430,64 @@ INSERT INTO `sys_tenant` VALUES (581236567985754112, 'gitee', '码云', '码云'
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
+  `id` bigint NOT NULL COMMENT '主键',
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '用户姓名',
   `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
   `avatar_id` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像id',
   `email` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱地址',
   `born` date NULL DEFAULT NULL COMMENT '出生日期',
-  `status` tinyint(4) NOT NULL DEFAULT 0,
-  `sex` tinyint(4) NULL DEFAULT NULL COMMENT '性别',
-  `dept_id` bigint(20) NULL DEFAULT NULL COMMENT '部门id',
+  `status` tinyint NOT NULL DEFAULT 0,
+  `sex` tinyint NULL DEFAULT NULL COMMENT '性别',
+  `dept_id` bigint NULL DEFAULT NULL COMMENT '部门id',
   `user_desc` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '详细描述',
-  `parent_uid` bigint(20) NULL DEFAULT NULL COMMENT '父账号id',
-  `street_id` bigint(20) NULL DEFAULT NULL COMMENT '街道id',
-  `county_id` bigint(20) NULL DEFAULT NULL COMMENT '国家id',
-  `city_id` bigint(20) NULL DEFAULT NULL COMMENT '城市id',
-  `province_id` bigint(20) NULL DEFAULT NULL COMMENT '省id',
-  `login_time` timestamp(0) NULL DEFAULT NULL COMMENT '最后登录时间',
-  `lock_time` timestamp(0) NULL DEFAULT NULL COMMENT '锁定账号时间',
+  `parent_uid` bigint NULL DEFAULT NULL COMMENT '父账号id',
+  `street_id` bigint NULL DEFAULT NULL COMMENT '街道id',
+  `county_id` bigint NULL DEFAULT NULL COMMENT '国家id',
+  `city_id` bigint NULL DEFAULT NULL COMMENT '城市id',
+  `province_id` bigint NULL DEFAULT NULL COMMENT '省id',
+  `login_time` timestamp NULL DEFAULT NULL COMMENT '最后登录时间',
+  `lock_time` timestamp NULL DEFAULT NULL COMMENT '锁定账号时间',
   `wechat` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '微信号',
   `signature` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '个性签名',
-  `family_role` tinyint(4) NULL DEFAULT NULL COMMENT '家庭角色',
+  `family_role` tinyint NULL DEFAULT NULL COMMENT '家庭角色',
   `creator` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
   `application_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户信息表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户信息表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (596078038307966976, '管理员', '15521089123', '0', 'shimmerjordan@foxmail.com', '1995-07-03', 0, 0, 596290673729212416, '管理员', NULL, NULL, NULL, 530100, 530000, '2020-04-05 19:47:18', NULL, NULL, '测试', NULL, 'admin', '2020-04-05 19:58:07', 'admin', '2020-04-05 19:47:18', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_user` VALUES (596307222997372928, '梁同学', '15521089123', '0', 'shimmerjordan@foxmail.com', '2021-07-01', 0, 1, 596290673729212416, '梁同学', NULL, NULL, NULL, NULL, NULL, '2020-04-05 19:36:13', NULL, NULL, NULL, NULL, 'admin', '2020-04-05 19:56:36', 'student', '2020-04-05 19:38:57', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_user` VALUES (596332387600830464, '林老师', '15521089123', NULL, 'shimmerjordan@foxmail.com', '2021-07-03', 0, 1, 596290673729212416, '林老师', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', '2020-03-05 22:17:01', 'admin', '2020-03-05 22:06:27', 0, 'EXAM', 'gitee');
-INSERT INTO `sys_user` VALUES (681167776798347264, '预览权限', '15521089123', '0', NULL, '2021-02-23', 0, 0, 596290673729212416, '', 596329627606192128, NULL, NULL, NULL, NULL, '2020-04-05 19:30:45', NULL, NULL, NULL, NULL, 'admin', '2020-04-05 19:56:38', 'preview', '2020-04-05 19:30:59', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (596078038307966976, '管理员', '18540171008', '839503846928683008', 'example@email.com', '1999-02-26', 0, 0, 596290673729212416, '管理员', NULL, NULL, NULL, 530100, 530000, '2021-05-16 20:41:50', NULL, NULL, '测试', NULL, 'admin', '2021-05-16 20:41:49', 'admin', '2021-05-16 20:41:50', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (596307222997372928, '梁同学', '15521089123', '0', 'example@email.com', '1999-02-02', 0, 1, 596290673729212416, '梁同学', NULL, NULL, NULL, NULL, NULL, '2021-01-31 12:10:24', NULL, NULL, NULL, NULL, 'admin', '2021-04-08 14:09:11', 'student', '2021-01-31 12:10:24', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (596332387600830464, '林老师', '15521089123', NULL, 'example@email.com', '1999-02-02', 0, 1, 596290673729212416, '林老师', NULL, NULL, NULL, NULL, NULL, '2021-05-16 20:35:52', NULL, NULL, NULL, NULL, 'admin', '2021-05-16 20:35:52', 'teacher', '2021-05-16 20:35:52', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (681167776798347264, '预览权限', '15521089123', '0', NULL, '1999-02-02', 0, 0, 596290673729212416, '', 596329627606192128, NULL, NULL, NULL, NULL, '2021-04-26 14:24:54', NULL, NULL, NULL, NULL, 'admin', '2021-04-26 14:24:53', 'preview', '2021-04-26 14:24:54', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user` VALUES (820684891577520128, NULL, NULL, NULL, 'shimmerjordan@foxmail.com', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-16 21:08:53', NULL, NULL, NULL, NULL, 'shimmerjordan', '2021-05-16 21:08:53', 'shimmerjordan', '2021-05-16 21:08:53', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_user_auths
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_auths`;
 CREATE TABLE `sys_user_auths`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
-  `user_id` bigint(20) NOT NULL COMMENT '用户ID',
-  `identity_type` tinyint(4) NOT NULL COMMENT '登录类型，手机号、邮箱、用户名或第三方应用名称（微信 微博等）',
+  `id` bigint NOT NULL COMMENT '主键',
+  `user_id` bigint NOT NULL COMMENT '用户ID',
+  `identity_type` tinyint NOT NULL COMMENT '登录类型，手机号、邮箱、用户名或第三方应用名称（微信 微博等）',
   `identifier` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '标识，手机号、邮箱、用户名或第三方应用的唯一标识',
   `credential` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '密码凭证，站内的保存密码，站外的不保存或保存token',
   `creator` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '创建人',
-  `create_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `modifier` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '修改人',
-  `modify_date` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
-  `del_flag` tinyint(4) NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
+  `modify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `del_flag` tinyint NOT NULL DEFAULT 0 COMMENT '删除标记 0:正常;1:删除',
   `application_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '系统编号',
   `tenant_code` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '租户编号',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户授权表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户授权表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_user_auths
@@ -1293,17 +1496,18 @@ INSERT INTO `sys_user_auths` VALUES (596329627606192128, 596078038307966976, 1, 
 INSERT INTO `sys_user_auths` VALUES (596329627648135168, 596307222997372928, 1, 'student', '$2a$10$5XMiXaS3XbkZvcdFHFA6HeZGWAfzxQtLVXRZi8Oyic/rbRLExT5Na', 'admin', '2021-07-04 13:21:03', 'admin', '2021-07-04 13:21:03', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user_auths` VALUES (596332387693105152, 596332387600830464, 1, 'teacher', '$2a$10$8CNmKhP0UJm9WVeDRkowteGHtJEz77xUNaKoVQook6ESYemueK8sC', 'admin', '2021-07-04 13:32:01', 'admin', '2021-07-04 13:32:01', 0, 'EXAM', 'gitee');
 INSERT INTO `sys_user_auths` VALUES (681167777872089088, 681167776798347264, 1, 'preview', '$2a$10$tzwo3TcjyyHnX85WlyO2Huq/gdR7gxhNBGrARAl9PctT6AFZ30Dnu', 'admin', '2021-02-23 15:57:34', 'admin', '2021-02-23 15:57:34', 0, 'EXAM', 'gitee');
+INSERT INTO `sys_user_auths` VALUES (820684892361854976, 820684891577520128, 1, 'shimmerjordan', '$2a$10$oPcF57bY6ronvk2FrCCivOJ.avBFtmw.WIm2tNG4vlbUaPT8AB3gK', 'shimmerjordan', '2021-03-14 15:48:46', 'shimmerjordan', '2021-03-14 15:48:46', 0, 'EXAM', 'gitee');
 
 -- ----------------------------
 -- Table structure for sys_user_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_role`;
 CREATE TABLE `sys_user_role`  (
-  `id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
+  `id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_user_role
@@ -1312,17 +1516,22 @@ INSERT INTO `sys_user_role` VALUES (681167857941352448, 596307222997372928, 5961
 INSERT INTO `sys_user_role` VALUES (681167874412384256, 596078038307966976, 596117256346406912);
 INSERT INTO `sys_user_role` VALUES (685246878203383808, 596332387600830464, 596330074307956736);
 INSERT INTO `sys_user_role` VALUES (686273423307051008, 681167776798347264, 681167029125910528);
+INSERT INTO `sys_user_role` VALUES (820684893141995520, 820684891577520128, 596116511031169024);
 
 -- ----------------------------
 -- Table structure for sys_user_student
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_student`;
 CREATE TABLE `sys_user_student`  (
-  `id` bigint(20) NOT NULL COMMENT '主键',
-  `user_id` bigint(20) NOT NULL COMMENT '学生姓名',
-  `student_id` bigint(20) NOT NULL COMMENT '电话号码',
-  `relationship_type` tinyint(4) NOT NULL COMMENT '关系类型',
+  `id` bigint NOT NULL COMMENT '主键',
+  `user_id` bigint NOT NULL COMMENT '学生姓名',
+  `student_id` bigint NOT NULL COMMENT '电话号码',
+  `relationship_type` tinyint NOT NULL COMMENT '关系类型',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户学生关联表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户学生关联表' ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of sys_user_student
+-- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;
