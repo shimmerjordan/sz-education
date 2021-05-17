@@ -12,7 +12,7 @@
 
 此外利用Git进行版本管理，在根目录中的`.github`文件夹内文件用于启动Github自带的Github Actions功能，用于代码规范性的Lint Code检验。在每次push动作发起时候进行检测并更新日志在根目录的`super-linter.log`文件中，为防止日志文件过大，在本仓库的`watched`状态为`start`时清除此日志。关于Github Action的相关其他用法可见[本篇博客](https://shimmerjordan.site/2021/02/01/DeployGithubActions/)。
 
-这里暂将博客记录作为README，以为只是本科毕业设计，合计也不会有外人来维护。以下为[博客原文](https://shimmerjordan.site/2021/03/08/introToSZ-education/)。
+这里暂将博客记录作为README，以为只是本科毕业设计，合计也不会有外人来维护。图片链接换成了Gitee仓库图片，如果无法显示可以查看原文。以下为[博客原文](https://shimmerjordan.site/2021/03/08/introToSZ-education/)。
 
 
 
@@ -163,30 +163,30 @@ monitor-service        //Spring boot amdin monitoring service
 
 ## Front Desk Examination Subsystem
 
-| ![Front Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_login.png) | ![Front Home](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_home.png) |
+| ![Front Login](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_login.png) | ![Front Home](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_home.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Courses List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_courses.png) | ![Exams List](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exams.png) |
-| ![Exam Interface one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exam.png) | ![Exam Interface two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_exam1.png) |
-| ![Exam records](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_record.png) | ![Answer Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_web_incorrect_answer.png) |
+| ![Courses List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_courses.png) | ![Exams List](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exams.png) |
+| ![Exam Interface one](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exam.png) | ![Exam Interface two](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_exam1.png) |
+| ![Exam records](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_record.png) | ![Answer Details](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_web_incorrect_answer.png) |
 
 ## Back office management subsystem
 
-| ![Backend Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_login.png) | ![Backend Exam Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam.png) |
+| ![Backend Login](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_login.png) | ![Backend Exam Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_exam.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Backend Exam Share](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam_share.png) | ![Backend Exam Add](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_addExam.png) |
-| ![Backend Exam Add Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_addExam_detail1.png) | ![Backend Score Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_manage.png) |
-| ![Backend Score Details](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_detail.png) | ![Backend Score Mark](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_score_mark.png) |
-| ![Backend Subjects Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_subjects_manage.png) | ![Backend Subjects Adding Rich Edit](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_subjects_rich_edit.png) |
-| ![Backend Menu Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_menu_manage.png) | ![Backend Client Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_client_manage.png) |
-| ![Backend Role Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_role_manage.png) | ![Backend Route Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_route_manage.png) |
-| ![Backend User Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_user_manage.png) | ![Backend Msg Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_msg.png) |
+| ![Backend Exam Share](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_exam_share.png) | ![Backend Exam Add](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_addExam.png) |
+| ![Backend Exam Add Detail](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_addExam_detail1.png) | ![Backend Score Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_manage.png) |
+| ![Backend Score Details](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_detail.png) | ![Backend Score Mark](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_mark.png) |
+| ![Backend Subjects Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_subjects_manage.png) | ![Backend Subjects Adding Rich Edit](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_subjects_rich_edit.png) |
+| ![Backend Menu Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_menu_manage.png) | ![Backend Client Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_client_manage.png) |
+| ![Backend Role Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_role_manage.png) | ![Backend Route Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_route_manage.png) |
+| ![Backend User Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_user_manage.png) | ![Backend Msg Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_msg.png) |
 
 ## Systems Monitoring
 
-| ![Consul Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_consul.png) | ![Log Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_log_manage.png) |
+| ![Consul Monitor](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_consul.png) | ![Log Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_log_manage.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Spring Boot Admin Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_spring_boot_admin.png) | ![Spring Boot Admin Monitor Detail](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_spring_boot_admin01.png) |
-| ![Zipkin Monitor one](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_zipkin1.png) | ![Zipkin Monitor two](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_zipkin2.png) |
+| ![Spring Boot Admin Monitor](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_spring_boot_admin.png) | ![Spring Boot Admin Monitor Detail](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_spring_boot_admin01.png) |
+| ![Zipkin Monitor one](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_zipkin1.png) | ![Zipkin Monitor two](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_zipkin2.png) |
 
 # System deployment
 
