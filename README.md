@@ -12,7 +12,7 @@
 
 此外利用Git进行版本管理，在根目录中的`.github`文件夹内文件用于启动Github自带的Github Actions功能，用于代码规范性的Lint Code检验。在每次push动作发起时候进行检测并更新日志在根目录的`super-linter.log`文件中，为防止日志文件过大，在本仓库的`watched`状态为`start`时清除此日志。关于Github Action的相关其他用法可见[本篇博客](https://shimmerjordan.site/2021/02/01/DeployGithubActions/)。
 
-这里暂将博客记录作为README，以为只是本科毕业设计，合计也不会有外人来维护。图片链接换成了Gitee仓库图片，如果无法显示可以查看原文。以下为[博客原文](https://shimmerjordan.site/2021/03/08/introToSZ-education/)。或者查看[Gitee镜像}(https://gitee.com/shimmerjordan/sz-education)。
+这里暂将博客记录作为README，以为只是本科毕业设计，合计也不会有外人来维护。图片链接换成了Gitee仓库图片，如果无法显示可以查看原文。以下为[博客原文](https://shimmerjordan.site/2021/03/08/introToSZ-education/)。或者查看[Gitee镜像](https://gitee.com/shimmerjordan/sz-education)。
 
 
 
