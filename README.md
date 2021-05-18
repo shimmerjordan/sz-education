@@ -171,9 +171,9 @@ monitor-service        //Spring boot amdin monitoring service
 
 ## Back office management subsystem
 
-| ![Backend Login](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_login.png) | ![Backend Exam Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_exam.png) |
+| ![Backend Login](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_login.png) | ![Backend Exam Management](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Backend Exam Share](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_exam_share.png) | ![Backend Exam Add](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_addExam.png) |
+| ![Backend Exam Share](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_exam_share.png) | ![Backend Exam Add](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_addExam.png) |
 | ![Backend Exam Add Detail](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_addExam_detail1.png) | ![Backend Score Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_manage.png) |
 | ![Backend Score Details](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_detail.png) | ![Backend Score Mark](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_score_mark.png) |
 | ![Backend Subjects Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_subjects_manage.png) | ![Backend Subjects Adding Rich Edit](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_subjects_rich_edit.png) |
@@ -183,7 +183,7 @@ monitor-service        //Spring boot amdin monitoring service
 
 ## Systems Monitoring
 
-| ![Consul Monitor](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_consul.png) | ![Log Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_log_manage.png) |
+| ![Consul Monitor](https://cdn.jsdelivr.net/gh/shimmerjordan/sz-education@master/docs/images/images_ui_consul.png) | ![Log Management](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_log_manage.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Spring Boot Admin Monitor](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_spring_boot_admin.png) | ![Spring Boot Admin Monitor Detail](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_spring_boot_admin01.png) |
 | ![Zipkin Monitor one](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_zipkin1.png) | ![Zipkin Monitor two](https://gitee.com/shimmerjordan/sz-education/raw/master/docs/images/images_ui_zipkin2.png) |
