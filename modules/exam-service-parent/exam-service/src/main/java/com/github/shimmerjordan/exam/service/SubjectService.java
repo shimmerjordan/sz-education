@@ -201,7 +201,7 @@ public class SubjectService {
         examinationSubject.setCategoryId(subjectDto.getCategoryId());
         examinationSubject.setSubjectId(subjectDto.getId());
         examinationSubject.setType(subjectDto.getType());
-        System.out.println("INSERT:" + subjectDto);
+        System.out.println("INSERT:" + examinationSubject);
         examinationSubjectService.insert(examinationSubject);
         int flag = 0;
         if(examinationSubjectService.findByExaminationIdAndSubjectId(examinationSubject) != null){

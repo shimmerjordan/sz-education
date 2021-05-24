@@ -103,7 +103,7 @@
     <!-- 组卷Auto1（RAND） -->
     <select id="findListByAuto1" resultType="java.lang.Long">
         SELECT
-        subject_id
+        DISTINCT subject_id
         FROM exam_examination_subject a ORDER BY RAND() LIMIT 20
     </select>
 
